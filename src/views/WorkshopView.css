@@ -1,0 +1,26 @@
+.workshop-day {
+  margin-bottom: 32px;
+}
+
+.workshop-day h5 {
+  text-align: center;
+  background-color: #3C99D6;
+  font-weight: 600;
+  color: white;
+  padding: 20px 0;
+  margin: 0;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.workshop-day .workshops {
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.workshop-day .event-item-container {
+  user-select: none;
+}

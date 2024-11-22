@@ -1,0 +1,46 @@
+.text-gradient {
+  background: linear-gradient(#3C99D6, #6fbcef);
+  text-align: center;
+  margin-bottom: 2rem;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#wordmark img{
+  position: absolute;
+  top: 0rem;
+  left: 30px;
+}
+
+#coming-soon {
+  margin-top: 2rem;
+}
+
+@media only screen and (max-width: 768px) {
+  #coming-soon {
+    margin-top: 2rem;
+  }
+}
+
+.icon {
+  width: 200px;
+  height: 50px;
+  margin-top: -40px;
+  margin-left: auto;
+  background-color: #eee;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 39px
+}
+
+.text1 {
+  font-size: 16px;
+  font-weight: 600
+}
+
+.text2 {
+  font-weight: normal;
+  color: #151515
+}

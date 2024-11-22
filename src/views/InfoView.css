@@ -1,0 +1,119 @@
+#info-view img {
+  width: 90%;
+}
+
+#info-view .links {
+  text-align: center;
+  margin-top: 16px;
+  margin-bottom: 32px;
+  height: 55px;
+}
+
+@media only screen and (max-width: 768px) {
+  #info-view .links {
+    margin-top: 0px;
+    margin-bottom: 96px;
+  }
+}
+
+.card-header {
+  font-weight: 700;
+  background-color: #3C99D6;
+  color: #fff;
+}
+
+.free-stuff p {
+  margin: 0;
+}
+
+.free-stuff li {
+  margin-bottom: 12px;
+}
+
+.discord-button {
+  background-color: #5165f6;
+  border-color: #5165f6;
+}
+
+.discord-button:hover {
+  background-color: #4254dd;
+  border-color: #4254dd;
+}
+
+.discord-button:focus {
+  background-color: #4254dd;
+  border-color: #4254dd;
+}
+
+.devpost-button {
+  background-color: #003749;
+  border-color: #003749;
+}
+
+.devpost-button:hover {
+  background-color: #012835;
+  border-color: #012835;
+}
+
+.devpost-button:focus {
+  background-color: #012835;
+  border-color: #012835;
+}
+
+.guide-button {
+  background-color: #3D9DDB;
+  border-color: #3D9DDB;
+}
+
+.guide-button:hover {
+  background-color: #2E79A9;
+  border-color: #2E79A9;
+}
+
+.guide-button:focus {
+  background-color: #2E79A9;
+  border-color: #2E79A9;
+}
+
+.help-button {
+  background-color: #D05656;
+  border-color: #D05656;
+}
+
+.help-button:hover {
+  background-color: #B14040;
+  border-color: #B14040;
+}
+
+.help-button:focus {
+  background-color: #B14040;
+  border-color: #B14040;
+}
+
+.rounded {
+  border-radius: 0.5rem !important;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  background-color: #eee;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 39px
+}
+
+.text1 {
+  font-size: 14px;
+  font-weight: 600
+}
+
+.text2 {
+  color: #a5aec0
+}
+
+.card {
+  height: 100%;
+}
