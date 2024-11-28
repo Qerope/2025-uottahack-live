@@ -42,7 +42,7 @@ class NavBarComponent extends React.Component {
 					}}
 					onClick={this.collapse}
 				/>
-				<Navbar id="navbar-main" expanded={this.state.expanded} className="navbar-dark" expand="lg">
+				<Navbar id="navbar-main" expanded={this.state.expanded} className="navbar-dark" expand="xl">
 					<Navbar.Brand id="brand" className='mt-2'>
 							<img src={Logo} style={{width: "58px", height: "41px", paddingLeft: "4px", paddingRight: "4px"}} alt="" />
 						<NavLink id="wordmark" to={RoutePath.Home} onClick={this.collapse} >

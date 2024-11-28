@@ -48,7 +48,7 @@ const Chat: React.FC = () => {
                 <Col xs={12} className="d-flex flex-column h-100">
                     <div className="text-center">
                         <h1 className="text-gradient font-weight-bold my-2 mb-4">
-                            uOttaChat <sup style={{ fontSize: '0.6em', fontWeight: 'normal' }}>beta</sup>
+                            uOttaChat (Beta)
                         </h1>
                         <p className="text-left mb-4" style={{ fontSize: '0.9rem' }}>
                             Hey hackers, sponsors, volunteers, and mentors! Meet uOttaChat – your go-to event chatbot! Whether you have questions about the hackathon, need specific details about challenges, event logistics (like room assignments), food options, the full event schedule, or anything else – uOttaChat has got you covered!

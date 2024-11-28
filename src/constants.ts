@@ -52,7 +52,7 @@ const ROUTES_WITH_TITLES: IRouteItem[] = [
 	},
 	{
 		path: RoutePath.Chat,
-		title: 'Chat (Beta)',
+		title: 'Chat',
 		component: Chat
 	}
 ];
