@@ -8,6 +8,7 @@ import MapView from './views/MapView';
 import FoodMenuView from './views/FoodMenuView';
 import ContactView from './views/ContactView';
 import ChallengeView from './views/ChallengeView';
+import Chat from './views/Chat';
 
 const SHOW_AS_LIVE_DATES = true;
 const MOBILE_BREAKPOINT_WIDTH = 992;
@@ -48,6 +49,11 @@ const ROUTES_WITH_TITLES: IRouteItem[] = [
 		path: RoutePath.Contact,
 		title: 'Contact',
 		component: ContactView
+	},
+	{
+		path: RoutePath.Chat,
+		title: 'Chat (Beta)',
+		component: Chat
 	}
 ];
 const CLOCK_EMOJI_HOUR_LIST = ['🕛', '🕐', '🕑', '🕒', '🕓', '🕔', '🕕', '🕖', '🕗', '🕘', '🕙', '🕚'];

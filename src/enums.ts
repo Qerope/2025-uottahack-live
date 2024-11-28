@@ -37,7 +37,8 @@ export enum RoutePath {
 	Map = '/map',
 	Food = '/food',
 	Contact = '/contact',
-	Info = '/info'
+	Info = '/info',
+	Chat = "/chat"
 }
 
 export enum Location {
