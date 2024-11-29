@@ -43,9 +43,6 @@ const DoubleInfoCard = ({ name1="", desc1="", tel1="", email1="" , name2="", des
 
   const InfoSection = () => (
 	<div>
-	  <h1 className="text-gradient font-weight-bold mt-4">
-	  	General Inquiries
-	  </h1>
 		<Row className='mt-3 center'>
 			<DoubleInfoCard
 				name1="Deniz Jasarbasic"

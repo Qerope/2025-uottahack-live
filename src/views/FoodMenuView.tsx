@@ -156,9 +156,6 @@ const FoodMenuView: React.FC = () => {
 	return (
 		<Container id="food-menu-view" fluid>
 			<Col>
-		<h1 className="text-gradient font-weight-bold mt-4 mb-4">
-		Food Menu
-		</h1>
 				<div className="d-flex flex-column">
 					<ButtonGroup className="button-group rounded">
 						{(mobile ? dayLabels : dayLabelsLong).map((label, index) => (

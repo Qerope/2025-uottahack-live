@@ -26,9 +26,6 @@ const WorkshopView: React.FC = () => {
 
 	return (
 		<Container id="workshop-view" fluid>
-		<h1 className="text-gradient font-weight-bold mt-4 mb-4">
-		Workshops
-		</h1>
 			<Col>
 				{
 					<div>

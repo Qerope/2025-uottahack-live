@@ -35,9 +35,6 @@ const ChallengeCard = ({ name = "", category = "", title = "", challenge = (<></
 
 const ChallengesSection = () => (
 	<div>
-		<h1 className="text-gradient font-weight-bold mt-4">
-			Challenges
-		</h1>
 		<Row className='mt-3 center'>
 			<ChallengeCard
 				name="Solace"

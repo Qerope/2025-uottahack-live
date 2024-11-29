@@ -76,10 +76,6 @@ const MapView: React.FC = () => {
 
 	return (
 		<Container id="map-view" fluid>
-		<h1 className="font-weight-bold mt-4 mb-4">
-		Learning Crossroads (CRX)
-		</h1>
-		<h4>100 Louis-Pasteur Private, Ottawa, ON K1N 9N3</h4>
 			<Col>
 				<Row>
 					<div className="d-flex flex-column">
