@@ -2,6 +2,12 @@
   width: 90%;
 }
 
+.title-gradient {
+  background: linear-gradient(rgba(20, 90, 171, 1), rgba(145, 152, 205, 1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 #info-view .links {
   text-align: center;
   margin-top: 16px;
@@ -14,6 +20,11 @@
     margin-top: 0px;
     margin-bottom: 96px;
   }
+}
+
+.card {
+  height: 100%;
+  border: 2px solid rgba(71, 106, 184, 1);
 }
 
 .card-header {
