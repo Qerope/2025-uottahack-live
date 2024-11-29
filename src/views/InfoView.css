@@ -91,7 +91,7 @@
 }
 
 .rounded {
-  border-radius: 0.5rem !important;
+  border-radius: 1rem !important;
 }
 
 .icon {
@@ -116,4 +116,9 @@
 
 .card {
   height: 100%;
+}
+
+.hacker-countdown-title {
+  color: rgba(71, 106, 184, 1);
+  text-align: center;
 }

@@ -51,13 +51,21 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
     };
 
     return (
-        <div>
-            <div style={{ textAlign: 'center', fontSize: '6vw' }}>
+        <div style={{ textAlign: 'center' }}>
+            <div
+                style={{
+                    fontSize: '6vw',
+                    background: 'linear-gradient(to left, rgba(71, 106, 184, 1), rgba(145, 145, 145, 1))',
+                    backgroundClip: 'text',
+                    color: 'transparent',
+                    padding: '20px',
+                    display: 'inline-block'
+                }}
+            >
                 <span>{addLeadingZeros(timeLeft.days)}<span style={{ fontSize: '3vw' }}>D</span>:</span>
                 <span>{addLeadingZeros(timeLeft.hours)}<span style={{ fontSize: '3vw' }}>H</span>:</span>
                 <span>{addLeadingZeros(timeLeft.minutes)}<span style={{ fontSize: '3vw' }}>M</span>:</span>
                 <span>{addLeadingZeros(timeLeft.seconds)}<span style={{ fontSize: '3vw' }}>S</span></span>
-                <p style={{ fontSize: '18px', fontWeight: 'normal', marginBottom: '50px' }}>TILL HACKING STARTS!</p>
             </div>
         </div>
     );

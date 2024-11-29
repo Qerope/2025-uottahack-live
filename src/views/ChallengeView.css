@@ -1,5 +1,5 @@
 .text-gradient {
-  background: linear-gradient(#3C99D6, #6fbcef);
+  background: linear-gradient(rgba(20, 90, 171, 1), rgba(145, 152, 205, 1));
   text-align: center;
   margin-bottom: 2rem;
   -webkit-background-clip: text;
