@@ -16,14 +16,14 @@ const ONE_MINUTE_MILLISECOND = 60000;
 const EVENT_LIST_ITEM_HEIGHT = 72;
 const ROUTES_WITH_TITLES: IRouteItem[] = [
 	{
-		path: [RoutePath.Home, RoutePath.Schedule],
-		title: 'Schedule',
-		component: ScheduleView
-	},
-	{
 		path: RoutePath.Info,
 		title: 'Information',
 		component: InfoView
+	},
+	{
+		path: [RoutePath.Home, RoutePath.Schedule],
+		title: 'Schedule',
+		component: ScheduleView
 	},
 	{
 		path: RoutePath.Challenge,
@@ -37,12 +37,12 @@ const ROUTES_WITH_TITLES: IRouteItem[] = [
 	},
 	{
 		path: RoutePath.Map,
-		title: 'Floor Plan',
+		title: 'Map',
 		component: MapView
 	},
 	{
 		path: RoutePath.Food,
-		title: 'Food Menu',
+		title: 'Menu',
 		component: FoodMenuView
 	},
 	{
