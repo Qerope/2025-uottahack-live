@@ -121,7 +121,7 @@ const InfoView: React.FC = () => {
 	return (
 		<Container id="info-view" fluid>
 			<h1 className="text-gradient font-weight-bold mt-4 mb-4">
-				Information
+				Hacker Countdown
 			</h1>
 			<Countdown targetDate="2024-03-01T21:30:00" />
 			<Col>
