@@ -21,9 +21,14 @@ const ROUTES_WITH_TITLES: IRouteItem[] = [
 		component: InfoView
 	},
 	{
-		path: [RoutePath.Home, RoutePath.Schedule],
+		path: RoutePath.Schedule,
 		title: 'Schedule',
 		component: ScheduleView
+	},
+	{
+		path: RoutePath.Map,
+		title: 'Map',
+		component: MapView
 	},
 	{
 		path: RoutePath.Challenge,
@@ -34,11 +39,6 @@ const ROUTES_WITH_TITLES: IRouteItem[] = [
 		path: RoutePath.Workshop,
 		title: 'Workshops',
 		component: WorkshopView
-	},
-	{
-		path: RoutePath.Map,
-		title: 'Map',
-		component: MapView
 	},
 	{
 		path: RoutePath.Food,
@@ -56,6 +56,7 @@ const ROUTES_WITH_TITLES: IRouteItem[] = [
 		component: Chat
 	}
 ];
+
 const CLOCK_EMOJI_HOUR_LIST = ['🕛', '🕐', '🕑', '🕒', '🕓', '🕔', '🕕', '🕖', '🕗', '🕘', '🕙', '🕚'];
 const CLOCK_EMOJI_THIRTY_LIST = ['🕧', '🕜', '🕝', '🕞', '🕟', '🕠', '🕡', '🕢', '🕣', '🕤', '🕥', '🕦'];
 

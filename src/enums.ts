@@ -30,14 +30,13 @@ export const EventCategoryColor: {
 };
 
 export enum RoutePath {
-	Home = '/',
+	Info = '/info',
 	Schedule = '/schedule',
+	Map = '/map',
 	Challenge = '/challenges',
 	Workshop = '/workshops',
-	Map = '/map',
 	Food = '/food',
 	Contact = '/contact',
-	Info = '/info',
 	Chat = "/chat"
 }
 
