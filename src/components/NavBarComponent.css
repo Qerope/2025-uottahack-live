@@ -3,7 +3,7 @@
   user-select: none;
   border-radius: 2rem;
   background: rgba(71, 106, 184, 1);
-  max-width: 64%; /* Increased from 57% to 75% */
+  max-width: 64%;
   margin: 20px auto 0 auto;
 }
 
@@ -27,5 +27,5 @@
   background-color: rgba(98, 147, 228, 1);
   text-decoration: none;
   border-radius: 2rem;
-  padding: 12px; /* Restores original hover animation */
+  padding: 12px;
 }
