@@ -1,6 +1,6 @@
 # uOttaHack 2024 Live Site Documentation
 
-Welcome to the documentation for the uOttaHack 6 live website, providing an overview of its pages and their functionality.
+Welcome to the documentation for the uOttaHack 7 live website, providing an overview of its pages and their functionality.
 
 <img width="1601" alt="image" src="https://github.com/uOttaHack/2024-live-site/assets/46465622/8e141a77-c218-4b1e-bbdd-fc8393782fb6">
 
@@ -10,7 +10,7 @@ This live site, powered by [Create React App](https://github.com/facebook/create
 
 ### Schedule (Route: `/schedule`)
 
-The Schedule page (accessible at [http://localhost:3000/schedule](http://localhost:3000/schedule)) offers a detailed agenda and timeline for uOttaHack 6. This page is implemented with the `ScheduleView` component.
+The Schedule page (accessible at [http://localhost:3000/schedule](http://localhost:3000/schedule)) offers a detailed agenda and timeline for uOttaHack 7. This page is implemented with the `ScheduleView` component.
 
 ### Information (Route: `/info`)
 
@@ -22,7 +22,7 @@ The Challenges page (accessible at [http://localhost:3000/challenge](http://loca
 
 ### Workshops (Route: `/workshop`)
 
-The Workshops page (accessible at [http://localhost:3000/workshop](http://localhost:3000/workshop)) outlines the various educational sessions and workshops offered during uOttaHack 6. It is implemented with the `WorkshopView` component.
+The Workshops page (accessible at [http://localhost:3000/workshop](http://localhost:3000/workshop)) outlines the various educational sessions and workshops offered during uOttaHack 7. It is implemented with the `WorkshopView` component.
 
 ### Floor Plan (Route: `/map`)
 
@@ -30,7 +30,7 @@ The Floor Plan page (accessible at [http://localhost:3000/map](http://localhost:
 
 ### Food Menu (Route: `/food`)
 
-The Food Menu page (accessible at [http://localhost:3000/food](http://localhost:3000/food)) details the available food options during uOttaHack 6. It is implemented with the `FoodMenuView` component.
+The Food Menu page (accessible at [http://localhost:3000/food](http://localhost:3000/food)) details the available food options during uOttaHack 7. It is implemented with the `FoodMenuView` component.
 
 ### Contact (Route: `/contact`)
 
