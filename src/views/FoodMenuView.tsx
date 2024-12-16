@@ -1,5 +1,6 @@
 import React from 'react';
 import './FoodMenuView.css';
+import '../assets/image 60.png'
 
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
@@ -10,8 +11,6 @@ import { secondDay, thirdDay } from '../data/schedule';
 import { RelativeTime, EventListener } from '../enums';
 import { MOBILE_BREAKPOINT_WIDTH } from '../constants';
 import { Row } from 'react-bootstrap';
-
-
 
 	const FoodCard = ({ meal="", title="", items=[["",""]], n=1, html=(<></>) }) => (
 		<div className={'col-md-'+12/n+' col-sm-12  mt-2'}>

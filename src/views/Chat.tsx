@@ -188,7 +188,7 @@ const Chat: React.FC = () => {
                                         height: '40px',
                                         padding: '0px',
                                         marginLeft: '10px',
-                                        backgroundColor: isSending ? '#B0B0B0' : '#58A4DC',
+                                        backgroundColor: isSending ? '#B0B0B0' : '#476ab8',
                                         display: 'flex',
                                         justifyContent: 'center',
                                         alignItems: 'center',
