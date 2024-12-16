@@ -5,7 +5,7 @@ import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 
 import { RelativeTime } from '../enums';
-import { firstDay, secondDay, thirdDay } from '../data/schedule';
+import { uOttaHack } from '../data/schedule';
 
 import EventListItem from '../components/EventListItem';
 import ModalDialog from '../components/ModalDialog';
@@ -14,7 +14,7 @@ import { DUMMY_EVENT } from '../constants';
 import { IEvent } from '../interfaces';
 import { Row } from 'react-bootstrap';
 
-const days = [firstDay, secondDay, thirdDay];
+const days = [uOttaHack.firstEventDay, uOttaHack.secondEventDay, uOttaHack.thirdEventDay];
 
 const WorkshopView: React.FC = () => {
 	const [show, setShow] = React.useState(false);

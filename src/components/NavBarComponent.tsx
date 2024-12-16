@@ -33,6 +33,12 @@ class NavBarComponent extends React.Component {
     }
 
     render() {
+        const isNavBarVisible = process.env.ISOPEN;
+        console.log(process.env.ISOPEN)
+        if (!isNavBarVisible) {
+            return null;
+        }
+
         return (
             <>
                 <div

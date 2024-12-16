@@ -6,7 +6,6 @@ import { EventListener, RelativeTime } from '../enums';
 import { IEventDay } from '../interfaces';
 import { dayAfterLastDay } from '../data/schedule';
 import { uOttaHack } from '../data/schedule';
-import { IHackTec } from '../data/schedule';
 import { getRelativeDayTime } from '../utils';
 
 import Container from 'react-bootstrap/Container';
@@ -17,19 +16,13 @@ import TimelineComponent from '../components/TimelineComponent';
 import EventListComponent from '../components/EventListComponent';
 import { Row } from 'react-bootstrap';
 
-var isIHackTec = false;
-
-const event = isIHackTec ? IHackTec : uOttaHack;
-const days: [IEventDay, IEventDay, IEventDay] = isIHackTec ? 
-	[IHackTec.firstDayMex, IHackTec.secondDayMex, IHackTec.thirdDayMex] : 
-	[uOttaHack.firstDay, uOttaHack.secondDay, uOttaHack.thirdDay];
-
+const days = 
+	[uOttaHack.firstEventDay, uOttaHack.secondEventDay, uOttaHack.thirdEventDay] ;
 days.forEach(day => day.events.forEach(event => (event.duration = Math.abs(event.duration))));
 
 const ScheduleView: React.FC = () => {
 	
-	const [isIHackTec, setIsIHackTec] = useState(false);
-	const [daysVar, setDays] = React.useState([uOttaHack.firstDay, uOttaHack.secondDay, uOttaHack.thirdDay]);
+	const [daysVar, setDays] = React.useState(days);
 	
 	const firstDay = daysVar[0];
 	const secondDay = daysVar[1];
@@ -42,19 +35,9 @@ const ScheduleView: React.FC = () => {
 		initialDay = thirdDay;
 	}
 
-	const handleClick = () => {
-	  setIsIHackTec(!isIHackTec);
-	  const days: [IEventDay, IEventDay, IEventDay] = !isIHackTec ? 
-		  [IHackTec.firstDayMex, IHackTec.secondDayMex, IHackTec.thirdDayMex] : 
-		  [uOttaHack.firstDay, uOttaHack.secondDay, uOttaHack.thirdDay];
-		setDays(days);
-	    setDay(days[day.index]);
-		setActiveColor(activeColor == '#3C99D6' ? '#ce1126' : '#3C99D6')
-	};
-
 	const [mobile, setMobile] = React.useState(true);
 	const [day, setDay] = React.useState(initialDay);
-	const [, setDummy] = React.useState();
+	const [dummy, setDummy] = useState<object>({});
 	const [activeColor, setActiveColor] = React.useState('#3C99D6')
 
 	const updateDimensions = () => {
@@ -83,25 +66,6 @@ const ScheduleView: React.FC = () => {
 
 	return (
 		<Container id="schedule" fluid>
-		{isIHackTec ? 
-		<h1 className="text-gradient font-weight-bold mt-4 mb-0" style={{background: 'linear-gradient(#ce1126, #dc2b40)', backgroundClip: 'text'}}>
-				iHack-Tec 
-			</h1>
-			: null}
-		<Button
-			onClick={handleClick}
-			className={'mexico-switch '+ (isIHackTec ? 'mex' : '')}
-			style={{
-				background: !isIHackTec
-				? 'linear-gradient(-90deg, #006341 0%, #ce1126 100%)'
-				: 'linear-gradient(-90deg, #6fbcef 0%, #3C99D6 100%)',
-				boxShadow: !isIHackTec
-				? '0px 0px 40px 4px #006341, 0px 0px 0px 2px rgba(255, 255, 255, 0.19) inset'
-				: '0px 0px 40px 4px #3C99D6, 0px 0px 0px 2px rgba(255, 255, 255, 0.19) inset',
-			}}
-			>
-			{isIHackTec ? 'uOttaHack' : 'iHack-Tec'}
-			</Button>
 			<div className="d-flex flex-column" >
 				<ButtonGroup>
 					{daysVar.map((dayInfo, index) => (

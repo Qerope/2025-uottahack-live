@@ -7,7 +7,7 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import { getRelativeDayTime } from '../utils';
-import { secondDay, thirdDay } from '../data/schedule';
+import { uOttaHack } from '../data/schedule';
 import { RelativeTime, EventListener } from '../enums';
 import { MOBILE_BREAKPOINT_WIDTH } from '../constants';
 import { Row } from 'react-bootstrap';
@@ -125,9 +125,9 @@ const dayLabelsLong = ['Friday March 1', 'Saturday March 2', 'Sunday March 3'];
 
 const FoodMenuView: React.FC = () => {
 	let initialDay = 0;
-	if (getRelativeDayTime(secondDay.date) === RelativeTime.Present) {
+	if (getRelativeDayTime(uOttaHack.secondEventDay.date) === RelativeTime.Present) {
 		initialDay = 1;
-	} else if (getRelativeDayTime(thirdDay.date) === RelativeTime.Present) {
+	} else if (getRelativeDayTime(uOttaHack.thirdEventDay.date) === RelativeTime.Present) {
 		initialDay = 2;
 	}
 

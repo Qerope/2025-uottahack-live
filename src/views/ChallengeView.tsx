@@ -3,7 +3,23 @@ import './ChallengeView.css';
 import { Row } from 'react-bootstrap';
 import cienaLogo from '../assets/ciena--600 1.png';
 
-const ChallengeCard = ({ name = "", category = "", title = "", challenge = (<></>), prize = (<></>), logo = null }) => (
+interface ChallengeCardProps {
+  name?: string;
+  category?: string;
+  title?: string | React.ReactNode;
+  challenge?: React.ReactNode;
+  prize?: React.ReactNode;
+  logo?: string | null;
+}
+
+const ChallengeCard: React.FC<ChallengeCardProps> = ({
+  name = "",
+  category = "",
+  title = <></>,
+  challenge = <></>,
+  prize = <></>,
+  logo = null,
+}) => (
     <div className='col-md-6 col-sm-12 mt-0 mb-5'>
         <div className="card p-3 mt-3 rounded">
             <div className="d-flex justify-content-between">

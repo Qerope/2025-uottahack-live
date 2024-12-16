@@ -8,11 +8,15 @@ import Button from 'react-bootstrap/Button';
 import { Card, CardColumns } from 'react-bootstrap';
 import Countdown from './Countdown';
 
+interface ButtonCardProps {
+	title: React.ReactNode;  // Update here to accept any renderable content
+  }
+
 const DoubleInfoCard = ({ title1 = "", desc1 = (<></>), link1 = "", title2 = "", desc2 = (<></>), link2 = "" }) => (
 	<div className='col-md-6 col-sm-12 mt-2' style={{ height: '100% !important' }}>
 	  <div className="card p-3 mb-2 rounded">
 		<div>
-		  <p className="heading mt-4 title-gradient" style={{ fontSize: '14pt', fontWeight: 600 }}>uOttaHack7 @ CRX Building</p>
+		  <p className="heading mt-4 title-gradient" style={{ fontSize: '14pt', fontWeight: 600 }}>uOttaHack 7 @ CRX Building</p>
 		  <p className="heading mt-2" style={{ fontSize: '14pt', fontWeight: 600 }}>Wifi Options:</p>
   
 		  <div className="d-flex flex-column">
@@ -38,7 +42,7 @@ const DoubleInfoCard = ({ title1 = "", desc1 = (<></>), link1 = "", title2 = "",
 	</div>
   );
   
-  const ButtonCard = ({ title = "" }) => (
+const ButtonCard: React.FC<ButtonCardProps> = ({ title }) => (
 	<div className='col-md-6 col-sm-12 mt-2'>
 	  <div className="card p-3 mb-2 rounded">
 		<h3 className="heading mt-4">{title}</h3>
@@ -94,21 +98,35 @@ const DoubleInfoCard = ({ title1 = "", desc1 = (<></>), link1 = "", title2 = "",
   );
   
   const InfoView: React.FC = () => {
+	const isInfoViewVisible = process.env.ISOPEN;
+  
+	if (!isInfoViewVisible) {
+	  return (
+		<Container id="info-view" fluid>
+		  <h1 className="hacker-countdown-title font-weight-bold mt-4 mb-4">
+			Hacker Countdown
+		  </h1>
+		  <Countdown targetDate={new Date("2025-01-17T18:00:00")} />
+		</Container>
+	  );
+	}
+  
 	return (
 	  <Container id="info-view" fluid>
 		<h1 className="hacker-countdown-title font-weight-bold mt-4 mb-4">
 		  Hacker Countdown
 		</h1>
-		<Countdown targetDate="2024-03-01T21:30:00" />
+		<Countdown targetDate={new Date("2025-01-17T18:00:00")} />
 		<Col>
-		  <Row className='g-4'>
+		  <Row className="g-4">
 			<InfoSection />
-			<br></br>
+			<br />
 		  </Row>
 		</Col>
 	  </Container>
 	);
   };
+  
   
   export default InfoView;
   
