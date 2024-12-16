@@ -1,46 +1,63 @@
-.text-gradient {
-  background: linear-gradient(rgba(20, 90, 171, 1), rgba(145, 152, 205, 1));
-  text-align: center;
-  margin-bottom: 2rem;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+body {
+  font-family: 'Jost', sans-serif;
 }
 
-#wordmark img{
-  position: absolute;
-  top: 0rem;
-  left: 30px;
-}
-
-#coming-soon {
-  margin-top: 2rem;
-}
-
-@media only screen and (max-width: 768px) {
-  #coming-soon {
-    margin-top: 2rem;
-  }
+#challenge-view {
+  margin-top: 70px;
 }
 
 .icon {
-  width: 200px;
-  height: 50px;
+  width: 170px;
+  height: 40px;
   margin-top: -40px;
-  margin-left: auto;
-  background-color: #eee;
+  margin-left: 10px;
+  background: linear-gradient(rgba(20, 90, 171, 1), rgba(145, 152, 205, 1));
   border-radius: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 39px
+  font-size: 17px;
+  color: white;
+  padding: 10px;
 }
 
 .text1 {
   font-size: 16px;
-  font-weight: 600
+  font-weight: 600;
 }
 
 .text2 {
   font-weight: normal;
-  color: #151515
+  color: #000000;
+}
+
+.card {
+  position: relative;
+  padding: 1.5rem;
+  border-radius: 10px;
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+.card .text-content {
+  padding-right: 190px;
+}
+
+.card .company-logo-box {
+  position: absolute;
+  top: 50%;
+  right: 45px;
+  transform: translateY(-50%);
+  background-color: #f1f1f1;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card .company-logo-box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
