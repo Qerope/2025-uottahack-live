@@ -1,24 +1,29 @@
 .workshop-day {
-  margin-bottom: 32px;
+  margin-bottom: 40px;
+  font-family: 'Jost', sans-serif;
+}
+
+.workshop-day:first-of-type {
+  margin-top: 60px;
 }
 
 .workshop-day h5 {
   text-align: center;
-  background-color: #3C99D6;
+  background: linear-gradient(rgba(20, 90, 171, 1), rgba(145, 152, 205, 1));
   font-weight: 600;
   color: white;
-  padding: 20px 0;
+  padding: 13px 0;
   margin: 0;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
 }
 
 .workshop-day .workshops {
-  border-left: 1px solid #ddd;
-  border-right: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem;
+  margin-top: 10px;
+  background-color: rgba(188, 209, 255, 1);
+  border-left: 1px solid rgba(188, 209, 255, 1);
+  border-right: 1px solid rgba(188, 209, 255, 1);
+  border-bottom: 1px solid rgba(188, 209, 255, 1);
 }
 
 .workshop-day .event-item-container {

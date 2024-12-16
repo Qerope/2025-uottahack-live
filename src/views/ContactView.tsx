@@ -118,7 +118,7 @@ const ContactView: React.FC = () => {
     <Container id="contact-view" fluid>
       <Col>
         <InfoSection />
-        <div className="mt-5" style={{ marginLeft: "70px" }}>
+        <div className="mt-5">
           <b>* For life-threatening emergencies, please call 911</b>
         </div>
       </Col>
