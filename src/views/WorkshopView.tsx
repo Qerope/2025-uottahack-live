@@ -12,7 +12,6 @@ import ModalDialog from '../components/ModalDialog';
 import { formattedEventTime } from '../utils';
 import { DUMMY_EVENT } from '../constants';
 import { IEvent } from '../interfaces';
-import { Row } from 'react-bootstrap';
 
 const days = [firstDay, secondDay, thirdDay];
 

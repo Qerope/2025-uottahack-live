@@ -1,12 +1,50 @@
-#food-menu-view .coffee {
-	margin-bottom: 32px;
-}
-
-#food-menu-view .button-group {
-	margin-bottom: 32px;
-}
-
-.icon {
+.workshop-day {
+	margin-bottom: 30px;
+	font-family: 'Jost', sans-serif;
+	max-width: 90%;
+	margin: 0 auto;
+  }
+  
+  .workshop-day h5 {
+	display: flex;
+	justify-content: space-between; 
+	align-items: center; 
+	text-align: center;
+	background: linear-gradient(rgba(20, 90, 171, 1), rgba(145, 152, 205, 1));
+	font-weight: 700;
+	color: white;
+	padding: 20px 50px;
+	margin: 0;
+	border-top-left-radius: 1rem;
+	border-top-right-radius: 1rem;
+	font-size: 1.5rem;
+  }
+  
+  .workshop-day .workshops {
+	margin-top: 0;
+	background-color: rgba(255, 255, 255, 1);
+	border-bottom-left-radius: 1rem;
+	border-bottom-right-radius: 1rem;
+	padding: 1.5rem;
+	margin-bottom: 20px;
+  }
+  
+  .heading {
+	font-size: 1.4rem;
+	font-weight: 700;
+  }
+  
+  .text1 {
+	font-size: 1rem;
+	color: #555;
+  }
+  
+  .text2 {
+	font-weight: 500;
+	color: #333;
+  }
+  
+  .icon {
 	width: 50px;
 	height: 50px;
 	background-color: #eee;
@@ -14,7 +52,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	font-size: 39px
+	font-size: 39px;
   }
   
   .badge span {
@@ -28,14 +66,39 @@
 	font-size: 0.9rem;
 	color: #515151;
 	justify-content: center;
-	align-items: center
+	align-items: center;
   }
   
-  .text1 {
-	font-size: 14px;
-	font-weight: 600
+  /* Mobile Responsive Layout */
+  .food-card .d-flex {
+	flex-wrap: wrap;
   }
   
-  .text2 {
-	color: #a5aec0
+  .food-card .description {
+	flex: 1;
+	margin-right: 20px;
   }
+  
+  .food-card .food-image img {
+	max-width: 90%;
+	height: auto;
+	border-radius: 0.5rem;
+	flex-shrink: 0;
+  }
+  
+  @media (max-width: 768px) {
+	.food-card .d-flex {
+	  flex-direction: column;
+	  align-items: center;
+	}
+	
+	.food-card .description {
+	  margin-right: 0;
+	}
+  
+	.food-card .food-image {
+	  margin-top: 20px; 
+	}
+  }
+  
+  
