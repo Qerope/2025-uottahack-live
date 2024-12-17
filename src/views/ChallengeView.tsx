@@ -58,7 +58,7 @@ const ChallengesSection = () => (
       <ChallengeCard
         name="testest"
         title="Scoreboard Challenge"
-        challenge={(<span>Welcome to the uOttaHack 6 scoreboard challenge. Throughout the weekend, you are able to collect points by:
+        challenge={(<span>Welcome to the uOttaHack 7 scoreboard challenge. Throughout the weekend, you are able to collect points by:
           <div style={{ marginTop: '6px' }}>
             <ul>
               <li>1 Point - Attending a workshop.</li>
