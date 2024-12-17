@@ -1,8 +1,8 @@
-# uOttaHack 2024 Live Site Documentation
+# uOttaHack 2025 Live Site Documentation
 
 Welcome to the documentation for the uOttaHack 7 live website, providing an overview of its pages and their functionality.
 
-<img width="1601" alt="image" src="https://github.com/uOttaHack/2024-live-site/assets/46465622/8e141a77-c218-4b1e-bbdd-fc8393782fb6">
+<img width="1601" alt="image" src="https://github.com/uOttaHack/2025-live-site/assets/46465622/8e141a77-c218-4b1e-bbdd-fc8393782fb6">
 
 ## Project Overview
 
@@ -36,16 +36,16 @@ The Food Menu page (accessible at [http://localhost:3000/food](http://localhost:
 
 The Contact page (accessible at [http://localhost:3000/contact](http://localhost:3000/contact)) offers information on how to get in touch with the organizers and key personnel. It is implemented with the `ContactView` component.
 
-## Getting Started with uOttaHack 2024 Live Site
+## Getting Started with uOttaHack 2025 Live Site
 
-To begin contributing or exploring the uOttaHack 2024 live site, follow these simple steps:
+To begin contributing or exploring the uOttaHack 2025 live site, follow these simple steps:
 
 ### 1. Clone the Repository
 
-Clone the uOttaHack 2024 live site repository to your local machine using the following command:
+Clone the uOttaHack 2025 live site repository to your local machine using the following command:
 
 ```
-git clone https://github.com/uOttaHack/2024-live-site.git
+git clone https://github.com/uOttaHack/2025-live-site.git
 ```
 
 This command fetches the latest codebase to your local environment.
@@ -55,11 +55,11 @@ This command fetches the latest codebase to your local environment.
 Navigate to the project directory and install the necessary dependencies using npm:
 
 ```
-cd 2024-live-site
+cd 2025-live-site
 npm install
 ```
 
-This command installs all the required packages and dependencies for the uOttaHack 2024 live site.
+This command installs all the required packages and dependencies for the uOttaHack 2025 live site.
 
 ### 3. Start the Local Server
 
@@ -69,13 +69,13 @@ Once the dependencies are installed, launch the local development server with th
 npm start
 ```
 
-Visit [http://localhost:3000](http://localhost:3000) in your browser to view the uOttaHack 2024 live site locally.
+Visit [http://localhost:3000](http://localhost:3000) in your browser to view the uOttaHack 2025 live site locally.
 
 ## Additional Notes
 
 -   Ensure that you have [Node.js](https://nodejs.org/) installed on your machine before proceeding.
 -   For the best development experience, it is recommended to use a modern web browser.
--   If you encounter any issues or have questions, refer to the [GitHub repository](https://github.com/uOttaHack/2024-live-site) for support and discussions.
+-   If you encounter any issues or have questions, refer to the [GitHub repository](https://github.com/uOttaHack/2025-live-site) for support and discussions.
 
 ## Learn More
 
