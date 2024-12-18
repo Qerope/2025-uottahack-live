@@ -1,14 +1,34 @@
-#map-view .button-group {
-	margin-top: 42px;
+#map-view {
+    padding: 20px;
 }
 
-#map-view .floor-layouts {
-	text-align: center;
+.toggle-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
-#map-view .floor-layouts img {
-	width: 100%;
-	margin: 24px 0px;
-	user-select: none;
+.map-layout {
+    height: 100%;
+    width: 100%;
 }
 
+.button-column {
+    text-align: center;
+}
+
+.image-column img {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+.floor-layouts {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.button-group button {
+    width: 100%;
+    margin-bottom: 10px;
+}
