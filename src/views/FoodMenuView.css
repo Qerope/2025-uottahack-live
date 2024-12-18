@@ -73,6 +73,10 @@
   .food-card .d-flex {
 	flex-wrap: wrap;
   }
+
+  .food-card .food-image {
+	margin-right: -30px;
+  }
   
   .food-card .description {
 	flex: 1;

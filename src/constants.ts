@@ -1,4 +1,4 @@
-import { RoutePath, EventCategory } from './enums';
+import { RoutePath, EventCategory, Location } from './enums';
 import { IRouteItem, IEvent } from './interfaces';
 
 import ScheduleView from './views/ScheduleView';
@@ -65,7 +65,7 @@ const DUMMY_EVENT: IEvent = {
 	start: new Date(),
 	duration: 0,
 	category: EventCategory.Default,
-	location: '',
+	location: Location.Default,
 	description: ''
 };
 

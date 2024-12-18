@@ -16,14 +16,14 @@ import TimelineComponent from '../components/TimelineComponent';
 import EventListComponent from '../components/EventListComponent';
 import { Row } from 'react-bootstrap';
 
-const event = uOttaHack;
-const days: [IEventDay, IEventDay, IEventDay] = [uOttaHack.firstDay, uOttaHack.secondDay, uOttaHack.thirdDay];
-
+const days = 
+	[uOttaHack.firstEventDay, uOttaHack.secondEventDay, uOttaHack.thirdEventDay] ;
 days.forEach(day => day.events.forEach(event => (event.duration = Math.abs(event.duration))));
 
 const ScheduleView: React.FC = () => {
 	
-	const [daysVar, setDays] = React.useState([uOttaHack.firstDay, uOttaHack.secondDay, uOttaHack.thirdDay]);
+	const [daysVar, setDays] = React.useState(days);
+	
 	const firstDay = daysVar[0];
 	const secondDay = daysVar[1];
 	const thirdDay = daysVar[2];
@@ -37,7 +37,7 @@ const ScheduleView: React.FC = () => {
 
 	const [mobile, setMobile] = React.useState(true);
 	const [day, setDay] = React.useState(initialDay);
-	const [, setDummy] = React.useState();
+	const [dummy, setDummy] = useState<object>({});
 	const [activeColor, setActiveColor] = React.useState('#3C99D6')
 
 	const updateDimensions = () => {

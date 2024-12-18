@@ -1,4 +1,4 @@
-import { EventCategory, RoutePath, RelativeTime } from './enums';
+import { EventCategory, RoutePath, RelativeTime, Location } from './enums';
 
 export interface IEvent {
 	name: string;
@@ -6,7 +6,7 @@ export interface IEvent {
 	start: Date;
 	duration: number;
 	category: EventCategory;
-	location: string;
+	location?: Location;
 	description: string;
 }
 

@@ -1,5 +1,6 @@
 export enum EventCategory {
 	Default = 'default',
+	Main = 'main',
 	Food = 'food',
 	Workshop1 = 'workshop1',
 	Workshop2 = 'workshop2',
@@ -16,6 +17,7 @@ export const EventCategoryColor: {
 	[category: string]: string;
 } = {
 	[EventCategory.Default]: 'grey',
+	[EventCategory.Main]: 'blue',
 	[EventCategory.Food]: 'deepskyblue',
 	[EventCategory.Workshop1]: 'purple',
 	[EventCategory.Workshop2]: 'purple',
@@ -42,28 +44,30 @@ export enum RoutePath {
 
 export enum Location {
 	None = '',
-	CareerFair = 'CRX Lobby',
+	CRXLobby = 'CRX Lobby',
 	WorkshopC308 = 'Workshop Room C308',
 	WorkshopC309 = 'Workshop Room C309',
 	WorkshopC010 = 'Workshop Room C010',
 	WorkshopC040 = 'Workshop Room C040',
+	WorkshopC140 = 'Workshop Room C140',
 	Staging = 'Staging - First Floor Classroom',
-	Lobby = 'CRX Lobby',
 	HackerSpace = 'Hacker Space Floor 5',
 	MovieTheatre = 'Movie Theater C240',
 	SecondFloor = 'Second Floor',
 	Karaoke = 'CRX C220',
-	InternPanel = 'CRX C240',
+	CRX240 = 'CRX C240',
 	REST = 'REST Room - 5th floor',
 	UCU = 'UCU - follow guides to different building',
 	UCUAud = 'UCU Auditorium',
-	Food = 'Food Room C307',
-	RestRoom = 'CRX Floor 5',
+	FoodC309 = 'Food Room C309',
+	RestRoomFloor5 = 'CRX Floor 5',
 	Demo = 'CRX C140',
 	CRX140 = 'CRX C140',
+	CRX427 = 'CRX C427',
 	Canal = 'Rideau Canal',
-	CRX = 'CRX',
-	Mexico = 'Mexico 🇲🇽'
+	UCUAuditorium = 'UCU Auditorium',
+	Mexico = 'Mexico 🇲🇽',
+	Default = 'University of Ottawa'
 }
 
 export enum RelativeTime {
