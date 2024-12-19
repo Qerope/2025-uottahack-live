@@ -79,14 +79,17 @@ const MapView: React.FC = () => {
     return (
         <Container id="map-view" fluid>
             <Row className="justify-content-center mb-4">
-                <Form.Check
-                    type="switch"
+                <div
                     id="view-switch"
-                    label={is3D ? '3D View' : '2D View'}
-                    checked={is3D}
-                    onChange={() => setIs3D(!is3D)}
-                    className="text-center"
-                />
+                    className={is3D ? 'active' : ''}
+                    onClick={() => setIs3D(!is3D)}
+                >
+                    <div className="toggle-slider"></div>
+                    <div className="toggle-label">
+                        <span>3D</span>
+                        <span>2D</span>
+                    </div>
+                </div>
             </Row>
             <Row className="justify-content-center align-items-center">
                 {is3D ? (

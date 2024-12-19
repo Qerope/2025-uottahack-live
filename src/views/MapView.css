@@ -32,3 +32,53 @@
     width: 100%;
     margin-bottom: 10px;
 }
+
+#view-switch {
+    position: relative;
+    width: 100px;
+    height: 40px;
+    background-color: white;
+    border: 2px solid rgba(120, 144, 197, 0.8);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: border-color 0.3s ease-in-out;
+}
+
+#view-switch.active {
+    border-color: linear;
+}
+
+#view-switch .toggle-slider {
+    position: absolute;
+    top: 4px;
+    left: 5px;
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(to bottom, rgba(20, 90, 171, 1), rgba(145, 152, 205, 1));
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+    z-index: 2;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#view-switch.active .toggle-slider {
+    transform: translateX(60px);
+}
+
+#view-switch .toggle-label {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgba(71, 106, 184, 1);
+    z-index: 1;
+    user-select: none;
+    pointer-events: none;
+}
