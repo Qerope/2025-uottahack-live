@@ -34,7 +34,7 @@ class NavBarComponent extends React.Component {
 
     render() {
         const isNavBarVisible = true;
-        console.log(process.env.ISOPEN)
+
         if (!isNavBarVisible) {
             return null;
         }
@@ -44,40 +44,59 @@ class NavBarComponent extends React.Component {
                 <div
                     id="navbar-hidden-overlay"
                     style={{
-                        display: this.state.expanded ? 'block' : 'none'
+                        display: this.state.expanded ? 'block' : 'none',
+                        zIndex: 999, // Ensure the overlay covers content
                     }}
                     onClick={this.collapse}
                 />
-                <Navbar
-                    id="navbar-main"
-                    expanded={this.state.expanded}
-                    className="navbar-dark"
-                    expand="xl"
-                >
-                    <Container fluid>
-                        <Navbar.Toggle
-                            aria-controls="basic-navbar-nav"
-                            onClick={this.toggle}
-                            style={{ color: 'white', borderColor: 'transparent' }}
+                <div className="navbar-wrapper">
+                    {/* Logo outside the navbar for large screens */}
+                    <NavLink to="/" className="logo-link">
+                        <img
+                            src={require('../assets/Logo.png')} 
+                            alt="Logo"
+                            className="logo-outside-navbar"
                         />
-                        <Navbar.Collapse id="basic-navbar-nav">
-                            <Nav className="mr-auto ml-auto">
-                                {ROUTES_WITH_TITLES.map((routeItem, index) => (
-                                    <NavLink
-                                        key={`route-path-link-${index}`}
-                                        to={Array.isArray(routeItem.path) ? routeItem.path[0] : routeItem.path}
-                                        onClick={this.collapse}
-                                        exact
-                                        className="nav-link"
-                                        style={{ alignSelf: 'center' }}
-                                    >
-                                        {routeItem.title}
-                                    </NavLink>
-                                ))}
-                            </Nav>
-                        </Navbar.Collapse>
-                    </Container>
-                </Navbar>
+                    </NavLink>
+                    <Navbar
+                        id="navbar-main"
+                        expanded={this.state.expanded}
+                        className="navbar-dark"
+                        expand="xl"
+                    >
+                        <Container fluid>
+                            <Navbar.Toggle
+                                aria-controls="basic-navbar-nav"
+                                onClick={this.toggle}
+                                style={{ color: 'white', borderColor: 'transparent' }}
+                            />
+                            <Navbar.Collapse id="basic-navbar-nav">
+                                {/* Logo inside the collapsed navbar for small screens */}
+                                <NavLink to="/" className="logo-link">
+                                    <img
+                                        src={require('../assets/Logo.png')} 
+                                        alt="Logo"
+                                        className="logo-inside-navbar"
+                                    />
+                                </NavLink>
+                                <Nav className="mr-auto ml-auto">
+                                    {ROUTES_WITH_TITLES.map((routeItem, index) => (
+                                        <NavLink
+                                            key={`route-path-link-${index}`}
+                                            to={Array.isArray(routeItem.path) ? routeItem.path[0] : routeItem.path}
+                                            onClick={this.collapse}
+                                            exact
+                                            className="nav-link"
+                                            style={{ alignSelf: 'center' }}
+                                        >
+                                            {routeItem.title}
+                                        </NavLink>
+                                    ))}
+                                </Nav>
+                            </Navbar.Collapse>
+                        </Container>
+                    </Navbar>
+                </div>
             </>
         );
     }

@@ -1,9 +1,40 @@
+.navbar-wrapper {
+  display: flex;
+  align-items: center; 
+  width: 100%;
+  position: relative;
+  justify-content: center; /* Centers the logo in the wrapper */
+}
+
+.logo-outside-navbar {
+  width: 170px;
+  margin-left: 20px;
+  position: absolute;
+  left: 0;
+  margin-top: -30px;
+}
+
+/* Logo inside the collapsed menu for small screens */
+.logo-inside-navbar {
+  width: 170px;
+  margin: 10px auto; /* Centers the logo inside the collapsed navbar */
+  display: none; /* Hide by default */
+}
+
+/* Show logo inside only when collapsed on small screens */
+@media (max-width: 991px) {
+  .logo-outside-navbar {
+    display: none; /* Hide logo outside the navbar on small screens */
+  }
+}
+
 #navbar-main {
   z-index: 1000;
   user-select: none;
   border-radius: 2rem;
   background: rgba(71, 106, 184, 1);
-  max-width: 64%;
+  width: 100%; 
+  max-width: 64%; 
   margin: 20px auto 0 auto;
 }
 
@@ -28,4 +59,9 @@
   text-decoration: none;
   border-radius: 2rem;
   padding: 12px;
+}
+
+.logo-link {
+  display: inline-block;
+  text-decoration: none;
 }
