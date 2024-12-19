@@ -11,22 +11,48 @@
 .map-layout {
     height: 100%;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
 }
 
 .button-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+.floor-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(120, 144, 197, 1);
+    color: white;
+    border: none;
+    font-weight: 600;
+    font-size: 0.5rem; 
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
     text-align: center;
 }
 
-.image-column img {
-    max-width: 100%;
-    height: auto;
-    cursor: pointer;
+.floor-button:focus,
+.floor-button:hover {
+    background-color: rgba(100, 124, 180, 1);
 }
 
-.floor-layouts {
-    text-align: center;
-    margin: 20px auto;
+.floor-button.active {
+    font-weight: 700;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
 }
+
 
 .button-group button {
     width: 100%;
@@ -81,4 +107,56 @@
     z-index: 1;
     user-select: none;
     pointer-events: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .map-layout {
+        flex-direction: column; /* Stack vertically on smaller screens */
+    }
+
+    .image-column {
+        margin-bottom: 20px;
+    }
+
+    .floor-layouts img {
+        width: 90%; /* Scale image */
+    }
+
+    /* Horizontal buttons for mobile */
+    .button-group {
+        flex-direction: row; /* Make buttons horizontal on mobile */
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .floor-button {
+        font-size: 1rem; /* Adjust font size for better readability */
+        width: 50px;
+        height: 50px;
+        margin: 5px;
+    }
+
+    #view-switch {
+        width: 100px;
+        height: 40px;
+    }
+
+    #view-switch .toggle-slider {
+        width: 30px;
+        height: 30px;
+    }
+
+    #view-switch .toggle-label {
+        font-size: 0.9rem;
+    }
+}
+
+/* Further adjustments for very small screens (below 768px) */
+@media (max-width: 768px) {
+    .floor-button {
+        font-size: 0.8rem;
+        width: 40px;
+        height: 40px;
+    }
 }

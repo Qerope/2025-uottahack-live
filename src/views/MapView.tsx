@@ -107,14 +107,24 @@ const MapView: React.FC = () => {
                     ></iframe>
                 ) : (
                     <Row className="map-layout d-flex align-items-center">
-                        <Col md={2} className="button-column justify-content-end">
+                        <Col md={8} className="image-column">
+                            <div className="floor-layouts text-center">
+                                <EnlargableImage
+                                    src={image}
+                                    alt={`Floor ${button + 1} layout`}
+                                    style={{ width: '80%', height: 'auto' }}
+                                />
+                                <p className="text-muted">Tap to zoom</p>
+                            </div>
+                        </Col>
+                        <Col md={2} className="button-column justify-content-start">
                             <ButtonGroup
                                 vertical={!isMobile}
                                 className="button-group"
                                 style={{
-                                    borderRadius: '2rem',
+                                    borderRadius: '1.2rem',
                                     backgroundColor: 'rgba(42, 61, 101, 1)',
-                                    padding: '0.5rem', // Adjust padding for smaller size
+                                    padding: '0.5rem',
                                 }}
                             >
                                 {floorImages.map((_, index) => (
@@ -127,8 +137,8 @@ const MapView: React.FC = () => {
                                                 index === button ? 'rgba(120, 144, 197, 1)' : 'rgba(120, 144, 197, 1)',
                                             border: '0',
                                             fontWeight: index === button ? 700 : 400,
-                                            width: '40px', // Smaller width
-                                            height: '40px', // Smaller height
+                                            width: '35px', 
+                                            height: '35px', // Smaller height
                                             fontSize: '1.2rem', // Smaller font size
                                             borderRadius: '50%',
                                             marginBottom: '0.5rem',
@@ -141,16 +151,6 @@ const MapView: React.FC = () => {
                                     </Button>
                                 ))}
                             </ButtonGroup>
-                        </Col>
-                        <Col md={8} className="image-column">
-                            <div className="floor-layouts text-center">
-                                <EnlargableImage
-                                    src={image}
-                                    alt={`Floor ${button + 1} layout`}
-                                    style={{ width: '80%', height: 'auto' }} // Adjust image size here
-                                />
-                                <p className="text-muted">Tap to zoom</p>
-                            </div>
                         </Col>
                     </Row>
                 )}
