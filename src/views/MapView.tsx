@@ -93,18 +93,7 @@ const MapView: React.FC = () => {
             </Row>
             <Row className="justify-content-center align-items-center">
                 {is3D ? (
-                    <iframe
-                        href="https://www.mappedin.com/"
-                        title="Mappedin Map"
-                        name="Mappedin Map"
-                        allow="clipboard-write 'self' https://app.mappedin.com; web-share 'self' https://app.mappedin.com"
-                        scrolling="no"
-                        width="90%"
-                        height="630"
-                        frameBorder="0"
-                        style={{ border: 0 }}
-                        src="https://app.mappedin.com/map/673b8c34deb617000bf4dad3?embedded=true"
-                    ></iframe>
+                    <iframe href="https://www.mappedin.com/" title="Mappedin Map" name="Mappedin Map" allow="clipboard-write 'self' https://app.mappedin.com; web-share 'self' https://app.mappedin.com" scrolling="no" width="100%" height="630" frameborder="0" style="border:0" src="https://app.mappedin.com/map/67648873c13a13000bfdf797?embedded=true"></iframe>
                 ) : (
                     <Row className="map-layout d-flex align-items-center">
                         <Col md={8} className="image-column">
