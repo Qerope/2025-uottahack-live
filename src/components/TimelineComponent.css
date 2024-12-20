@@ -2,9 +2,10 @@
 	position: relative;
 	overflow: auto;
 	width: 100%;
-	outline: 1px solid #ddd;
+	outline: 2px solid rgba(71, 106, 184, 1);
 	height: 72vh;
 	border-radius: 1rem;
+	background: rgba(126, 152, 208, 0.18);
 }
 
 .timeline-label,
