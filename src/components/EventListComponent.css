@@ -1,8 +1,21 @@
 #event-list {
-	outline: 1px solid #ddd;
-	height: 72vh;
-	width: 100%;
-	overflow-y: auto;
-	overflow-x: hidden;
-	border-radius: 1rem;
+    outline: 2px solid rgba(71, 106, 184, 1);
+    width: 100%;
+    border-radius: 1rem;
+    background: rgba(126, 152, 208, 0.18);
+    padding: 10px;
+}
+
+.event-item-container {
+    background-color: white;
+    padding: 1px 1px;
+    margin: 8px 0;
+    border-radius: 15px; 
+    transition: background-color 0.3s ease;
+    max-width: 100%;
+	user-select: none;
+}
+
+.event-item-container:hover {
+    background-color: rgba(234, 231, 231, 0.5);
 }

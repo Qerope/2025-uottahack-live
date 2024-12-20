@@ -93,7 +93,11 @@ class EventListComponent extends React.Component<PropTypesDay> {
 					event={this.state.selectedEvent}
 				/>
 				{this.state.events.map((event, index) => (
-					<div key={`event-list-item-${index}`} onClick={() => this.handleEventListItemClick(event)}>
+					<div
+						key={`event-list-item-${index}`}
+						onClick={() => this.handleEventListItemClick(event)}
+						className="event-item-container"
+					>
 						<EventListItem
 							event={event}
 							showAsToday={this.props.showAsToday}
@@ -104,6 +108,7 @@ class EventListComponent extends React.Component<PropTypesDay> {
 			</div>
 		);
 	}
+	
 }
 
 export default EventListComponent;
