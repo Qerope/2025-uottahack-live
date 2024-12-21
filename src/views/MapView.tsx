@@ -5,7 +5,7 @@ import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
-import { Row, Form } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 
 const floorImages = [
     require('../assets/images/floor0.svg'),
@@ -18,15 +18,11 @@ const floorImages = [
 
 const useCheckMobileScreen = () => {
     const [width, setWidth] = useState(window.innerWidth);
-    const handleWindowSizeChange = () => {
-        setWidth(window.innerWidth);
-    };
 
     useEffect(() => {
-        window.addEventListener('resize', handleWindowSizeChange);
-        return () => {
-            window.removeEventListener('resize', handleWindowSizeChange);
-        };
+        const handleResize = () => setWidth(window.innerWidth);
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
     }, []);
 
     return width <= 1024;
@@ -47,9 +43,7 @@ const EnlargableImage = ({ src, alt }: { src: string; alt: string }) => {
             background-size: contain;
             overflow-y: scroll;
         `;
-        modal.addEventListener('click', () => {
-            document.body.removeChild(modal);
-        });
+        modal.addEventListener('click', () => document.body.removeChild(modal));
         document.body.appendChild(modal);
     };
 
@@ -60,7 +54,7 @@ const EnlargableImage = ({ src, alt }: { src: string; alt: string }) => {
             src={src}
             alt={alt}
             onClick={handleClick}
-            style={{ width: '100%', height: 'auto' }} // Adjust image size here
+            style={{ width: '100%', height: 'auto' }}
         />
     );
 };
@@ -76,13 +70,15 @@ const MapView: React.FC = () => {
         setImage(floorImages[index]);
     };
 
+    const handleToggle3D = () => setIs3D((prev) => !prev);
+
     return (
         <Container id="map-view" fluid>
             <Row className="justify-content-center mb-4">
                 <div
                     id="view-switch"
                     className={is3D ? 'active' : ''}
-                    onClick={() => setIs3D(!is3D)}
+                    onClick={handleToggle3D}
                 >
                     <div className="toggle-slider"></div>
                     <div className="toggle-label">
@@ -93,7 +89,17 @@ const MapView: React.FC = () => {
             </Row>
             <Row className="justify-content-center align-items-center">
                 {is3D ? (
-                    <iframe href="https://www.mappedin.com/" title="Mappedin Map" name="Mappedin Map" allow="clipboard-write 'self' https://app.mappedin.com; web-share 'self' https://app.mappedin.com" scrolling="no" width="100%" height="630" frameborder="0" style="border:0" src="https://app.mappedin.com/map/67648873c13a13000bfdf797?embedded=true"></iframe>
+                    <iframe
+                        title="Mappedin Map"
+                        src="https://app.mappedin.com/map/67648873c13a13000bfdf797?embedded=true"
+                        scrolling="no"
+                        width="100%"
+                        height="630"
+                        frameBorder="0"
+                        style={{
+                            border: '0',
+                        }}
+                    ></iframe>
                 ) : (
                     <Row className="map-layout d-flex align-items-center">
                         <Col md={8} className="image-column">
@@ -101,12 +107,11 @@ const MapView: React.FC = () => {
                                 <EnlargableImage
                                     src={image}
                                     alt={`Floor ${button + 1} layout`}
-                                    style={{ width: '80%', height: 'auto' }}
                                 />
                                 <p className="text-muted">Tap to zoom</p>
                             </div>
                         </Col>
-                        <Col md={2} className="button-column justify-content-start">
+                        <Col md={2} className="button-column">
                             <ButtonGroup
                                 vertical={!isMobile}
                                 className="button-group"
@@ -118,23 +123,21 @@ const MapView: React.FC = () => {
                             >
                                 {floorImages.map((_, index) => (
                                     <Button
-                                        className="floor-button"
                                         key={`button-${index}`}
                                         onClick={() => handleClick(index)}
                                         style={{
                                             backgroundColor:
-                                                index === button ? 'rgba(120, 144, 197, 1)' : 'rgba(120, 144, 197, 1)',
+                                                index === button
+                                                    ? 'rgba(120, 144, 197, 1)'
+                                                    : 'rgba(120, 144, 197, 1)',
                                             border: '0',
                                             fontWeight: index === button ? 700 : 400,
-                                            width: '35px', 
-                                            height: '35px', // Smaller height
-                                            fontSize: '1.2rem', // Smaller font size
+                                            width: '35px',
+                                            height: '35px',
+                                            fontSize: '1.2rem',
                                             borderRadius: '50%',
                                             marginBottom: '0.5rem',
-                                            outline: 'none',
-                                            boxShadow: 'none'
                                         }}
-                                        variant={index === button ? 'dark' : 'light'}
                                     >
                                         {index}
                                     </Button>
