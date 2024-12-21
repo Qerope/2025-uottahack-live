@@ -67,7 +67,7 @@ const day1 = (
 						['Salad', 'lettuce, tomatoes, cucumbers, olives, dressing'],
 						['Add-ons', 'pickles, jalapeños, onions, extra cheese']
 					]}
-					imageSrc={require('../assets/image 60.png')}
+					imageSrc={require('../assets/image 60.png').default}
 				/>
 			</div>
 		</div>
@@ -87,7 +87,7 @@ const day2 = (
 						['Fruits', 'Apples, clementines, bananas'],
 						['Beverages', 'Coffee, tea, water, redbull ;)']
 					]}
-					imageSrc={require('../assets/image 60.png')}
+					imageSrc={require('../assets/image 60.png').default}
 				/>
 			</div>
 		</div>
@@ -105,7 +105,7 @@ const day2 = (
 						['Bibimbap Rice Bowl', 'steamed rice, assorted vegetables, fried egg, gochujang sauce'],
 						['Add-ons', 'Kimbap Rolls, Japchae Noodles, Tofu Side Dish']
 					]}
-					imageSrc={require('../assets/image 60.png')}
+					imageSrc={require('../assets/image 60.png').default}
 				/>
 			</div>
 		</div>
@@ -122,7 +122,7 @@ const day2 = (
 						['Tabbouleh/Fattoush Salad', 'parsley, tomato, bulgur wheat, olive oil, lemon juice'],
 						['Addons', 'Garlic Potatoes, Rice, Pita']
 					]}
-					imageSrc={require('../assets/image 60.png')}
+					imageSrc={require('../assets/image 60.png').default}
 				/>
 			</div>
 		</div>
@@ -142,7 +142,7 @@ const day3 = (
 						['Fruits', 'Apples, clementines, bananas'],
 						['Beverages', 'Coffee, tea, water, redbull ;)']
 					]}
-					imageSrc={require('../assets/image 60.png')}
+					imageSrc={require('../assets/image 60.png').default}
 				/>
 			</div>
 		</div>
@@ -158,7 +158,7 @@ const day3 = (
 						['Tabbouleh/Fattoush Salad', 'parsley, tomato, bulgur wheat, olive oil, lemon juice'],
 						['Addons', 'Garlic Potatoes, Rice, Pita']
 					]}
-					imageSrc={require('../assets/image 60.png')}
+					imageSrc={require('../assets/image 60.png').default}
 				/>
 			</div>
 		</div>
