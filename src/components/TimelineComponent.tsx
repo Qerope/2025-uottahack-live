@@ -10,12 +10,12 @@ import ModalDialog from '../components/ModalDialog';
 import { DUMMY_EVENT } from '../constants';
 
 const minutes = 60;
-const timeLabelOffset = 4;
-const timeMarkerOffset = 1;
-const labelSpaceVertical = 6;
-const labelSpaceHorizontal = 90;
-const trackSpace = 40;
-const trackStartHeight = 36;
+const timeLabelOffset = 6;  // Adjusted for better spacing
+const timeMarkerOffset = 0;  // Subtle time marker
+const labelSpaceVertical = 8; // Increased spacing for clean look
+const labelSpaceHorizontal = 100; // Increased for better readability
+const trackSpace = 50; // More space between events for clarity
+const trackStartHeight = 50; // Adjusted track start height for uniformity
 const timeLabels = Array.from(Array(24).keys()).map(i => `${i % 12 === 0 ? 12 : i % 12}${i % 24 < 12 ? 'AM' : 'PM'}`);
 
 function processCategoryBuckets(events: IEvent[]) {
@@ -94,7 +94,10 @@ class TimelineComponent extends React.Component<PropTypesDay> {
 							</p>
 							<div
 								className="timeline-label-marker"
-								style={{ left: index * labelSpaceHorizontal - timeMarkerOffset }}
+								style={{
+									left: index * labelSpaceHorizontal - timeMarkerOffset,
+									background: '#D3D3D3'
+								}}
 							/>
 						</div>
 					))}
@@ -120,11 +123,7 @@ class TimelineComponent extends React.Component<PropTypesDay> {
 							{categoryBuckets[activityKey].map((event, eventIndex) => (
 								<div
 									key={`timeline-track-${activityKey}-${eventIndex}`}
-									className={`timeline-track-item ${
-										this.props.showAsToday
-											? getRelativeEventTime(event)
-											: this.props.relativeDayTime
-									}`}
+									className={`timeline-track-item gantt-style ${this.props.showAsToday ? getRelativeEventTime(event) : this.props.relativeDayTime}`}
 									style={{
 										width: (labelSpaceHorizontal / minutes) * event.duration,
 										left: (labelSpaceHorizontal / minutes) * dateToMinutesInDay(event.start),
@@ -134,29 +133,13 @@ class TimelineComponent extends React.Component<PropTypesDay> {
 								>
 									<p>{event.name}</p>
 									<div
-										key={`timeline-track-${activityKey}-${eventIndex}`}
-										className="timeline-track-line"
+										className="timeline-track-bar"
 										style={{
-											background: EventCategoryColor[activityKey] || Color.Overflow
+											background: EventCategoryColor[activityKey] || Color.Overflow,
+											height: '100%',
+											borderRadius: '6px', // Rounded corners for a smooth look
 										}}
-									>
-										{['left', 'right'].map(lineEnd => (
-											<svg
-												key={`timeline-line-${lineEnd}`}
-												className={`timeline-track-line-end-${lineEnd}`}
-												height="10"
-												width="10"
-											>
-												<circle
-													className={`timeline-track-line-end-${lineEnd}`}
-													cx="5"
-													cy="5"
-													r="5"
-													fill={EventCategoryColor[activityKey] || Color.Overflow}
-												/>
-											</svg>
-										))}
-									</div>
+									/>
 								</div>
 							))}
 						</div>

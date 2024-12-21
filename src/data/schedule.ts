@@ -202,7 +202,7 @@ const finalLunchEvent: IEvent = {
 const firstEventDay: IEventDay = {
     index: 0,
     title: "Friday 🎉",
-    longTitle: "Day 1 🥳",
+    longTitle: "Friday, 17 January",
     date: new Date('2025-01-17'),
     events: [
         registrationEvent, 
@@ -217,7 +217,7 @@ const firstEventDay: IEventDay = {
 const secondEventDay: IEventDay = {
     index: 1,
     title: "Saturday 🕺",
-    longTitle: "Day 2 🌟",
+    longTitle: "Saturday, 18 January",
     date: new Date('2025-01-18'),
     events: [
         midnightSnackEvent, 
@@ -237,7 +237,7 @@ const secondEventDay: IEventDay = {
 const thirdEventDay: IEventDay = {
     index: 2,
     title: "Sunday 🌅",
-    longTitle: "Day 3 🏆",
+    longTitle: "Sunday, 19 January",
     date: new Date('2025-01-19'),
     events: [
         midnightSnackEvent,

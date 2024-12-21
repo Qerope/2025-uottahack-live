@@ -3,7 +3,6 @@ import './ScheduleView.css';
 
 import { ONE_MINUTE_MILLISECOND, SHOW_AS_LIVE_DATES, MOBILE_BREAKPOINT_WIDTH } from '../constants';
 import { EventListener, RelativeTime } from '../enums';
-import { IEventDay } from '../interfaces';
 import { dayAfterLastDay } from '../data/schedule';
 import { uOttaHack } from '../data/schedule';
 import { getRelativeDayTime } from '../utils';
@@ -22,7 +21,7 @@ days.forEach(day => day.events.forEach(event => (event.duration = Math.abs(event
 
 const ScheduleView: React.FC = () => {
 	
-	const [daysVar, setDays] = React.useState(days);
+	const [daysVar] = React.useState(days);
 	
 	const firstDay = daysVar[0];
 	const secondDay = daysVar[1];
@@ -37,8 +36,7 @@ const ScheduleView: React.FC = () => {
 
 	const [mobile, setMobile] = React.useState(true);
 	const [day, setDay] = React.useState(initialDay);
-	const [dummy, setDummy] = useState<object>({});
-	const [activeColor, setActiveColor] = React.useState('#3C99D6')
+	const [setDummy] = useState<object>({});
 
 	const updateDimensions = () => {
 		const isMobile = window.innerWidth < MOBILE_BREAKPOINT_WIDTH;
@@ -67,18 +65,26 @@ const ScheduleView: React.FC = () => {
 	return (
 		<Container id="schedule" fluid>
 			<div className="d-flex flex-column" >
-				<ButtonGroup>
-					{daysVar.map((dayInfo, index) => (
-						<Button
-							key={`btn-group-${index}`}
-							onClick={() => setDay(dayInfo)}
-							className='ml-2 mr-2 mb-2 mt-4'
-							style={{backgroundColor: index === day.index ? activeColor : '#f8f9fa', border: "0px", borderRadius: "2.5rem", fontWeight: index === day.index ? 700 : 500, padding: "0.8rem 0 0.8rem 0"}}
-							variant={index === day.index ? 'dark' : 'light'}
-						>
-							{(!mobile && dayInfo.longTitle) || dayInfo.title}
-						</Button>
-					))}
+			<ButtonGroup className="button-group rounded" style={{ width: '90%', margin: '0 auto' }}>
+				{daysVar.map((dayInfo, index) => (
+					<Button
+					key={`btn-group-${index}`}
+					onClick={() => setDay(dayInfo)}
+					className='ml-2 mr-2 mb-2 mt-5'
+					style={{
+						backgroundColor: index === day.index ? '#476ab8' : '#f8f9fa',
+						border: '0',
+						fontWeight: index === day.index ? 700 : 400,
+						borderRadius: '1rem',
+						padding: '0.8rem 0 0.8rem 0',
+						outline: 'none',
+						boxShadow: 'none'
+					}}
+					variant={index === day.index ? 'dark' : 'light'}
+					>
+					{(!mobile && dayInfo.longTitle) || dayInfo.title}
+					</Button>
+				))}
 				</ButtonGroup>
 			</div>
 			<Row>
