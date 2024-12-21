@@ -80,7 +80,7 @@ const Countdown: React.FC<CountdownProps> = ({
         showSeconds &&
         (timeLeft.days > 0 || timeLeft.hours > 0 || timeLeft.minutes > 0 || timeLeft.seconds > 0);
 
-    const containerStyle = {
+    const containerStyle: React.CSSProperties = {
         backgroundSize: '200% 200%',
         animation: 'gradient-shift 6s infinite',
         borderRadius: '15px',
@@ -92,9 +92,9 @@ const Countdown: React.FC<CountdownProps> = ({
         fontFamily: '"Roboto", sans-serif',
     };
 
-    const timeUnitStyle = {
+    const timeUnitStyle: React.CSSProperties = {
         display: 'flex',
-        flexDirection: 'column',
+        flexDirection: 'column' as 'column',
         alignItems: 'center',
         margin: '0 8px',
         padding: '15px',
@@ -102,7 +102,7 @@ const Countdown: React.FC<CountdownProps> = ({
         transition: 'transform 0.5s ease, opacity 0.5s ease',
     };
 
-    const numberStyle = {
+    const numberStyle: React.CSSProperties = {
         fontSize: '5rem',
         fontWeight: 'bold',
         backgroundImage: `linear-gradient(${gradientAngle}deg, #476AB8, #85AED0, #88C5FF)`,
@@ -114,14 +114,14 @@ const Countdown: React.FC<CountdownProps> = ({
         transition: 'opacity 0.5s ease',
     };
 
-    const labelStyle = {
+    const labelStyle: React.CSSProperties = {
         fontSize: '2rem',
         fontWeight: 300,
         color: '#666',
         letterSpacing: '1px',
         backgroundImage: `linear-gradient(${gradientAngle}deg, #476AB8, #85AED0, #88C5FF)`,
         WebkitBackgroundClip: 'text',
-        textTransform: 'uppercase',
+        textTransform: 'uppercase' as 'uppercase', 
     };
 
     return (
