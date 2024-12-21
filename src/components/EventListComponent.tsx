@@ -13,7 +13,12 @@ function sortEvents(event1: IEvent, event2: IEvent) {
 	return event1.start.getTime() - event2.start.getTime();
 }
 
-class EventListComponent extends React.Component<PropTypesDay> {
+interface EventListFilterState {
+  selectedFilters: { [key: string]: boolean };
+}
+
+
+class EventListComponent extends React.Component<PropTypesDay, EventListFilterState> {
 	scrollContainerRef: React.RefObject<HTMLDivElement>;
 	state: {
 		modalShow: boolean;
@@ -124,7 +129,6 @@ class EventListComponent extends React.Component<PropTypesDay> {
 			<div>
 				{/* <div className="uoPoints-label">uOttaPoints: 0</div>      add this later*/}
 				{/* Filter Section */}
-				<div className='filter-label'>Filter</div>
 				<div className="filter-container">
 					<label>
 						<input
