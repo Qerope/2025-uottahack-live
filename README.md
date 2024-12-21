@@ -2,7 +2,7 @@
 
 Welcome to the documentation for the uOttaHack 7 live website, providing an overview of its pages and their functionality.
 
-<img width="1601" alt="image" src="https://github.com/uOttaHack/2025-live-site/assets/46465622/8e141a77-c218-4b1e-bbdd-fc8393782fb6">
+![alt text](image.png)
 
 ## Project Overview
 
