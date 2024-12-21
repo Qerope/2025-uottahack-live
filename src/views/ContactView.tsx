@@ -26,19 +26,19 @@ const DoubleInfoCard = ({
 
   const textStyle = {
     fontSize: "18px",
-    fontWeight: "300",
+    fontWeight: 300,
     color: "#000",
   };
 
   const nameStyle = {
     fontSize: "16px",
-    fontWeight: "400",
+    fontWeight: 400,
     color: "#000",
   };
 
   const phoneStyle = {
     fontSize: "16px",
-    fontWeight: "300",
+    fontWeight: 300,
     color: "rgba(26, 119, 119, 1)",
   };
 
