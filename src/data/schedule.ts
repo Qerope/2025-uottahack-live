@@ -202,7 +202,7 @@ const finalLunchEvent: IEvent = {
 const firstEventDay: IEventDay = {
     index: 0,
     title: "Friday 🎉",
-    longTitle: "Friday January 17",
+    longTitle: "Friday, January 17",
     date: new Date('2025-01-17'),
     events: [
         registrationEvent, 
