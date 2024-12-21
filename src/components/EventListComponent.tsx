@@ -7,7 +7,7 @@ import { dateToMinutesInDay, getRelativeEventTime, formattedEventTime } from '..
 
 import EventListItem from './EventListItem';
 import ModalDialog from '../components/ModalDialog';
-import { RelativeTime } from '../enums';
+import { EventCategory, RelativeTime } from '../enums';
 
 function sortEvents(event1: IEvent, event2: IEvent) {
   return event1.start.getTime() - event2.start.getTime();
@@ -111,10 +111,10 @@ class EventListComponent extends React.Component<PropTypesDay, EventListFilterSt
     const { foodTime, sponsors, workshops, deadlines } = this.state.selectedFilters;
     return this.state.events.filter(event => {
       return (
-        (foodTime ? event.foodTime : true) &&
-        (sponsors ? event.sponsors : true) &&
-        (workshops ? event.workshops : true) &&
-        (deadlines ? event.deadlines : true)
+        (foodTime ? event.category == EventCategory.Food : true) &&
+        (sponsors ? event.category == EventCategory.Career : true) &&
+        (workshops ? (event.category == EventCategory.Workshop1 || event.category == EventCategory.Workshop2 || event.category == EventCategory.Workshop3 || event.category == EventCategory.Workshop4) : true) &&
+        (deadlines ? event.category == EventCategory.Main : true)
       );
     });
   }
