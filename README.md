@@ -2,7 +2,7 @@
 
 Welcome to the documentation for the uOttaHack 7 live website, providing an overview of its pages and their functionality.
 
-![alt text](image.png)
+![alt text](image-1.png)
 
 ## Project Overview
 
