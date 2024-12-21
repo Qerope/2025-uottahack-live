@@ -3,40 +3,56 @@ import './ChallengeView.css';
 import { Row } from 'react-bootstrap';
 import cienaLogo from '../assets/ciena--600 1.png';
 
-const ChallengeCard = ({ name = "", category = "", title = "", challenge = (<></>), prize = (<></>), logo = null }) => (
-    <div className='col-md-6 col-sm-12 mt-0 mb-5'>
-        <div className="card p-3 mt-3 rounded">
-            <div className="d-flex justify-content-between">
-                <div className="d-flex flex-row align-items-center">
-                    <div className="icon">
-                        {name}
-                    </div>
-                </div>
-                {category !== "" && (
-                    <div className="badge">
-                        <span>{category}</span>
-                    </div>
-                )}
-            </div>
-            <div className="mt-4 ml-4 mb-3 text-content">
-                <h3 className="heading">{title}</h3>
-                <div className="mt-1">
-                    <div className="mt-3">
-                        <span className="text1">Challenge: <span className="text2">{challenge}</span></span>
-                    </div>
-                    {prize !== (<></>) && (
-                        <div className="mt-3">
-                            <span className="text1">Prizes 🏆: <span style={{ fontWeight: 'normal' }}>{prize}</span></span>
-                        </div>
-                    )}
-                </div>
-            </div>
-            {/* Company logo */}
-            <div className="company-logo-box">
-                {logo ? <img src={logo} alt="Company Logo" /> : null}
-            </div>
+interface ChallengeCardProps {
+  name?: string;
+  category?: string;
+  title?: string;
+  challenge?: JSX.Element;
+  prize?: JSX.Element;
+  logo?: string | null;
+}
+
+const ChallengeCard = ({
+  name = "",
+  category = "",
+  title = "",
+  challenge = <></>,
+  prize = <></>,
+  logo = null,
+}: ChallengeCardProps) => (
+  <div className='col-md-6 col-sm-12 mt-0 mb-5'>
+    <div className="card p-3 mt-3 rounded">
+      <div className="d-flex justify-content-between">
+        <div className="d-flex flex-row align-items-center">
+          <div className="icon">
+            {name}
+          </div>
         </div>
+        {category !== "" && (
+          <div className="badge">
+            <span>{category}</span>
+          </div>
+        )}
+      </div>
+      <div className="mt-4 ml-4 mb-3 text-content">
+        <h3 className="heading">{title}</h3>
+        <div className="mt-1">
+          <div className="mt-3">
+            <span className="text1">Challenge: <span className="text2">{challenge}</span></span>
+          </div>
+          {prize !== (<></>) && (
+            <div className="mt-3">
+              <span className="text1">Prizes 🏆: <span style={{ fontWeight: 'normal' }}>{prize}</span></span>
+            </div>
+          )}
+        </div>
+      </div>
+      {/* Company logo */}
+      <div className="company-logo-box">
+        {logo ? <img src={logo} alt="Company Logo" /> : null}
+      </div>
     </div>
+  </div>
 );
 
 const ChallengesSection = () => (
@@ -84,7 +100,7 @@ const ChallengeView: React.FC = () => {
           <h1 className="hacker-countdown-title font-weight-bold mt-4 mb-4">Stay tuned for challenges. They will be released soon!</h1>
         </div>
       )}
-      
+
       {!challengesHidden && (
         <ChallengesSection />
       )}
