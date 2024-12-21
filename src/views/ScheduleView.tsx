@@ -70,7 +70,7 @@ const ScheduleView: React.FC = () => {
 					<Button
 					key={`btn-group-${index}`}
 					onClick={() => setDay(dayInfo)}
-					className='ml-2 mr-2 mb-2 mt-5'
+					className='ml-2 mr-2 mb-5 mt-5'
 					style={{
 						backgroundColor: index === day.index ? '#476ab8' : '#f8f9fa',
 						border: '0',
@@ -88,7 +88,7 @@ const ScheduleView: React.FC = () => {
 				</ButtonGroup>
 			</div>
 			<Row>
-				<div className='col-md-9 col-sm-12 mt-2'>
+				<div className='col-md-9 col-sm-12 mt-3'>
 					<div className='mr-2 ml-2'>
 						<TimelineComponent day={day} showAsToday={showAsToday} relativeDayTime={relativeDayTime} />
 					</div>

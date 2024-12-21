@@ -10,12 +10,64 @@
     background-color: white;
     padding: 1px 1px;
     margin: 8px 0;
-    border-radius: 15px; 
+    border-radius: 15px;
     transition: background-color 0.3s ease;
     max-width: 100%;
-	user-select: none;
+    user-select: none;
 }
 
 .event-item-container:hover {
     background-color: rgba(234, 231, 231, 0.5);
+}
+
+.filter-container {
+    background-color: white;
+    padding: 10px;
+    border-radius: 1rem;
+    margin-bottom: 20px;
+    outline: 2px solid rgba(71, 106, 184, 1);
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 10px;
+}
+
+.filter-container label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.filter-container input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+/* New filter label container */
+.filter-label {
+    background-color: rgba(71, 106, 184, 1);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-bottom: 3px;
+    width: fit-content;
+    font-size: 14px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* uOttaPoints label */
+.uoPoints-label {
+    background-color: white;
+    padding: 10px;
+    border-radius: 0.7rem;
+    margin-bottom: 20px;
+    outline: 2px solid rgba(71, 106, 184, 1);
+    font-weight: bold; 
+    color: rgba(71, 106, 184, 1);
+    text-align: center;
+    width: 60%;
+    margin-right: auto;
+    margin-left: auto;
 }
