@@ -116,12 +116,11 @@ const Countdown: React.FC<CountdownProps> = ({
 
     const labelStyle = {
         fontSize: '2rem',
-        fontWeight: '300',
+        fontWeight: 300,
         color: '#666',
         letterSpacing: '1px',
         backgroundImage: `linear-gradient(${gradientAngle}deg, #476AB8, #85AED0, #88C5FF)`,
         WebkitBackgroundClip: 'text',
-        color: 'transparent',
         textTransform: 'uppercase',
     };
 
