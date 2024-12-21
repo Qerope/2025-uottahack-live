@@ -11,7 +11,17 @@ import { uOttaHack } from '../data/schedule';
 import { RelativeTime, EventListener } from '../enums';
 import { MOBILE_BREAKPOINT_WIDTH } from '../constants';
 
-const FoodCard = ({ meal = "", title = "", items = [["", ""]], n = 1, html = (<></>), imageSrc }) => (
+type FoodCardProps = {
+	meal?: string;
+	title?: string;
+	items?: [string, string][];
+	n?: number;
+	html?: JSX.Element;
+	imageSrc?: string; 
+  };
+  
+  const FoodCard: React.FC<FoodCardProps> = ({ meal = "", title = "", items = [["", ""]], n = 1, html = (<></>), imageSrc }) => (
+  
 	<div className={'col-md-' + (12 / n) + ' col-sm-6 col-xs-12 mt-2'}>
 		<div className="food-card p-3 mb-2 rounded">
 			<div className="mt-3">
