@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import { Row } from 'react-bootstrap';
@@ -20,8 +20,8 @@ const DoubleInfoCard = ({
     backgroundColor: "#fff",
     border: "2.5px solid black",
     display: "inline-block",
-	marginTop: "50px",
-    marginBottom: "10px", 
+    marginTop: "50px",
+    marginBottom: "10px",
   };
 
   const textStyle = {
@@ -44,54 +44,54 @@ const DoubleInfoCard = ({
 
   return (
     <div className="col-md-11 col-sm-12 mt-2">
-        <Row>
-          <div className="col-md-6 text-center">
-            <div style={profilePictureStyle}></div>
-            <h4 style={nameStyle}>{name1}</h4>
-            <div className="mt-1">
-              {tel1 && (
-                <div className="mt-2">
-                  <span style={textStyle}>
-                    Phone: <span style={phoneStyle}>{tel1}</span>
-                  </span>
-                </div>
-              )}
-              {email1 && (
-                <div className="mt-2">
-                  <span style={textStyle}>Email: {email1}</span>
-                </div>
-              )}
-              {discord1 && (
-                <div className="mt-2">
-                  <span style={textStyle}>Discord: {discord1}</span>
-                </div>
-              )}
-            </div>
+      <Row>
+        <div className="col-md-6 text-center">
+          <div style={profilePictureStyle}></div>
+          <h4 style={nameStyle}>{name1}</h4>
+          <div className="mt-1">
+            {tel1 && (
+              <div className="mt-2">
+                <span style={textStyle}>
+                  Phone: <span style={phoneStyle}>{tel1}</span>
+                </span>
+              </div>
+            )}
+            {email1 && (
+              <div className="mt-2">
+                <span style={textStyle}>Email: {email1}</span>
+              </div>
+            )}
+            {discord1 && (
+              <div className="mt-2">
+                <span style={textStyle}>Discord: {discord1}</span>
+              </div>
+            )}
           </div>
-          <div className="col-md-6 text-center">
-            <div style={profilePictureStyle}></div>
-            <h4 style={nameStyle}>{name2}</h4>
-            <div className="mt-1">
-              {tel2 && (
-                <div className="mt-2">
-                  <span style={textStyle}>
-                    Phone: <span style={phoneStyle}>{tel2}</span>
-                  </span>
-                </div>
-              )}
-              {email2 && (
-                <div className="mt-2">
-                  <span style={textStyle}>Email: {email2}</span>
-                </div>
-              )}
-              {discord2 && (
-                <div className="mt-2">
-                  <span style={textStyle}>Discord: {discord2}</span>
-                </div>
-              )}
-            </div>
+        </div>
+        <div className="col-md-6 text-center">
+          <div style={profilePictureStyle}></div>
+          <h4 style={nameStyle}>{name2}</h4>
+          <div className="mt-1">
+            {tel2 && (
+              <div className="mt-2">
+                <span style={textStyle}>
+                  Phone: <span style={phoneStyle}>{tel2}</span>
+                </span>
+              </div>
+            )}
+            {email2 && (
+              <div className="mt-2">
+                <span style={textStyle}>Email: {email2}</span>
+              </div>
+            )}
+            {discord2 && (
+              <div className="mt-2">
+                <span style={textStyle}>Discord: {discord2}</span>
+              </div>
+            )}
           </div>
-        </Row>
+        </div>
+      </Row>
     </div>
   );
 };
@@ -114,14 +114,26 @@ const InfoSection = () => (
 );
 
 const ContactView: React.FC = () => {
+
+  const [contactHidden, setContactHidden] = useState(true);
+
   return (
+
     <Container id="contact-view" fluid>
-      <Col>
-        <InfoSection />
-        <div className="mt-5">
-          <b>* For life-threatening emergencies, please call 911</b>
+      {/* Conditionally render the hidden challenges message */}
+      {contactHidden && (
+        <div className="challenges-hidden-message">
+          <h1 className="hacker-countdown-title font-weight-bold mt-4 mb-4">Stay tuned for more details. They will be released soon!</h1>
         </div>
-      </Col>
+      )}
+      {!contactHidden && (
+        <Col>
+          <InfoSection />
+          <div className="mt-5">
+            <b>* For life-threatening emergencies, please call 911</b>
+          </div>
+        </Col>
+      )}
     </Container>
   );
 };

@@ -28,7 +28,6 @@ const Countdown: React.FC<CountdownProps> = ({
     hoursThreshold = 24,
     minutesThreshold = 60,
 }) => {
-    // Function to calculate time left
     const calculateTimeLeft = (): TimeLeft => {
         const now = new Date();
         const difference = targetDate.getTime() - now.getTime();
@@ -45,10 +44,9 @@ const Countdown: React.FC<CountdownProps> = ({
         };
     };
 
-    // State to hold the time left
     const [timeLeft, setTimeLeft] = useState<TimeLeft>(calculateTimeLeft());
+    const [gradientAngle, setGradientAngle] = useState(0);
 
-    // Update the countdown every second
     useEffect(() => {
         const timer = setInterval(() => {
             setTimeLeft(calculateTimeLeft());
@@ -57,10 +55,21 @@ const Countdown: React.FC<CountdownProps> = ({
         return () => clearInterval(timer);
     }, [targetDate]);
 
-    // Function to format time units with leading zeros
+    useEffect(() => {
+        let lastTime = performance.now();
+        const animateGradient = (time: number) => {
+            const delta = time - lastTime;
+            if (delta > 64) { // Cap the FPS to ~24
+                setGradientAngle((prev) => (prev + 1) % 360);
+                lastTime = time;
+            }
+            requestAnimationFrame(animateGradient);
+        };
+        requestAnimationFrame(animateGradient);
+    }, []);
+
     const formatTimeUnit = (value: number): string => (value < 10 ? `0${value}` : value.toString());
 
-    // Helper to check if we should display a certain time unit
     const shouldShowDays = showDays && (timeLeft.days >= daysThreshold || timeLeft.days > 0);
     const shouldShowHours =
         showHours && (timeLeft.days > 0 || timeLeft.hours >= hoursThreshold || timeLeft.hours > 0);
@@ -71,65 +80,87 @@ const Countdown: React.FC<CountdownProps> = ({
         showSeconds &&
         (timeLeft.days > 0 || timeLeft.hours > 0 || timeLeft.minutes > 0 || timeLeft.seconds > 0);
 
+    const containerStyle = {
+        backgroundSize: '200% 200%',
+        animation: 'gradient-shift 6s infinite',
+        borderRadius: '15px',
+        display: 'flex',
+        justifyContent: 'center',
+        padding: '20px',
+        alignItems: 'center',
+        fontSize: '2.5rem',
+        fontFamily: '"Roboto", sans-serif',
+    };
+
+    const timeUnitStyle = {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        margin: '0 8px',
+        padding: '15px',
+        borderRadius: '10px',
+        transition: 'transform 0.5s ease, opacity 0.5s ease',
+    };
+
+    const numberStyle = {
+        fontSize: '5rem',
+        fontWeight: 'bold',
+        backgroundImage: `linear-gradient(${gradientAngle}deg, #476AB8, #85AED0, #88C5FF)`,
+        WebkitBackgroundClip: 'text',
+        color: 'transparent',
+        textShadow: '0 8px 15px rgba(0, 12, 124, 0.12)',
+        marginBottom: '-10px',
+        opacity: 1,
+        transition: 'opacity 0.5s ease',
+    };
+
+    const labelStyle = {
+        fontSize: '2rem',
+        fontWeight: '300',
+        color: '#666',
+        letterSpacing: '1px',
+        backgroundImage: `linear-gradient(${gradientAngle}deg, #476AB8, #85AED0, #88C5FF)`,
+        WebkitBackgroundClip: 'text',
+        color: 'transparent',
+        textTransform: 'uppercase',
+    };
+
     return (
-        <div style={styles.countdownContainer}>
+        <div style={containerStyle}>
             {shouldShowDays && (
-                <div style={styles.timeUnit}>
-                    <span style={styles.number}>{formatTimeUnit(timeLeft.days)}</span>
-                    <span style={styles.label}>D</span>
+                <div style={timeUnitStyle}>
+                    <span style={{ ...numberStyle, opacity: timeLeft.days >= 0 ? 1 : 0 }}>
+                        {formatTimeUnit(timeLeft.days)}
+                    </span>
+                    <span style={labelStyle}>D</span>
                 </div>
             )}
-
             {shouldShowHours && (
-                <div style={styles.timeUnit}>
-                    <span style={styles.number}>{formatTimeUnit(timeLeft.hours)}</span>
-                    <span style={styles.label}>H</span>
+                <div style={timeUnitStyle}>
+                    <span style={{ ...numberStyle, opacity: timeLeft.hours >= 0 ? 1 : 0 }}>
+                        {formatTimeUnit(timeLeft.hours)}
+                    </span>
+                    <span style={labelStyle}>H</span>
                 </div>
             )}
-
             {shouldShowMinutes && (
-                <div style={styles.timeUnit}>
-                    <span style={styles.number}>{formatTimeUnit(timeLeft.minutes)}</span>
-                    <span style={styles.label}>M</span>
+                <div style={timeUnitStyle}>
+                    <span style={{ ...numberStyle, opacity: timeLeft.minutes >= 0 ? 1 : 0 }}>
+                        {formatTimeUnit(timeLeft.minutes)}
+                    </span>
+                    <span style={labelStyle}>M</span>
                 </div>
             )}
-
             {shouldShowSeconds && (
-                <div style={styles.timeUnit}>
-                    <span style={styles.number}>{formatTimeUnit(timeLeft.seconds)}</span>
-                    <span style={styles.label}>S</span>
+                <div style={timeUnitStyle}>
+                    <span style={{ ...numberStyle, opacity: timeLeft.seconds >= 0 ? 1 : 0 }}>
+                        {formatTimeUnit(timeLeft.seconds)}
+                    </span>
+                    <span style={labelStyle}>S</span>
                 </div>
             )}
         </div>
     );
-};
-
-// Styles for the countdown
-const styles = {
-    countdownContainer: {
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        padding: '10px 20px',
-        borderRadius: '10px',
-        fontSize: '2.5rem',
-    },
-    timeUnit: {
-        display: 'flex',
-        alignItems: 'center',
-        margin: '0 4px',
-        padding: '10px',
-        borderRadius: '5px',
-    },
-    number: {
-        fontSize: '4rem',
-        fontWeight: 'bold',
-        marginRight: '4px',
-    },
-    label: {
-        fontSize: '1.6rem',
-        fontWeight: '300',
-    },
 };
 
 export default Countdown;

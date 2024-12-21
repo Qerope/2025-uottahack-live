@@ -56,30 +56,96 @@
   border-color: #4254dd;
 }
 
-.devpost-button {
-  background-color: rgba(1, 62, 84, 1);
-  border-color: rgba(1, 62, 84, 1);
+.dorahacks-button {
+  background-color: #FF761C; 
+  border-color: #FF761C;
+  color: white;
 }
 
-.devpost-button:hover {
-  background-color: #012835;
-  border-color: #012835;
+.dorahacks-button:hover {
+  background-color: #e25a14; 
+  border-color: #e25a14;
 }
 
-.devpost-button:focus {
-  background-color: #012835;
-  border-color: #012835;
+.dorahacks-button:focus {
+  background-color: #e25a14;
+  border-color: #e25a14;
+  outline: none;  
 }
 
 .guide-button {
-  background: linear-gradient(to bottom, rgba(20, 90, 171, 1), rgba(145, 152, 205, 1));
   border-color: linear-gradient(to bottom, rgba(20, 90, 171, 1), rgba(145, 152, 205, 1));
 }
 
 .guide-button:hover {
-  background: linear-gradient(to bottom, rgba(15, 80, 160, 1), rgba(120, 130, 190, 1)); /* Slightly darker gradient for hover */
   border-color: rgba(15, 80, 160, 1); /* Darker border color for hover */
 }
+
+.act-button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-align: center;
+  border: 2px solid transparent;
+  border-radius: 50px; 
+  cursor: pointer;
+  position: relative;
+  transition: all 0.4s ease;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.act-button:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  transform: translateY(-4px); /* Lift effect */
+  transition: all 0.3s ease;
+}
+
+.act-button:focus {
+  outline: none;
+  border-color: #fff;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.4);
+}
+
+.act-button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+/* Pulsing Animation */
+.act-button:active {
+  animation: pulse 0.6s ease-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.act-button:hover {
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2);
+}
+
 
 .guide-button:focus {
   background-color: #2E79A9;

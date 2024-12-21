@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './ChallengeView.css';
 import { Row } from 'react-bootstrap';
 import cienaLogo from '../assets/ciena--600 1.png';
@@ -74,9 +74,20 @@ const ChallengesSection = () => (
 );
 
 const ChallengeView: React.FC = () => {
+  const [challengesHidden, setChallengesHidden] = useState(true);
+
   return (
     <div id="challenge-view">
-      <ChallengesSection />
+      {/* Conditionally render the hidden challenges message */}
+      {challengesHidden && (
+        <div className="challenges-hidden-message">
+          <h1 className="hacker-countdown-title font-weight-bold mt-4 mb-4">Stay tuned for challenges. They will be released soon!</h1>
+        </div>
+      )}
+      
+      {!challengesHidden && (
+        <ChallengesSection />
+      )}
     </div>
   );
 };

@@ -15,7 +15,7 @@ const DoubleInfoCard = ({ title1 = "", desc1 = (<></>), link1 = "", title2 = "",
 	<div className='col-md-6 col-sm-12 mt-2' style={{ height: '100% !important' }}>
 	  <div className="card p-3 mb-2 rounded">
 		<div>
-		  <p className="heading mt-4 title-gradient" style={{ fontSize: '14pt', fontWeight: 600 }}>uOttaHack 7 @ CRX Building</p>
+		  <p className="heading mt-1 mb-4 title-gradient" >uOttaHack 7 @ CRX Building</p>
 		  <p className="heading mt-2" style={{ fontSize: '14pt', fontWeight: 600 }}>Wifi Options:</p>
   
 		  <div className="d-flex flex-column">
@@ -44,33 +44,32 @@ const DoubleInfoCard = ({ title1 = "", desc1 = (<></>), link1 = "", title2 = "",
 const ButtonCard: React.FC<ButtonCardProps> = ({ title }) => (
 	<div className='col-md-6 col-sm-12 mt-2'>
 	  <div className="card p-3 mb-2 rounded">
-		<h3 className="heading mt-4">{title}</h3>
-		<br />
+		<h1 className="heading mt-1 mb-1 ">{title}</h1>
 		<div className="row">
 		  <div className="col-md-6 mb-3">
-			<a href='https://discord.gg/gBzRU4pJES'>
-			  <Button className='rounded mx-auto h-100 discord-button' style={{ width: '100%', minHeight: '60px' }}>
+			<a href='https://apply.uottahack.ca/discord'>
+			  <Button className='rounded mx-auto h-100 discord-button act-button' style={{ width: '100%', minHeight: '60px' }}>
 				<p className='font-weight-bold h4 mb-0'>Discord</p>
 			  </Button>
 			</a>
 		  </div>
 		  <div className="col-md-6 mb-3">
-			<a href='https://uottahack-6.devpost.com'>
-			  <Button className='rounded mx-auto h-100 devpost-button' style={{ width: '100%', minHeight: '60px' }}>
-				<p className='font-weight-bold h4 mb-0'>Devpost</p>
+			<a href='https://dorahacks.io/hackathon/uottahack7'>
+			  <Button className='rounded mx-auto h-100 dorahacks-button act-button' style={{ width: '100%', minHeight: '60px' }}>
+				<p className='font-weight-bold h4 mb-0'>DoraHacks</p>
 			  </Button>
 			</a>
 		  </div>
 		  <div className="col-md-6 mb-3">
-			<a href='https://discord.gg/gBzRU4pJES'>
-			  <Button className='rounded mx-auto h-100 guide-button' style={{ width: '100%', minHeight: '60px' }}>
+			<a href='/hacker-guide.pdf'>
+			  <Button className='rounded mx-auto h-100 guide-button act-button' style={{ width: '100%', minHeight: '60px' }}>
 				<p className='font-weight-bold h4 mb-0'>Hacker Guide</p>
 			  </Button>
 			</a>
 		  </div>
 		  <div className="col-md-6 mb-3">
-			<a href='https://discord.gg/gBzRU4pJES'>
-			  <Button className='rounded mx-auto h-100 help-button' style={{ width: '100%', minHeight: '60px' }}>
+			<a href='https://apply.uottahack.ca/discord'>
+			  <Button className='rounded mx-auto h-100 help-button act-button' style={{ width: '100%', minHeight: '60px' }}>
 				<p className='font-weight-bold h4 mb-0'>Mentor Help!</p>
 			  </Button>
 			</a>

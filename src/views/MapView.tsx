@@ -60,7 +60,7 @@ const EnlargableImage = ({ src, alt }: { src: string; alt: string }) => {
 };
 
 const MapView: React.FC = () => {
-    const [is3D, setIs3D] = useState(false);
+    const [is3D, setIs3D] = useState(true);
     const [button, setButton] = useState(1);
     const [image, setImage] = useState(floorImages[1]);
     const isMobile = useCheckMobileScreen();
@@ -132,8 +132,8 @@ const MapView: React.FC = () => {
                                                     : 'rgba(120, 144, 197, 1)',
                                             border: '0',
                                             fontWeight: index === button ? 700 : 400,
-                                            width: '35px',
-                                            height: '35px',
+                                            width: '45px',
+                                            height: '45px',
                                             fontSize: '1.2rem',
                                             borderRadius: '50%',
                                             marginBottom: '0.5rem',
