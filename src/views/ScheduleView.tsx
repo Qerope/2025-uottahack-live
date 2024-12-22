@@ -36,8 +36,8 @@ const ScheduleView: React.FC = () => {
 
 	const [mobile, setMobile] = React.useState(true);
 	const [day, setDay] = React.useState(initialDay);
-	const [setDummy] = useState<object>({});
-
+	const [dummy, setDummy] = useState<object | null>(null); 
+	
 	const updateDimensions = () => {
 		const isMobile = window.innerWidth < MOBILE_BREAKPOINT_WIDTH;
 		if (mobile !== isMobile) {
