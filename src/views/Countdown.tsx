@@ -75,10 +75,10 @@ const Countdown: React.FC<CountdownProps> = ({
         showHours && (timeLeft.days > 0 || timeLeft.hours >= hoursThreshold || timeLeft.hours > 0);
     const shouldShowMinutes =
         showMinutes &&
-        (timeLeft.days > 0 || timeLeft.hours > 0 || timeLeft.minutes >= minutesThreshold || timeLeft.minutes > 0);
+        (timeLeft.days > 0 || timeLeft.hours > 0 || timeLeft.minutes >= minutesThreshold || timeLeft.minutes > 0) && (timeLeft.days === 0 && timeLeft.hours < hoursThreshold/2);
     const shouldShowSeconds =
         showSeconds &&
-        (timeLeft.days > 0 || timeLeft.hours > 0 || timeLeft.minutes > 0 || timeLeft.seconds > 0);
+        (timeLeft.days > 0 || timeLeft.hours > 0 || timeLeft.minutes > 0 || timeLeft.seconds > 0) && (timeLeft.days === 0 && timeLeft.hours === 0 && timeLeft.minutes < minutesThreshold/2);
 
     const containerStyle: React.CSSProperties = {
         backgroundSize: '200% 200%',
@@ -109,19 +109,18 @@ const Countdown: React.FC<CountdownProps> = ({
         WebkitBackgroundClip: 'text',
         color: 'transparent',
         textShadow: '0 8px 15px rgba(0, 12, 124, 0.12)',
-        marginBottom: '-10px',
+        marginBottom: '-20px',
         opacity: 1,
         transition: 'opacity 0.5s ease',
     };
 
     const labelStyle: React.CSSProperties = {
-        fontSize: '2rem',
+        fontSize: '1.4rem',
         fontWeight: 300,
-        color: '#666',
+        color: 'transparent',
         letterSpacing: '1px',
         backgroundImage: `linear-gradient(${gradientAngle}deg, #476AB8, #85AED0, #88C5FF)`,
         WebkitBackgroundClip: 'text',
-        textTransform: 'uppercase' as 'uppercase', 
     };
 
     return (
@@ -131,7 +130,7 @@ const Countdown: React.FC<CountdownProps> = ({
                     <span style={{ ...numberStyle, opacity: timeLeft.days >= 0 ? 1 : 0 }}>
                         {formatTimeUnit(timeLeft.days)}
                     </span>
-                    <span style={labelStyle}>D</span>
+                    <span style={labelStyle}>Days</span>
                 </div>
             )}
             {shouldShowHours && (
@@ -139,7 +138,7 @@ const Countdown: React.FC<CountdownProps> = ({
                     <span style={{ ...numberStyle, opacity: timeLeft.hours >= 0 ? 1 : 0 }}>
                         {formatTimeUnit(timeLeft.hours)}
                     </span>
-                    <span style={labelStyle}>H</span>
+                    <span style={labelStyle}>Hours</span>
                 </div>
             )}
             {shouldShowMinutes && (
@@ -147,7 +146,7 @@ const Countdown: React.FC<CountdownProps> = ({
                     <span style={{ ...numberStyle, opacity: timeLeft.minutes >= 0 ? 1 : 0 }}>
                         {formatTimeUnit(timeLeft.minutes)}
                     </span>
-                    <span style={labelStyle}>M</span>
+                    <span style={labelStyle}>Minutes</span>
                 </div>
             )}
             {shouldShowSeconds && (
@@ -155,7 +154,7 @@ const Countdown: React.FC<CountdownProps> = ({
                     <span style={{ ...numberStyle, opacity: timeLeft.seconds >= 0 ? 1 : 0 }}>
                         {formatTimeUnit(timeLeft.seconds)}
                     </span>
-                    <span style={labelStyle}>S</span>
+                    <span style={labelStyle}>Seconds</span>
                 </div>
             )}
         </div>
