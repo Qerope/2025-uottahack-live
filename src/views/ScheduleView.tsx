@@ -16,13 +16,11 @@ import EventListComponent from '../components/EventListComponent';
 import { Row } from 'react-bootstrap';
 
 const days = 
-	[uOttaHack.firstEventDay, uOttaHack.secondEventDay, uOttaHack.thirdEventDay] ;
+	[uOttaHack.firstEventDay, uOttaHack.secondEventDay, uOttaHack.thirdEventDay];
 days.forEach(day => day.events.forEach(event => (event.duration = Math.abs(event.duration))));
 
 const ScheduleView: React.FC = () => {
-	
 	const [daysVar] = React.useState(days);
-	
 	const firstDay = daysVar[0];
 	const secondDay = daysVar[1];
 	const thirdDay = daysVar[2];
@@ -36,8 +34,8 @@ const ScheduleView: React.FC = () => {
 
 	const [mobile, setMobile] = React.useState(true);
 	const [day, setDay] = React.useState(initialDay);
-	const [dummy, setDummy] = useState<object | null>(null); 
-	
+	const [dummy, setDummy] = useState<object | null>(null);
+
 	const updateDimensions = () => {
 		const isMobile = window.innerWidth < MOBILE_BREAKPOINT_WIDTH;
 		if (mobile !== isMobile) {
@@ -65,26 +63,26 @@ const ScheduleView: React.FC = () => {
 	return (
 		<Container id="schedule" fluid>
 			<div className="d-flex flex-column" >
-			<ButtonGroup className="button-group rounded" style={{ width: '90%', margin: '0 0' }}>
-				{daysVar.map((dayInfo, index) => (
-					<Button
-					key={`btn-group-${index}`}
-					onClick={() => setDay(dayInfo)}
-					className='ml-2 mr-2 mb-5 mt-5'
-					style={{
-						backgroundColor: index === day.index ? '#476ab8' : '#f8f9fa',
-						border: '0',
-						fontWeight: index === day.index ? 700 : 400,
-						borderRadius: '1rem',
-						padding: '0.8rem 0 0.8rem 0',
-						outline: 'none',
-						boxShadow: 'none'
-					}}
-					variant={index === day.index ? 'dark' : 'light'}
-					>
-					{(!mobile && dayInfo.longTitle) || dayInfo.title}
-					</Button>
-				))}
+				<ButtonGroup className="button-group rounded" style={{ width: '90%', margin: '0 0' }}>
+					{daysVar.map((dayInfo, index) => (
+						<Button
+							key={`btn-group-${index}`}
+							onClick={() => setDay(dayInfo)}
+							className='ml-2 mr-2 mb-5 mt-5'
+							style={{
+								backgroundColor: index === day.index ? '#476ab8' : '#f8f9fa',
+								border: '0',
+								fontWeight: index === day.index ? 700 : 400,
+								borderRadius: '1rem',
+								padding: '0.8rem 0 0.8rem 0',
+								outline: 'none',
+								boxShadow: 'none'
+							}}
+							variant={index === day.index ? 'dark' : 'light'}
+						>
+							{(!mobile && dayInfo.longTitle) || dayInfo.title}
+						</Button>
+					))}
 				</ButtonGroup>
 			</div>
 			<Row>
@@ -99,6 +97,10 @@ const ScheduleView: React.FC = () => {
 					</div>
 				</div>
 			</Row>
+			{/* Add the timezone note */}
+			<div style={{ textAlign: 'left', marginTop: '5px', marginLeft: '15px', fontSize: '14px', color: '#6c757d' }}>
+				*All event times are displayed in EST
+			</div>
 		</Container>
 	);
 };
