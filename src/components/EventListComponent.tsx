@@ -99,12 +99,15 @@ class EventListComponent extends React.Component<PropTypesDay, EventListFilterSt
 
   handleFilterChange(event: React.ChangeEvent<HTMLInputElement>) {
     const { name, checked } = event.target;
-    this.setState((prevState) => ({
-      selectedFilters: {
-        ...prevState.selectedFilters,
-        [name]: checked
-      }
-    }));
+    try {
+      this.setState((prevState) => ({
+        selectedFilters: {
+          ...prevState.selectedFilters,
+          [name]: checked
+        }
+      }));
+    }
+    catch { }
   }
 
   getFilteredEvents() {
