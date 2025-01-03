@@ -99,7 +99,7 @@ const ScheduleView: React.FC = () => {
 			</Row>
 			{/* Add the timezone note */}
 			<div style={{ textAlign: 'left', marginTop: '5px', marginLeft: '15px', fontSize: '14px', color: '#6c757d' }}>
-				*All event times are displayed in EST
+				*All event times are displayed in your local time zone
 			</div>
 		</Container>
 	);
