@@ -49,8 +49,8 @@ const day1 = (
 			<h5>Dinner<span className="time">18:00</span></h5>
 			<div className="workshops">
 				<FoodCard
-					meal="Dinner 🥖"
-					title="Subway 🚇"
+					meal="Shawarma Express 🌯"
+					title="Shawarma Express🥙"
 					items={[
 					  ['Subway Sandwich', 'choice of bread, protein (e.g., turkey, ham, veggie patty), various vegetables, cheese, sauce'],
 					  ['Chips', 'potato chips or any preferred side'],
@@ -86,7 +86,7 @@ const day2 = (
       <h5>Lunch<span className="time">12:00</span></h5>
       <div className="workshops">
         <FoodCard
-          meal="Lunch 🍱"
+          meal="Raon Kitchen 🍱"
           title="Raon Kitchen 🍚"
           items={[
             ['Kimchi', 'napa cabbage, Korean radish, garlic, ginger, Korean red pepper flakes, fish sauce, salted shrimp'],
@@ -104,7 +104,7 @@ const day2 = (
       <h5>Dinner<span className="time">18:00</span></h5>
       <div className="workshops">
         <FoodCard
-          meal="Dinner 🫔"
+          meal="BiBi's 🫔"
           title="BiBi's 🌯"
           items={[
             ['Beef/Chicken/Falafel Wrap', 'white pepper, sumac, cardamom, cinnamon, lemon juice, canola oil, red vinegar, pomegranate molasses, sesame sauce, chopped onion'],
@@ -141,7 +141,8 @@ const day3 = (
       <h5>Lunch<span className="time">12:00</span></h5>
       <div className="workshops">
         <FoodCard
-          meal="Lunch 🥪"
+          meal="BanhMiYes 🥖"
+		  title="BanhMiYes 🥪"
           items={[
             ['Beef/Chicken/Falafel', 'white pepper, sumac, cardamom, cinnamon, lemon juice, canola oil, red vinegar, pomegranate molasses, sesame sauce, chopped onion'],
             ['Hummus', 'chickpeas, sesame sauce, olive oil, lemon juice, white pepper'],
