@@ -153,7 +153,7 @@ const karaokeEvent: IEvent = {
 const midnightSnackEvent2: IEvent = {
     name: "Midnight Snack",
     subtitle: "🍕 Fuel for the Night",
-    start: new Date('2025-01-18T11:30:00-05:00'),
+    start: new Date('2025-01-18T23:30:00-05:00'),
     duration: 120,
     category: EventCategory.Food,
     location: Location.FoodC309,
