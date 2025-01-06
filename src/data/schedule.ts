@@ -199,6 +199,46 @@ const finalLunchEvent: IEvent = {
     description: "🍕 Enjoy a relaxing lunch before the final ceremony."
 };
 
+const totebagEvent: IEvent = {
+    name: "Totebag Painting",
+    subtitle: "🌟 Design & Shine",
+    start: new Date('2025-01-18T15:00:00-05:00'),
+    duration: 60, 
+    category: EventCategory.Workshop1,
+    location: Location.WorkshopC440,
+    description: "👜 Unleash your creativity on a tote!"
+};
+
+const hackerWorkshop1Event: IEvent = {
+    name: "Hacker Workshop",
+    subtitle: "🧑‍🏫 Learn & Grow",
+    start: new Date('2025-01-18T20:00:00-05:00'),
+    duration: 60, 
+    category: EventCategory.Workshop1,
+    location: Location.WorkshopC140,
+    description: "🎓 Level up your skills with expert-led workshops."
+};
+
+const hackerWorkshop2Event: IEvent = {
+    name: "Hacker Workshop",
+    subtitle: "🧑‍🏫 Learn & Grow",
+    start: new Date('2025-01-18T09:00:00-05:00'),
+    duration: 60, 
+    category: EventCategory.Workshop1,
+    location: Location.WorkshopC140,
+    description: "🎓 Level up your skills with expert-led workshops."
+};
+
+const hackerWorkshop3Event: IEvent = {
+    name: "Hacker Workshop",
+    subtitle: "🧑‍🏫 Learn & Grow",
+    start: new Date('2025-01-18T21:00:00-05:00'),
+    duration: 60, 
+    category: EventCategory.Workshop1,
+    location: Location.WorkshopC140,
+    description: "🎓 Level up your skills with expert-led workshops."
+};
+
 const firstEventDay: IEventDay = {
     index: 0,
     title: "Friday 🎉",
@@ -230,7 +270,11 @@ const secondEventDay: IEventDay = {
         dinnerEvent,
         workshopEvent2,
         karaokeEvent,
-		midnightSnackEvent2
+		midnightSnackEvent2,
+        totebagEvent,
+        hackerWorkshop1Event,
+        hackerWorkshop2Event,
+        hackerWorkshop3Event
     ]
 };
 

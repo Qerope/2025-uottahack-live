@@ -39,7 +39,7 @@ const WorkshopView: React.FC = () => {
 							(day, index) =>
 								filterWorkshops(day.events).length !== 0 && (
 									<div key={`workshop-day-${index}`} className="workshop-day">
-										<h5>Day {index + 1}</h5>
+										<h5>Saturday, January 18</h5>
 										<div className="workshops ">
 											<div className='col-md-12 row'>
 											{filterWorkshops(day.events).map((event, index) => (

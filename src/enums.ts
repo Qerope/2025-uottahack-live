@@ -51,6 +51,7 @@ export enum Location {
 	WorkshopC010 = 'Workshop Room C010',
 	WorkshopC040 = 'Workshop Room C040',
 	WorkshopC140 = 'Workshop Room C140',
+	WorkshopC440 = 'Workshop Room C440',
 	Staging = 'Staging - First Floor Classroom',
 	HackerSpace = 'Hacker Space Floor 5',
 	MovieTheatre = 'Movie Theater C240',
