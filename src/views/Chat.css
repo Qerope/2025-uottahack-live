@@ -17,3 +17,33 @@
     background: transparent; /* Light gray color for the track */
     border-radius: 10px; /* Rounded corners for the track */
 }
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* .fade-in-message {
+    animation: fadeIn 0.3s ease-out forwards;
+} */
+
+
+.fade-in-char {
+    opacity: 0;
+    animation: fadeInChar 0.3s ease forwards;
+}
+
+@keyframes fadeInChar {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

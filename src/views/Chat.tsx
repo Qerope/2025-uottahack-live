@@ -1,5 +1,6 @@
 import React, { useState, ChangeEvent } from 'react';
 import { Button, Form, Container, Row, Col, ListGroup, Alert } from 'react-bootstrap';
+import axios from 'axios';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './Chat.css';
 
@@ -12,17 +13,6 @@ const Chat: React.FC = () => {
     const [currentTypingText, setCurrentTypingText] = useState('');
 
     const simulateTyping = async (fullResponse: string) => {
-        setIsTyping(true);
-        const words = fullResponse.split(' ');
-        let currentText = '';
-
-        for (let word of words) {
-            currentText += (currentText ? ' ' : '') + word;
-            setCurrentTypingText(currentText);
-            // Random delay between 100-300ms for more natural typing feel
-            await new Promise(resolve => setTimeout(resolve, Math.random() * 200 + 100));
-        }
-
         setMessages(prev => [...prev, { text: fullResponse, from: 'chatbot' }]);
         setCurrentTypingText('');
         setIsTyping(false);
@@ -35,9 +25,22 @@ const Chat: React.FC = () => {
             setMessage('');
             setIsSending(true);
 
-            const chatbotResponse = "Hey there! uOttaChat is currently offline for maintenance.";
-            await new Promise(resolve => setTimeout(resolve, 500));
-            await simulateTyping(chatbotResponse);
+            try {
+                setIsTyping(true);
+                const response = await axios.post('https://chat.uottahack.ca/chat', { userMessage: message });
+
+                const botMessage = response.data.botMessage;
+                if (botMessage) {
+                    await simulateTyping(botMessage);
+                }
+            } catch (error) {
+                console.error('Error sending message:', error);
+                setMessages(prev => [
+                    ...prev,
+                    { text: 'Sorry, something went wrong. Please try again later.', from: 'chatbot' }
+                ]);
+            }
+
             setIsSending(false);
         }
     };
@@ -48,7 +51,7 @@ const Chat: React.FC = () => {
                 <Col xs={12} className="d-flex flex-column h-100">
                     <div className="text-center">
                         <p className="text-left mb-4" style={{ fontSize: '0.9rem' }}>
-                            Hey hackers, sponsors, volunteers, and mentors! Meet uOttaChat – your go-to event chatbot! Whether you have questions about the hackathon, need specific details about challenges, event logistics (like room assignments), food options, the full event schedule, or anything else – uOttaChat has got you covered!
+                            Hey hackers, sponsors, volunteers, and mentors! Meet uOttaChat – your go-to support for uOttaHack 7! Whether you have questions about the hackathon, need specific details about challenges, event logistics (like room assignments), food options, the full event schedule, or anything else – uOttaChat has got you covered!
                         </p>
                         <Alert className="text-left py-2 mb-4" variant="warning" style={{ fontSize: '0.8rem' }}>
                             <b>Disclaimer:</b> uOttaChat can make mistakes. Check important info.
@@ -102,6 +105,7 @@ const Chat: React.FC = () => {
                                             position: 'relative',
                                             paddingLeft: msg.from === 'chatbot' ? '40px' : '16px',
                                         }}
+                                        className="fade-in-message" 
                                     >
                                         {msg.from === 'chatbot' && (
                                             <div style={{
@@ -115,7 +119,11 @@ const Chat: React.FC = () => {
                                                 backgroundColor: '#58A4DC',
                                             }} />
                                         )}
-                                        {msg.text}
+                                        {msg.text.split('').map((char, idx) => (
+                                            <span key={idx} className="fade-in-char" style={{ animationDelay: `${idx * 0.03}s` }}>
+                                                {char}
+                                            </span>
+                                        ))}
                                     </ListGroup.Item>
                                 ))}
                                 {isTyping && (
@@ -200,7 +208,6 @@ const Chat: React.FC = () => {
                                         fontWeight: 'bold',
                                         color: '#fff'
                                     }}></i>
-
                                 </Button>
                             </Form>
                         </div>
