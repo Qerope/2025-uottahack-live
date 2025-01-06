@@ -1,7 +1,6 @@
 import React from 'react';
 import './NavBarComponent.css';
 
-import { RoutePath } from '../enums';
 import { ROUTES_WITH_TITLES } from '../constants';
 
 import { NavLink } from 'react-router-dom';

@@ -9,6 +9,7 @@ import FoodMenuView from './views/FoodMenuView';
 import ContactView from './views/ContactView';
 import ChallengeView from './views/ChallengeView';
 import Chat from './views/Chat';
+import ResourcesView from './views/ResourcesView';
 
 const SHOW_AS_LIVE_DATES = true;
 const MOBILE_BREAKPOINT_WIDTH = 992;
@@ -24,6 +25,11 @@ const ROUTES_WITH_TITLES: IRouteItem[] = [
 		path: RoutePath.Schedule,
 		title: 'Schedule',
 		component: ScheduleView
+	},
+	{
+		path: RoutePath.Resources,
+		title: 'Resources',
+		component: ResourcesView
 	},
 	{
 		path: RoutePath.Map,
