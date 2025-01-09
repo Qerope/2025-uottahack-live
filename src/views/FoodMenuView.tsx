@@ -1,6 +1,5 @@
 import React from 'react';
 import './FoodMenuView.css';
-import '../assets/image 60.png'
 
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
@@ -82,20 +81,32 @@ const day2 = (
       </div>
     </div>
 
-    <div className="workshop-day">
+    <div className="workshop-day raon-img">
       <h5>Lunch<span className="time">12:00</span></h5>
       <div className="workshops">
         <FoodCard
           meal="Raon Kitchen 🍱"
           title="Raon Kitchen 🍚"
           items={[
-            ['Kimchi', 'napa cabbage, Korean radish, garlic, ginger, Korean red pepper flakes, fish sauce, salted shrimp'],
-            ['Gochujang Sauce', 'fermented soybean paste, glutinous rice powder, barley malt powder, red chili powder, soy sauce'],
-            ['Marinated Bulgogi Beef', 'beef sirloin, soy sauce, sugar, sesame oil, garlic, ginger, black pepper'],
-            ['Bibimbap Rice Bowl', 'steamed rice, assorted vegetables, fried egg, gochujang sauce'],
-            ['Add-ons','Kimbap Rolls, Japchae Noodles, Tofu Side Dish']
-          ]}
-          imageSrc={require('../assets/image 60.png')}
+			[
+			  'Bibimbap',
+			  'Raon Kitchen\'s signature Korean dish. A rice bowl with assorted vegetables, kimchi, and your choice of protein. Includes black & white rice, carrots, cabbage, spinach, mushrooms, and egg garnish (optional for vegans). Served with house-made sauces: chogochujang, lemon soy, sesame oil, and seeds.'
+			],
+			[
+			  'Tofu (Vegan, Gluten-Free)',
+			  'Mild, soy sauce-based protein option.'
+			],
+			[
+			  'Chicken (Halal, Gluten-Free)',
+			  'Spicy, gochujang-based protein option.'
+			],
+			[
+			  'Beef (Not Gluten-Free)',
+			  'Mild, soy sauce-based protein option.'
+			]
+		  ]}
+		  
+          imageSrc={require('../assets/raon.png')}
         />
       </div>
     </div>
@@ -143,13 +154,12 @@ const day3 = (
         <FoodCard
           meal="BanhMiYes 🥖"
 		  title="BanhMiYes 🥪"
-          items={[
-            ['Beef/Chicken/Falafel', 'white pepper, sumac, cardamom, cinnamon, lemon juice, canola oil, red vinegar, pomegranate molasses, sesame sauce, chopped onion'],
-            ['Hummus', 'chickpeas, sesame sauce, olive oil, lemon juice, white pepper'],
-            ['Tabbouleh/Fattoush Salad', 'parsley, tomato, bulgur wheat, olive oil, lemon juice'],
-            ['Addons','Garlic Potatoes, Rice, Pita']
-          ]}
-          imageSrc={require('../assets/image 60.png')}
+          items = {[
+			['Grilled Beef (Halal)', 'Halal ground beef with homemade sauce, Vietnamese kimchi, coriander, and hot sauce. Dairy-Free, Nut-Free, Halal, Contains Gluten, Contains Egg.'],
+  			['Pulled Chicken', 'Tender chicken with mayo, pickled carrot, cucumber, and coriander. Dairy-Free, Nut-Free, Contains Gluten, Contains Egg.'],
+  			['Tofu & Veggie Pork', 'Crispy tofu with veggie pork, pickles, cucumber, and green onion. Dairy-Free, Nut-Free, Vegetarian, Contains Gluten, Contains Egg.']
+			]}
+          imageSrc={require('../assets/banhmiyes.webp')}
         />
       </div>
     </div>
@@ -197,7 +207,7 @@ const FoodMenuView: React.FC = () => {
 				Exciting updates are coming your way—stay tuned for more delicious details, arriving soon! 🍽️🚀
 				</h1>
 
-				{/* commenting out for now, uncomment when were ready to show this info
+				// commenting out for now, uncomment when were ready to show this info
 				<div className="d-flex flex-column">
 				<ButtonGroup className="button-group rounded" style={{ width: '90%', margin: '0 auto'}}>
 					{(mobile ? dayLabels : dayLabelsLong).map((label, index) => (
@@ -224,7 +234,7 @@ const FoodMenuView: React.FC = () => {
 
 				<div className="workshops">
 				{days[button]}
-				</div> */}
+				</div> 
 			</Col>
 			</Container>
 	);

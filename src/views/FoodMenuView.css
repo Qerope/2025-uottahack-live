@@ -68,6 +68,15 @@
 	justify-content: center;
 	align-items: center;
   }
+
+  .food-image {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 400px; /* Adjust size as needed */
+	max-height: 250px; /* Maintain proportions */
+	overflow: hidden;
+  }
   
   /* Mobile Responsive Layout */
   .food-card .d-flex {
