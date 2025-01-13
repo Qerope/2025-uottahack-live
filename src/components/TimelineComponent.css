@@ -3,10 +3,11 @@
     overflow: auto;
     width: 100%;
     outline: none;
-    height: 74vh;
+    height: 64vh;
     border-radius: 12px; 
-    background: rgba(126, 152, 208, 0.1);
-	outline: 2px solid rgba(71, 106, 184, 1);
+    background: rgb(255, 255, 255);
+	outline: 1px solid rgb(216, 228, 255);
+    padding: 10px;
 }
 
 .timeline-label,
@@ -22,11 +23,12 @@
     font-weight: bold;
     transition: color 0.2s ease;
     text-align: left;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
 }
 
-
 .timeline-label-marker {
-    height: 7%;
+    height: 2%;
     width: 2px;
     background: rgba(0, 0, 0, 0.2);
 }
@@ -42,7 +44,7 @@
 
 #timeline-slider .triangle-pointer {
     position: absolute;
-    width: 10px;
+    /* width: 10px; */
     left: -5px;
 }
 
@@ -79,7 +81,6 @@
     pointer-events: none;
     overflow: hidden;
     text-overflow: ellipsis;
-	margin-top: 1px;
 }
 
 .timeline-track-bar {
@@ -103,5 +104,5 @@
 }
 
 .timeline-track-item.present > .timeline-track-bar {
-    box-shadow: 0 0 16px rgba(255, 0, 0, 0.7);
+    box-shadow: 0 0 16px rgba(46, 42, 42, 0.7);
 }

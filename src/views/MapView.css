@@ -34,7 +34,7 @@
     color: white;
     border: none;
     font-weight: 600;
-    font-size: 0.5rem; 
+    font-size: 0.5rem;
     width: 45px;
     height: 45px;
     border-radius: 50%;
@@ -61,10 +61,10 @@
 
 #view-switch {
     position: relative;
-    width: 100px;
+    width: 90px;
     height: 40px;
     background-color: white;
-    border: 2px solid rgba(120, 144, 197, 0.8);
+    border: 2px solid rgb(216, 228, 255);
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -90,7 +90,7 @@
 }
 
 #view-switch.active .toggle-slider {
-    transform: translateX(60px);
+    transform: translateX(47px);
 }
 
 #view-switch .toggle-label {
@@ -112,7 +112,8 @@
 /* Responsive Styles */
 @media (max-width: 1024px) {
     .map-layout {
-        flex-direction: column; /* Stack vertically on smaller screens */
+        flex-direction: column;
+        /* Stack vertically on smaller screens */
     }
 
     .image-column {
@@ -120,18 +121,21 @@
     }
 
     .floor-layouts img {
-        width: 90%; /* Scale image */
+        width: 90%;
+        /* Scale image */
     }
 
     /* Horizontal buttons for mobile */
     .button-group {
-        flex-direction: row; /* Make buttons horizontal on mobile */
+        flex-direction: row;
+        /* Make buttons horizontal on mobile */
         justify-content: center;
         margin-bottom: 20px;
     }
 
     .floor-button {
-        font-size: 1rem; /* Adjust font size for better readability */
+        font-size: 1rem;
+        /* Adjust font size for better readability */
         width: 50px;
         height: 50px;
         margin: 5px;
@@ -158,5 +162,43 @@
         font-size: 0.8rem;
         width: 40px;
         height: 40px;
+    }
+}
+
+.skeleton-loader {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+    border-radius: 10px;
+}
+
+@keyframes loading {
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+.skeleton-loader {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite linear;
+    border-radius: 10px;
+}
+
+@keyframes loading {
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
     }
 }

@@ -63,17 +63,17 @@ const ScheduleView: React.FC = () => {
 	return (
 		<Container id="schedule" fluid>
 			<div className="d-flex flex-column" >
-				<ButtonGroup className="button-group rounded" style={{ width: '90%', margin: '0 0' }}>
+				<ButtonGroup className="button-group rounded" style={{ width: '75%', margin: '0 0' }}>
 					{daysVar.map((dayInfo, index) => (
 						<Button
 							key={`btn-group-${index}`}
 							onClick={() => setDay(dayInfo)}
-							className='ml-2 mr-2 mb-5 mt-5'
+							className='ml-2 mr-2 mb-1 mt-5'
 							style={{
 								backgroundColor: index === day.index ? '#476ab8' : '#f8f9fa',
 								border: '0',
 								fontWeight: index === day.index ? 700 : 400,
-								borderRadius: '1rem',
+								borderRadius: '100px',
 								padding: '0.8rem 0 0.8rem 0',
 								outline: 'none',
 								boxShadow: 'none'

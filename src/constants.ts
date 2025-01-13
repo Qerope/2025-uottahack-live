@@ -26,11 +26,11 @@ const ROUTES_WITH_TITLES: IRouteItem[] = [
 		title: 'Schedule',
 		component: ScheduleView
 	},
-	{
-		path: RoutePath.Resources,
-		title: 'Resources',
-		component: ResourcesView
-	},
+	// {
+	// 	path: RoutePath.Resources,
+	// 	title: 'Resources',
+	// 	component: ResourcesView
+	// },
 	{
 		path: RoutePath.Map,
 		title: 'Map',

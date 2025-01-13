@@ -10,12 +10,12 @@ import twittercard_image from './assets/twitter-card.jpg';
 
 // Metadata for the page
 export const metadata = {
-  title: "uOttaHack 7",
+  title: "uOttaHack Live",
   description:
     "Join us to attend uOttaHack 7, the most anticipated hackathon in Ottawa, proudly celebrating 7 years of innovation, creativity, and community. This year, we’re leveling up the hacker experience with exciting new initiatives, exclusive workshops, inspiring keynote speakers, and unforgettable activities. Whether you're a seasoned hacker or a first-timer, uOttaHack 7 promises to be an incredible weekend of collaboration, learning, and fun.",
   openGraph: {
     type: 'website',
-    title: "uOttaHack 7 - 2025",
+    title: "uOttaHack Live - 2025",
     description: "Join us to attend uOttaHack 7, the most anticipated hackathon in Ottawa.",
     url: "https://2025.uOttahack.com",
     images: [
