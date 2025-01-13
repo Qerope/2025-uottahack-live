@@ -51,12 +51,13 @@ const day1 = (
 					meal="Shawarma Express 🌯"
 					title="Shawarma Express🥙"
 					items={[
-					  ['Subway Sandwich', 'choice of bread, protein (e.g., turkey, ham, veggie patty), various vegetables, cheese, sauce'],
-					  ['Chips', 'potato chips or any preferred side'],
-					  ['Salad', 'lettuce, tomatoes, cucumbers, olives, dressing'],
-					  ['Add-ons', 'pickles, jalapeños, onions, extra cheese']
-					]}
-					imageSrc={require('../assets/image 60.png')}
+						['Included Items', 'Falafel, chicken and beef with rice, garlic potatoes, hummus, garlic sauce, pickles, fattoush salad, tabbouli salad, and pita bread'],
+						['Falafel', 'Chickpeas, parsley, garlic, cumin, smoked paprika, wheat'],
+						['Tabbouli Salad', 'Parsley, tomato, bulgur wheat, olive oil, lemon juice'],
+						['Garlic Sauce', 'Garlic, oil, lemon, egg'],
+						['Baklawa', 'Nuts, syrup, phyllo dough']
+					  ]}					  
+					imageSrc={require('../assets/images/shawarmaexpress.png')}
 				/>
 			</div>
 		</div>
@@ -122,7 +123,7 @@ const day2 = (
             ['Tabbouleh/Fattoush Salad', 'parsley, tomato, bulgur wheat, olive oil, lemon juice'],
             ['Addons','Garlic Potatoes, Rice, Pita']
           ]}
-          imageSrc={require('../assets/image 60.png')}
+          imageSrc={require('../assets/images/bibis.png')}
         />
       </div>
     </div>
