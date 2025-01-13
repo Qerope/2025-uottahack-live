@@ -71,12 +71,11 @@ const day2 = (
         <FoodCard
           meal="Breakfast 🥐"
           items={[
-            ['Baked Goods', 'Muffins, croissants, braided apple turnovers, mini chocolatines'],
-            ['Bagels', 'Kettleman\'s bagels & cream cheese'],
+			['Baked Goods', 'muffins (banana chocolate chip/chocolate chip/double chocolate), croissants'],
             ['Fruits','Apples, clementines, bananas'],
             ['Beverages','Coffee, tea, water, redbull ;)']
           ]}
-          imageSrc={require('../assets/image 60.png')}
+          imageSrc={require('../assets/images/muffins.png')}
         />
       </div>
     </div>
@@ -138,12 +137,11 @@ const day3 = (
         <FoodCard
           meal="Breakfast 🥐"
           items={[
-            ['Baked Goods', 'muffins, croissants, braided apple turnovers, mini chocolatines'],
-            ['Bagels', 'Kettleman\'s bagels & cream cheese'],
+            ['Baked Goods', 'muffins (banana chocolate chip/chocolate chip/double chocolate), croissants'],
             ['Fruits','Apples, clementines, bananas'],
             ['Beverages','Coffee, tea, water, redbull ;)']
           ]}
-          imageSrc={require('../assets/image 60.png')}
+          imageSrc={require('../assets/images/muffins.png')}
         />
       </div>
     </div>
