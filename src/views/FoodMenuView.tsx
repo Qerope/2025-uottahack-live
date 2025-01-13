@@ -167,7 +167,7 @@ const day3 = (
 
 const days = [day1, day2, day3];
 const dayLabels = ['Fri', 'Sat', 'Sun'];
-const dayLabelsLong = ['Friday January 17', 'Saturday January 18', 'Sunday January 19'];
+const dayLabelsLong = ['Friday 🎉', 'Saturday 🕺', 'Sunday 🌅'];
 
 const FoodMenuView: React.FC = () => {
 	let initialDay = 0;
