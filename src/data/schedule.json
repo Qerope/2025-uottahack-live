@@ -1,0 +1,234 @@
+{
+    "uOttaHack": {
+      "firstEventDay": {
+        "index": 0,
+        "title": "Friday 🎉",
+        "longTitle": "Friday, January 17",
+        "date": "2025-01-17T00:00:00-05:00",
+        "events": [
+          {
+            "name": "Registration",
+            "subtitle": "✨ Check-in & Badge Pickup",
+            "start": "2025-01-17T17:00:00-05:00",
+            "duration": 180,
+            "category": "main",
+            "location": "CRXLobby",
+            "description": "🏷️ Pick up your event badge, grab some swag, and get ready to hack!"
+          },
+          {
+            "name": "Dinner",
+            "subtitle": "🍔 Welcome Feast",
+            "start": "2025-01-17T18:00:00-05:00",
+            "duration": 90,
+            "category": "food",
+            "location": "FoodC309",
+            "description": "🍽️ Enjoy delicious food while mingling with fellow participants."
+          },
+          {
+            "name": "Opening Ceremony",
+            "subtitle": "🎉 Official Kickoff",
+            "start": "2025-01-17T20:00:00-05:00",
+            "duration": 90,
+            "category": "main",
+            "location": "UCUAuditorium",
+            "description": "🎤 The event begins! Hear from inspiring speakers and get pumped!"
+          },
+          {
+            "name": "Career Fair",
+            "subtitle": "💼 Meet Industry Pros",
+            "start": "2025-01-17T21:30:00-05:00",
+            "duration": 120,
+            "category": "career",
+            "location": "CRXLobby",
+            "description": "🤝 Connect with recruiters and explore awesome career opportunities."
+          },
+          {
+            "name": "Team Formation",
+            "subtitle": "🧑‍🤝‍🧑 Find Your Dream Team",
+            "start": "2025-01-17T21:30:00-05:00",
+            "duration": 60,
+            "category": "activity1",
+            "location": "RestRoomFloor5",
+            "description": "📝 Join a team or form your own to work on your hackathon project!"
+          },
+          {
+            "name": "Hacking Begins",
+            "subtitle": "👩‍💻 Let the Coding Begin!",
+            "start": "2025-01-17T23:00:00-05:00",
+            "duration": 0,
+            "category": "main",
+            "description": "💻 It's time to start building your masterpiece!"
+          }
+        ]
+      },
+      "secondEventDay": {
+        "index": 1,
+        "title": "Saturday 🕺",
+        "longTitle": "Saturday, January 18",
+        "date": "2025-01-18T00:00:00-05:00",
+        "events": [
+          {
+            "name": "Midnight Snack",
+            "subtitle": "🍕 Fuel for the Night",
+            "start": "2025-01-18T00:00:00-05:00",
+            "duration": 90,
+            "category": "food",
+            "location": "FoodC309",
+            "description": "🌙 Grab a tasty snack and keep the energy high as you hack into the night."
+          },
+          {
+            "name": "Breakfast",
+            "subtitle": "🥞 Morning Fuel",
+            "start": "2025-01-18T07:00:00-05:00",
+            "duration": 90,
+            "category": "food",
+            "location": "FoodC309",
+            "description": "🍳 Wake up and start your day with a hearty breakfast!"
+          },
+          {
+            "name": "Caffeine Cafe",
+            "subtitle": "☕ Coffee & Snacks",
+            "start": "2025-01-18T11:00:00-05:00",
+            "duration": 60,
+            "category": "food",
+            "location": "CRX427",
+            "description": "🍩 Grab a coffee, a snack, and power through the day!"
+          },
+          {
+            "name": "Workshop",
+            "subtitle": "🧑‍🏫 Learn & Grow",
+            "start": "2025-01-18T11:00:00-05:00",
+            "duration": 60,
+            "category": "workshop1",
+            "location": "WorkshopC140",
+            "description": "🎓 Level up your skills with expert-led workshops."
+          },
+          {
+            "name": "Career Fair",
+            "subtitle": "💼 Meet Industry Pros",
+            "start": "2025-01-18T11:30:00-05:00",
+            "duration": 300,
+            "category": "career",
+            "location": "CRXLobby",
+            "description": "🤝 Connect with recruiters and explore awesome career opportunities."
+          },
+          {
+            "name": "Lunch",
+            "subtitle": "🍔 Midday Refuel",
+            "start": "2025-01-18T12:00:00-05:00",
+            "duration": 90,
+            "category": "food",
+            "location": "FoodC309",
+            "description": "🍲 Take a break, grab a bite, and recharge for the next challenge."
+          },
+          {
+            "name": "Pet Therapy",
+            "subtitle": "🐶 Relax with Cute Animals",
+            "start": "2025-01-18T12:00:00-05:00",
+            "duration": 90,
+            "category": "activity2",
+            "location": "CRXLobby",
+            "description": "🐾 Take a break with therapy animals and de-stress."
+          },
+          {
+            "name": "Dinner",
+            "subtitle": "🍔 Welcome Feast",
+            "start": "2025-01-18T18:00:00-05:00",
+            "duration": 90,
+            "category": "food",
+            "location": "FoodC309",
+            "description": "🍽️ Enjoy delicious food while mingling with fellow participants."
+          },
+          {
+            "name": "Workshop",
+            "subtitle": "🧑‍🏫 Learn & Grow",
+            "start": "2025-01-18T18:00:00-05:00",
+            "duration": 60,
+            "category": "workshop1",
+            "location": "WorkshopC140",
+            "description": "🎓 Level up your skills with expert-led workshops."
+          },
+          {
+            "name": "Karaoke",
+            "subtitle": "🎤 Sing Your Heart Out",
+            "start": "2025-01-18T21:30:00-05:00",
+            "duration": 105,
+            "category": "activity1",
+            "location": "RestRoomFloor5",
+            "description": "🎶 Grab the mic, sing your favorite song, and have some fun!"
+          },
+          {
+            "name": "Midnight Snack",
+            "subtitle": "🍕 Fuel for the Night",
+            "start": "2025-01-18T11:30:00-05:00",
+            "duration": 120,
+            "category": "food",
+            "location": "FoodC309",
+            "description": "🌙 Grab a tasty snack and keep the energy high as you hack into the night."
+          }
+        ]
+      },
+      "thirdEventDay": {
+        "index": 2,
+        "title": "Sunday 🌅",
+        "longTitle": "Sunday, January 19",
+        "date": "2025-01-19T00:00:00-05:00",
+        "events": [
+          {
+            "name": "Midnight Snack",
+            "subtitle": "🍕 Fuel for the Night",
+            "start": "2025-01-19T00:00:00-05:00",
+            "duration": 90,
+            "category": "food",
+            "location": "FoodC309",
+            "description": "🌙 Grab a tasty snack and keep the energy high as you hack into the night."
+          },
+          {
+            "name": "Breakfast",
+            "subtitle": "🥞 Morning Fuel",
+            "start": "2025-01-19T07:00:00-05:00",
+            "duration": 90,
+            "category": "food",
+            "location": "FoodC309",
+            "description": "🍳 Wake up and start your day with a hearty breakfast!"
+          },
+          {
+            "name": "Hacking Ends",
+            "subtitle": "💻 Submit Your Code",
+            "start": "2025-01-19T10:00:00-05:00",
+            "duration": 0,
+            "category": "main",
+            "description": "🏁 Final push! Submit your project and wrap up your hackathon journey!"
+          },
+          {
+            "name": "Demos (Judging)",
+            "subtitle": "🖥️ Project Presentations",
+            "start": "2025-01-19T11:00:00-05:00",
+            "duration": 150,
+            "category": "main",
+            "location": "CRX140",
+            "description": "👨‍💻 Present your creation to the judges and impress them with your work!"
+          },
+          {
+            "name": "Lunch",
+            "subtitle": "🍽️ Midday Meal",
+            "start": "2025-01-19T13:00:00-05:00",
+            "duration": 90,
+            "category": "food",
+            "location": "FoodC309",
+            "description": "🍕 Enjoy a relaxing lunch before the final ceremony."
+          },
+          {
+            "name": "Closing Ceremonies",
+            "subtitle": "🎉 Awards & Farewell",
+            "start": "2025-01-19T14:30:00-05:00",
+            "duration": 60,
+            "category": "main",
+            "location": "UCUAuditorium",
+            "description": "🏆 Celebrate the end of an amazing hackathon with awards and final speeches!"
+          }
+        ]
+      }
+    },
+    "dayAfterLastDay": "2025-01-20T00:00:00-06:00"
+  }
