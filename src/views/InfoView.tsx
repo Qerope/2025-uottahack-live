@@ -104,7 +104,7 @@ const ButtonCard: React.FC<ButtonCardProps> = ({ title }) => (
 		  <h1 className="hacker-countdown-title font-weight-bold mt-4 mb-4">
 			Hacker Countdown
 		  </h1>
-		  <Countdown targetDate={new Date("2025-01-17T18:00:00")} />
+		  <Countdown targetDate="2025-01-17T18:00:00" />
 		</Container>
 	  );
 	}
@@ -114,7 +114,7 @@ const ButtonCard: React.FC<ButtonCardProps> = ({ title }) => (
 		<h1 className="hacker-countdown-title font-weight-bold mt-4 mb-4">
 		  Hacker Countdown
 		</h1>
-		<Countdown targetDate={new Date("2025-01-17T18:00:00")} />
+		<Countdown targetDate="2025-01-17T18:00:00" />
 		<Col>
 		  <Row className="g-4">
 			<InfoSection />

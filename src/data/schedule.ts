@@ -44,7 +44,7 @@ const careerFairEvent: IEvent = {
 const teamFormationEvent: IEvent = {
     name: "Team Formation",
     subtitle: "🧑‍🤝‍🧑 Find Your Dream Team",
-    start: new Date('2025-01-17T21:30:00-05:00'),
+    start: new Date('2025-01-17T22:30:00-05:00'),
     duration: 60,
     category: EventCategory.Activity1,
     location: Location.RestRoomFloor5,

@@ -6,6 +6,7 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import { Row } from 'react-bootstrap';
+import Skeleton from 'react-loading-skeleton'; // Import Skeleton
 
 const floorImages = [
     require('../assets/images/floor0.svg'),
@@ -63,6 +64,7 @@ const MapView: React.FC = () => {
     const [is3D, setIs3D] = useState(true);
     const [button, setButton] = useState(1);
     const [image, setImage] = useState(floorImages[1]);
+    const [isIframeLoaded, setIsIframeLoaded] = useState(false);
     const isMobile = useCheckMobileScreen();
 
     const handleClick = (index: number) => {
@@ -72,9 +74,16 @@ const MapView: React.FC = () => {
 
     const handleToggle3D = () => setIs3D((prev) => !prev);
 
+    const handleIframeLoad = () => {
+        setIsIframeLoaded(true);
+    };
+
     return (
         <Container id="map-view" fluid>
-            <Row className="justify-content-center mb-4">
+            <Row className="justify-content-between">
+                <h1 className="hacker-countdown-title font-weight-bold mb-3 p-0">
+                    Event Map
+                </h1>
                 <div
                     id="view-switch"
                     className={is3D ? 'active' : ''}
@@ -82,12 +91,20 @@ const MapView: React.FC = () => {
                 >
                     <div className="toggle-slider"></div>
                     <div className="toggle-label">
-                        <span>3D</span>
-                        <span>2D</span>
+                        <span style={{ marginLeft: "3px", marginTop: "1.2px" }}>3D</span>
+                        <span style={{ marginRight: "1px", marginTop: "1.2px" }}>2D</span>
                     </div>
                 </div>
+                <p style={{ fontSize: '1.1rem' }}>
+                    Hey hackers, sponsors, volunteers, and mentors! uOttaHack 7 will be taking place at the Learning Crossroads (CRX) building at the University of Ottawa. Check out our 3D and 2D maps below to help navigate the event. You can search for specific rooms, sponsor locations, events, and much more! Feel free to explore the venue and make the most of the weekend! The maps will guide you to everything you need to ensure you have an amazing time. See you around the event :)
+                </p>
             </Row>
-            <Row className="justify-content-center align-items-center">
+
+
+
+
+
+            <Row className="justify-content-center align-items-center mt-4">
                 {is3D ? (
                     <iframe
                         title="Mappedin Map"
@@ -98,7 +115,9 @@ const MapView: React.FC = () => {
                         frameBorder="0"
                         style={{
                             border: '0',
+                            borderRadius: '15px',
                         }}
+                        onLoad={handleIframeLoad}
                     ></iframe>
                 ) : (
                     <Row className="map-layout d-flex align-items-center">
@@ -146,6 +165,7 @@ const MapView: React.FC = () => {
                         </Col>
                     </Row>
                 )}
+                {!isIframeLoaded && <div className="loading-spinner">Loading 3D Map...</div>}
             </Row>
         </Container>
     );

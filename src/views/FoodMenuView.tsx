@@ -203,11 +203,11 @@ const FoodMenuView: React.FC = () => {
 		<Container id="food-menu-view" fluid>
 			<Col>
 				{/* Add heading here */}
-				<h1 className="hacker-countdown-title font-weight-bold mt-4 mb-4">
+				{/* <h1 className="hacker-countdown-title font-weight-bold mt-4 mb-4">
 				Exciting updates are coming your way—stay tuned for more delicious details, arriving soon! 🍽️🚀
 				</h1>
 
-				// commenting out for now, uncomment when were ready to show this info
+				// commenting out for now, uncomment when were ready to show this info */}
 				<div className="d-flex flex-column">
 				<ButtonGroup className="button-group rounded" style={{ width: '90%', margin: '0 auto'}}>
 					{(mobile ? dayLabels : dayLabelsLong).map((label, index) => (

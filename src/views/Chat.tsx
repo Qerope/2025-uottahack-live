@@ -50,10 +50,14 @@ const Chat: React.FC = () => {
             <Row className="m-0 h-100">
                 <Col xs={12} className="d-flex flex-column h-100">
                     <div className="text-center">
-                        <p className="text-left mb-4" style={{ fontSize: '0.9rem' }}>
-                            Hey hackers, sponsors, volunteers, and mentors! Meet uOttaChat – your go-to support for uOttaHack 7! Whether you have questions about the hackathon, need specific details about challenges, event logistics (like room assignments), food options, the full event schedule, or anything else – uOttaChat has got you covered!
+                        <h1 className="hacker-countdown-title font-weight-bold mt-4 mb-4">
+                            uOttaChat (Beta)
+                        </h1>
+
+                        <p className="text-left mb-4" style={{ fontSize: '1.1rem' }}>
+                            Hey hackers, sponsors, volunteers, and mentors! Meet uOttaChat – your go-to support for uOttaHack 7! Whether you have questions about the hackathon, need specific details about challenges, event logistics, food options, the full event schedule, or anything else – uOttaChat has got you covered!
                         </p>
-                        <Alert className="text-left py-2 mb-4" variant="warning" style={{ fontSize: '0.8rem' }}>
+                        <Alert className="text-left py-2 mb-4" variant="warning" style={{ fontSize: '1rem' }}>
                             <b>Disclaimer:</b> uOttaChat can make mistakes. Check important info.
                         </Alert>
                     </div>
@@ -105,7 +109,7 @@ const Chat: React.FC = () => {
                                             position: 'relative',
                                             paddingLeft: msg.from === 'chatbot' ? '40px' : '16px',
                                         }}
-                                        className="fade-in-message" 
+                                        className="fade-in-message"
                                     >
                                         {msg.from === 'chatbot' && (
                                             <div style={{
@@ -116,7 +120,7 @@ const Chat: React.FC = () => {
                                                 width: '20px',
                                                 height: '20px',
                                                 borderRadius: '50%',
-                                                backgroundColor: '#58A4DC',
+                                                backgroundColor: '#476ab8',
                                             }} />
                                         )}
                                         {msg.text.split('').map((char, idx) => (
@@ -126,7 +130,7 @@ const Chat: React.FC = () => {
                                         ))}
                                     </ListGroup.Item>
                                 ))}
-                                {isTyping && (
+                                {/* {isTyping && (
                                     <ListGroup.Item
                                         style={{
                                             border: 'none',
@@ -159,7 +163,7 @@ const Chat: React.FC = () => {
                                         }} />
                                         {currentTypingText}
                                     </ListGroup.Item>
-                                )}
+                                )} */}
                             </ListGroup>
 
                             <Form onSubmit={sendMessage} style={{

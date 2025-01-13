@@ -1,75 +1,110 @@
-.navbar-wrapper {
-  display: flex;
-  align-items: center; 
-  width: 100%;
-  position: relative;
-  justify-content: center; /* Centers the logo in the wrapper */
+/* Logo styles */
+.logo {
+  margin-top: 2px;
+  width: 45px;
+  display: block;
 }
 
-.logo-outside-navbar {
-  width: 170px;
-  margin-left: 20px;
-  position: absolute;
-  left: 0;
-  top: 40px;
-  margin: auto 20px auto 20px;
+.logo-link {
+  left: 20px;
+  z-index: 1;
 }
 
-@media (max-width: 1200px) {
-  .logo-outside-navbar {
-    top: 25px;
-  }
-}
-
-/* Logo inside the collapsed menu for small screens */
-.logo-inside-navbar {
-  width: 170px;
-  margin: 10px auto; /* Centers the logo inside the collapsed navbar */
-  display: none; /* Hide by default */
-}
-
-/* Show logo inside only when collapsed on small screens */
-@media (max-width: 1920px) {
-  .logo-outside-navbar {
-    display: none; /* Hide logo outside the navbar on small screens */
-  }
-}
-
+/* Main navbar styles */
 #navbar-main {
   z-index: 1000;
   user-select: none;
-  border-radius: 2rem;
-  background: rgba(71, 106, 184, 1);
-  width: 100%; 
-  max-width: 78%; 
-  margin: 20px auto 20px auto;
-}
-
-#navbar-hidden-overlay {
+  border: 1px solid rgb(216, 228, 255);
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.80);
+  width: 80%;
+  margin: 40px auto;
   position: fixed;
-  z-index: 999;
-  width: 100%;
-  height: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0px 0;
+  box-sizing: border-box;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  height: 70px;
 }
 
+/* Navigation link styles */
 #basic-navbar-nav .nav-link {
-  color: white;
-  font-weight: 300;
+  color: rgba(71, 106, 184, 1);
   padding: 20px;
   margin: 5px;
+  font-weight: bold;
   align-items: center;
   border-radius: 2rem;
   transition: background-color 0.3s ease, padding 0.3s ease;
 }
 
 #basic-navbar-nav .nav-link:hover {
-  background-color: rgba(98, 147, 228, 1);
+  background-color: rgb(224, 236, 255);
   text-decoration: none;
   border-radius: 2rem;
-  padding: 16px;
+  padding: 10px;
 }
 
-.logo-link {
-  display: inline-block;
-  text-decoration: none;
+/* Hamburger menu styles */
+.navbar-toggler {
+  border: none;
+  padding: 0.25rem 0.75rem;
+  margin-right: 1rem;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.hamburger-icon {
+  color: rgba(71, 106, 184, 1);
+}
+
+/* Responsive styles */
+@media (max-width: 1400px) {
+  #navbar-main {
+      width: 90%;
+  }
+  
+  #basic-navbar-nav .nav-link {
+      text-align: center;
+      margin: 5px 0;
+  }
+
+  .logo-link {
+      position: relative !important;
+      left: 0;
+  }
+}
+
+@media (min-width: 1401px) {
+  .navbar-collapse {
+      display: flex;
+      justify-content: center;
+  }
+
+  #basic-navbar-nav .nav-link {
+      padding: 10px 20px;
+  }
+}
+
+/* Remove extra padding and margin for the hamburger menu button */
+.navbar-toggler,
+.hamburger-toggle {
+    border: none;
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    margin-right: 5px; /* Remove margin */
+    background: transparent; /* Ensure the background is transparent */
+}
+
+/* Remove the default spacing of the icon itself */
+.hamburger-icon {
+    margin-top: 3px;
+    padding: 0; /* Remove any padding from the icon */
+
 }
