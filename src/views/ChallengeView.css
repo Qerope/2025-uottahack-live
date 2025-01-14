@@ -61,3 +61,15 @@ body {
   max-height: 100%;
   object-fit: contain;
 }
+
+.truncated-text .content.truncated {
+  position: relative;
+}
+
+.see-more-btn:hover {
+  text-decoration: underline;
+}
+
+.fade-overlay {
+  pointer-events: none;
+}

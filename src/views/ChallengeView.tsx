@@ -21,6 +21,52 @@ interface ChallengeCardProps {
   logo?: string | null;
 }
 
+const TruncatedText = ({ children }: { children: React.ReactNode }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  return (
+    <div className="truncated-text">
+      <div
+        className={`content ${!isExpanded ? 'truncated' : ''}`}
+        style={{
+          maxHeight: isExpanded ? 'none' : '100px',
+          overflow: 'hidden',
+          position: 'relative'
+        }}
+      >
+        {children}
+        {!isExpanded && (
+          <div
+            className="fade-overlay"
+            style={{
+              position: 'absolute',
+              bottom: 0,
+              left: 0,
+              right: 0,
+              height: '40px',
+              background: 'linear-gradient(180deg, transparent, white)'
+            }}
+          />
+        )}
+      </div>
+      <button
+        onClick={() => setIsExpanded(!isExpanded)}
+        className="see-more-btn mt-2"
+        style={{
+          background: 'none',
+          border: 'none',
+          color: '#007bff',
+          cursor: 'pointer',
+          padding: '4px 8px',
+          fontSize: '0.9rem'
+        }}
+      >
+        {isExpanded ? 'See Less' : 'See More'}
+      </button>
+    </div>
+  );
+};
+
 const ChallengeCard = ({
   name = "",
   category = "",
@@ -47,11 +93,17 @@ const ChallengeCard = ({
         <h3 className="heading">{title}</h3>
         <div className="mt-1">
           <div className="mt-3">
-            <span className="text1">Challenge: <span className="text2">{challenge}</span></span>
+            <span className="text1">Challenge: 
+              <span className="text2">
+                <TruncatedText>{challenge}</TruncatedText>
+              </span>
+            </span>
           </div>
           {prize !== (<></>) && (
             <div className="mt-3">
-              <span className="text1">Prizes 🏆: <span style={{ fontWeight: 'normal' }}>{prize}</span></span>
+              <span className="text1">Prizes 🏆: 
+                <span style={{ fontWeight: 'normal' }}>{prize}</span>
+              </span>
             </div>
           )}
         </div>
