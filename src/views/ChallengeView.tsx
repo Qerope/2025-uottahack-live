@@ -220,7 +220,16 @@ const ChallengeView: React.FC = () => {
 
   return (
     <div id="challenge-view">
+      {/* Conditionally render the hidden challenges message */}
+      {challengesHidden && (
+        <div className="challenges-hidden-message">
+          <h1 className="hacker-countdown-title font-weight-bold mt-4 mb-4">Stay tuned for challenges. They will be released soon!</h1>
+        </div>
+      )}
+
+      {!challengesHidden && (
         <ChallengesSection />
+      )}
     </div>
   );
 };
