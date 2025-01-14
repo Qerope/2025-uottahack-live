@@ -57,14 +57,35 @@
 }
 
 .dorahacks-button {
-  background-color: #FF761C; 
+  background-color: #FF761C;
   border-color: #FF761C;
   color: white;
+  position: relative;
 }
 
 .dorahacks-button:hover {
-  background-color: #e25a14; 
+  background-color: #e25a14;
   border-color: #e25a14;
+}
+
+.emergency-tooltip {
+  display: none;
+  position: absolute;
+  top: -20%; /* Below the button */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  white-space: nowrap;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.dorahacks-button:hover .emergency-tooltip {
+  display: block;
 }
 
 .dorahacks-button:focus {

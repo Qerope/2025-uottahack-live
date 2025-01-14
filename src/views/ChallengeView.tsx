@@ -59,16 +59,9 @@ const ChallengesSection = () => (
   <div>
     <Row className='mt-3 center'>
       <ChallengeCard
-        name="Ciena"
-        title="Ciena Challenge Title"
+        name="SurveyMonkey"
+        title="Retail Monkey"
         challenge={(<span>Releasing 2025-01-17 @ 9:30 PM</span>)}
-        prize={(<span>N/A</span>)}
-        logo={cienaLogo}
-      />
-      <ChallengeCard
-        name="Ford"
-        title="Ford Challenge Title"
-        challenge={(<span>Releasing 2025-01- @ 9:30 PM</span>)}
         prize={(<span>N/A</span>)}
       />
       <ChallengeCard
@@ -94,16 +87,7 @@ const ChallengeView: React.FC = () => {
 
   return (
     <div id="challenge-view">
-      {/* Conditionally render the hidden challenges message */}
-      {challengesHidden && (
-        <div className="challenges-hidden-message">
-          <h1 className="hacker-countdown-title font-weight-bold mt-4 mb-4">Stay tuned for challenges. They will be released soon!</h1>
-        </div>
-      )}
-
-      {!challengesHidden && (
         <ChallengesSection />
-      )}
     </div>
   );
 };
