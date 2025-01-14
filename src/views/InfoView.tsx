@@ -101,7 +101,7 @@ const ButtonCard: React.FC<ButtonCardProps> = ({ title }) => (
 	if (!isInfoViewVisible) {
 	  return (
 		<Container id="info-view" fluid>
-		  <h1 className="hacker-countdown-title font-weight-bold mt-4 mb-4">
+		  <h1 className="hacker-countdown-title font-weight-bold mt-4">
 			Hacker Countdown
 		  </h1>
 		  <Countdown targetDate={new Date("2025-01-17T18:00:00")} />

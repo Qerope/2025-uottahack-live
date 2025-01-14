@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './Countdown.css'; 
 
 interface CountdownProps {
     targetDate: Date;
@@ -70,16 +71,6 @@ const Countdown: React.FC<CountdownProps> = ({
 
     const formatTimeUnit = (value: number): string => (value < 10 ? `0${value}` : value.toString());
 
-    const shouldShowDays = showDays && (timeLeft.days >= daysThreshold || timeLeft.days > 0);
-    const shouldShowHours =
-        showHours && (timeLeft.days > 0 || timeLeft.hours >= hoursThreshold || timeLeft.hours > 0);
-    const shouldShowMinutes =
-        showMinutes &&
-        (timeLeft.days > 0 || timeLeft.hours > 0 || timeLeft.minutes >= minutesThreshold || timeLeft.minutes > 0) && (timeLeft.days === 0 && timeLeft.hours < hoursThreshold/2);
-    const shouldShowSeconds =
-        showSeconds &&
-        (timeLeft.days > 0 || timeLeft.hours > 0 || timeLeft.minutes > 0 || timeLeft.seconds > 0) && (timeLeft.days === 0 && timeLeft.hours === 0 && timeLeft.minutes < minutesThreshold/2);
-
     const containerStyle: React.CSSProperties = {
         backgroundSize: '200% 200%',
         animation: 'gradient-shift 6s infinite',
@@ -105,7 +96,7 @@ const Countdown: React.FC<CountdownProps> = ({
     const numberStyle: React.CSSProperties = {
         fontSize: '5rem',
         fontWeight: 'bold',
-        backgroundImage: `linear-gradient(${gradientAngle}deg, #476AB8, #85AED0, #88C5FF)`,
+        backgroundImage: `linear-gradient(${gradientAngle}deg, #BB4FCC, #4B5DE6, #169AE5)`,
         WebkitBackgroundClip: 'text',
         color: 'transparent',
         textShadow: '0 8px 15px rgba(0, 12, 124, 0.12)',
@@ -125,37 +116,33 @@ const Countdown: React.FC<CountdownProps> = ({
 
     return (
         <div style={containerStyle}>
-            {shouldShowDays && (
-                <div style={timeUnitStyle}>
+            {showDays && (
+                <span style={timeUnitStyle}>
                     <span style={{ ...numberStyle, opacity: timeLeft.days >= 0 ? 1 : 0 }}>
-                        {formatTimeUnit(timeLeft.days)}
+                        {formatTimeUnit(timeLeft.days)}<span style={{ fontSize: '3rem' }}>D</span>
                     </span>
-                    <span style={labelStyle}>Days</span>
-                </div>
+                </span>
             )}
-            {shouldShowHours && (
-                <div style={timeUnitStyle}>
+            {showHours && (
+                <span style={timeUnitStyle}>
                     <span style={{ ...numberStyle, opacity: timeLeft.hours >= 0 ? 1 : 0 }}>
-                        {formatTimeUnit(timeLeft.hours)}
+                        {formatTimeUnit(timeLeft.hours)}<span style={{ fontSize: '3rem' }}>H</span>
                     </span>
-                    <span style={labelStyle}>Hours</span>
-                </div>
+                </span>
             )}
-            {shouldShowMinutes && (
-                <div style={timeUnitStyle}>
+            {showMinutes && (
+                <span style={timeUnitStyle}>
                     <span style={{ ...numberStyle, opacity: timeLeft.minutes >= 0 ? 1 : 0 }}>
-                        {formatTimeUnit(timeLeft.minutes)}
+                        {formatTimeUnit(timeLeft.minutes)}<span style={{ fontSize: '3rem' }}>M</span>
                     </span>
-                    <span style={labelStyle}>Minutes</span>
-                </div>
+                </span>
             )}
-            {shouldShowSeconds && (
-                <div style={timeUnitStyle}>
-                    <span style={{ ...numberStyle, opacity: timeLeft.seconds >= 0 ? 1 : 0 }}>
-                        {formatTimeUnit(timeLeft.seconds)}
+            {showSeconds && (
+                <span style={timeUnitStyle}>
+                    <span style={{ ...numberStyle, opacity: timeLeft.seconds >= 0 ? 1 : 0 }} className='text-black'>
+                        {formatTimeUnit(timeLeft.seconds)}<span style={{ fontSize: '3rem' }}>S</span>
                     </span>
-                    <span style={labelStyle}>Seconds</span>
-                </div>
+                </span>
             )}
         </div>
     );

@@ -194,8 +194,11 @@
 .card {
   height: 100%;
 }
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700&display=swap');
+
 
 .hacker-countdown-title {
   color: rgba(71, 106, 184, 1);
   text-align: center;
+  font-family: 'Urbanist', sans-serif;
 }
