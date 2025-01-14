@@ -68,7 +68,7 @@ const Chat: React.FC = () => {
                         backgroundColor: '#fff',
                         display: 'flex',
                         flexDirection: 'column',
-                        height: '60vh',
+                        height: '54vh',
                         width: '100%',
                         marginBottom: '20px'
                     }}>
@@ -100,7 +100,7 @@ const Chat: React.FC = () => {
                                             width: 'auto',
                                             marginLeft: msg.from === 'chatbot' ? '0' : 'auto',
                                             marginRight: msg.from === 'chatbot' ? 'auto' : '0',
-                                            fontSize: '13px',
+                                            fontSize: '15px',
                                             borderRadius: '10px',
                                             textAlign: 'left',
                                             alignSelf: msg.from === 'chatbot' ? 'flex-start' : 'flex-end',
@@ -184,9 +184,9 @@ const Chat: React.FC = () => {
                                             border: '0px',
                                             paddingLeft: '20px',
                                             paddingRight: '20px',
-                                            height: '40px',
+                                            height: '45px',
                                             backgroundColor: '#F2F2F2',
-                                            fontSize: '13px'
+                                            fontSize: '15px'
                                         }}
                                     />
                                 </Form.Group>
