@@ -54,19 +54,18 @@ const ButtonCard: React.FC<ButtonCardProps> = ({ title }) => (
 			</a>
 		  </div>
 		  <div className="col-md-6 mb-3">
-  <a href="https://dorahacks.io/hackathon/uottahack7">
-    <Button
-      className="rounded mx-auto h-100 dorahacks-button act-button"
-      style={{ width: "100%", minHeight: "60px", position: "relative" }}
-    >
-      <p className="font-weight-bold h4 mb-0">DoraHacks</p>
-      <span className="emergency-tooltip">
-        For Emergency preparedness: <a href="tel:+13106007653">+1-310-600-7653</a>
-      </span>
-    </Button>
-  </a>
-</div>
-
+			<a href="https://dorahacks.io/hackathon/uottahack7">
+				<Button
+				className="rounded mx-auto h-100 dorahacks-button act-button"
+				style={{ width: "100%", minHeight: "60px", position: "relative" }}
+				>
+				<p className="font-weight-bold h4 mb-0">DoraHacks</p>
+				<span className="emergency-tooltip">
+					For Emergency preparedness: <a href="tel:+13106007653">+1-310-600-7653</a>
+				</span>
+				</Button>
+			</a>
+			</div>
 		  <div className="col-md-6 mb-3">
 			<a href='/hacker-guide.pdf'>
 			  <Button className='rounded mx-auto h-100 guide-button act-button' style={{ width: '100%', minHeight: '60px' }}>
