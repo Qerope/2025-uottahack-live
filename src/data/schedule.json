@@ -52,6 +52,24 @@
             "description": "📝 Join a team or form your own to work on your hackathon project!"
           },
           {
+            "name": "Fire Noodle Challenge",
+            "subtitle": "🔥Spice Up the Night!",
+            "start": "2025-01-17T21:30:00-05:00",
+            "duration": 60,
+            "category": "food",
+            "location": "WorkshopC440",
+            "description": "🍜 Watch or compete: Brave the heat and you might win a sweet treat…"
+          },
+          {
+            "name": "Bracelet Making + Jackbox",
+            "subtitle": "✨ Craft, Trade, and Play!",
+            "start": "2025-01-17T22:30:00-05:00",
+            "duration": 90,
+            "category": "activity1",
+            "location": "WorkshopC440",
+            "description": "🎲 Come make/trade charm bracelets and play party games together!"
+          },
+          {
             "name": "Hacking Begins",
             "subtitle": "👩‍💻 Let the Coding Begin!",
             "start": "2025-01-17T23:00:00-05:00",
@@ -71,37 +89,55 @@
             "name": "Midnight Snack",
             "subtitle": "🍕 Fuel for the Night",
             "start": "2025-01-18T00:00:00-05:00",
-            "duration": 90,
+            "duration": 60,
             "category": "food",
-            "location": "FoodC309",
+            "location": "FoodC440",
             "description": "🌙 Grab a tasty snack and keep the energy high as you hack into the night."
           },
           {
             "name": "Breakfast",
             "subtitle": "🥞 Morning Fuel",
             "start": "2025-01-18T07:00:00-05:00",
-            "duration": 90,
+            "duration": 120,
             "category": "food",
             "location": "FoodC309",
             "description": "🍳 Wake up and start your day with a hearty breakfast!"
           },
           {
             "name": "Caffeine Cafe",
-            "subtitle": "☕ Coffee & Snacks",
-            "start": "2025-01-18T11:00:00-05:00",
-            "duration": 60,
+            "subtitle": "☕ Coffee Boost",
+            "start": "2025-01-18T09:30:00-05:00",
+            "duration": 90,
             "category": "food",
-            "location": "CRX427",
-            "description": "🍩 Grab a coffee, a snack, and power through the day!"
+            "location": "FoodC410",
+            "description": "🍩 Get a caffeine boost or unwind with some video games, board games etc! Serving drinks while supplies last."
           },
           {
-            "name": "Workshop",
-            "subtitle": "🧑‍🏫 Learn & Grow",
-            "start": "2025-01-18T11:00:00-05:00",
+            "name": "Totebag Painting",
+            "subtitle": "🌟 Design & Shine",
+            "start": "2025-01-18T10:00:00-05:00",
+            "duration": 60, 
+            "category": "Workshop1",
+            "location": "C410",
+            "description": "👜 Design your own tote bag, all skill levels welcome! (Limited spots, sign up via discord)"
+          },
+          {
+            "name": "Microsoft: How to Build and Deploy an API Workshop",
+            "subtitle": "💻 Create and Launch APIs",
+            "start": "2025-01-18T10:00:00-05:00",
             "duration": 60,
             "category": "workshop1",
             "location": "WorkshopC140",
-            "description": "🎓 Level up your skills with expert-led workshops."
+            "description": "🎓 Create and launch your first API with Microsoft experts! (Sign up via Discord)"
+          },
+          {
+            "name": "Intro to Machine Learning",
+            "subtitle": "🤖 Basics to Basics!",
+            "start": "2025-01-18T11:00:00-05:00",
+            "duration": 60,
+            "category": "workshop2",
+            "location": "WorkshopC230",
+            "description": "🔍 Break into Machine Learning! Basics to Basics!"
           },
           {
             "name": "Career Fair",
@@ -122,22 +158,58 @@
             "description": "🍲 Take a break, grab a bite, and recharge for the next challenge."
           },
           {
-            "name": "Pet Therapy",
+            "name": "Mario Kart Drop-In",
             "subtitle": "🐶 Relax with Cute Animals",
-            "start": "2025-01-18T12:00:00-05:00",
-            "duration": 90,
+            "start": "2025-01-18T12:30:00-05:00",
+            "duration": 60,
             "category": "activity2",
-            "location": "CRXLobby",
-            "description": "🐾 Take a break with therapy animals and de-stress."
+            "location": "C410",
+            "description": "🏎️ Drop by to get destroyed in Mario Kart <3"
           },
           {
-            "name": "Totebag Painting",
-            "subtitle": "🌟 Design & Shine",
+            "name": "Caffeine Cafe",
+            "subtitle": "☕ Coffee Boost",
+            "start": "2025-01-18T13:00:00-05:00",
+            "duration": 240,
+            "category": "food",
+            "location": "C410",
+            "description": "🍩 Get a caffeine boost or unwind with some video games, board games etc! Serving drinks while supplies last."
+          },
+          {
+            "name": "Skating on the Canal",
+            "subtitle": "⛸️ Fun on Ice",
+            "start": "2025-01-18T14:00:00-05:00",
+            "duration": 120,
+            "category": "activity2",
+            "location": "CRXLobby",
+            "description": "⛸️ Come skating at the canal with us! (We are not liable if you get lost.)"
+          },
+          {
+            "name": "Starting your own Software Development Agency Workshop",
+            "subtitle": "💻 Build Your Dream Agency",
+            "start": "2025-01-18T14:00:00-05:00",
+            "duration": 90,
+            "category": "workshop2",
+            "location": "C140",
+            "description": "🚀 Launch your tech business and learn from the best!"
+          },
+          {
+            "name": "Onigiri Cooking Class",
+            "subtitle": "🍙 Rice Ball Delights",
             "start": "2025-01-18T15:00:00-05:00",
-            "duration": 60, 
-            "category": "Workshop1",
-            "location": "WorkshopC440",
-            "description": "👜 Unleash your creativity on a tote!"
+            "duration": 60,
+            "category": "workshop2",
+            "location": "C440",
+            "description": "🧑‍🍳 Join a Japanese rice ball cooking class!"
+          },
+          {
+            "name": "2D Unity Platformer Workshop",
+            "subtitle": "🎮 Jump into Game Dev with Unity!",
+            "start": "2025-01-18T15:00:00-05:00",
+            "duration": 180,
+            "category": "workshop2",
+            "location": "C040",
+            "description": "👾 Build your first video game: Design a 2D platformer. (sign up via discord)"
           },
           {
             "name": "Dinner",
@@ -158,13 +230,22 @@
             "description": "🎓 Level up your skills with expert-led workshops."
           },
           {
+            "name": "Caffeine Cafe",
+            "subtitle": "☕ Coffee Boost",
+            "start": "2025-01-18T20:00:00-05:00",
+            "duration": 120,
+            "category": "food",
+            "location": "C410",
+            "description": "🍩 Get a caffeine boost or unwind with some video games, board games etc! Serving drinks while supplies last."
+          },
+          {
             "name": "Karaoke",
             "subtitle": "🎤 Sing Your Heart Out",
             "start": "2025-01-18T21:30:00-05:00",
-            "duration": 105,
+            "duration": 150,
             "category": "activity1",
-            "location": "RestRoomFloor5",
-            "description": "🎶 Grab the mic, sing your favorite song, and have some fun!"
+            "location": "C040",
+            "description": "🎶 Sing your heart out with live DJ! "
           },
           {
             "name": "Midnight Snack",
@@ -196,7 +277,7 @@
             "name": "Breakfast",
             "subtitle": "🥞 Morning Fuel",
             "start": "2025-01-19T07:00:00-05:00",
-            "duration": 90,
+            "duration": 120,
             "category": "food",
             "location": "FoodC309",
             "description": "🍳 Wake up and start your day with a hearty breakfast!"
