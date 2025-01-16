@@ -67,7 +67,7 @@ const ButtonCard: React.FC<ButtonCardProps> = ({ title }) => (
 			</a>
 			</div>
 		  <div className="col-md-6 mb-3">
-			<a href='/hacker-guide.pdf'>
+			<a href='https://uottahack.notion.site/uOttaHack-VII-Ultimate-Guide-172bd45d0a7a80fea3c1eb2c8b6aa2cd'>
 			  <Button className='rounded mx-auto h-100 guide-button act-button' style={{ width: '100%', minHeight: '60px' }}>
 				<p className='font-weight-bold h4 mb-0'>Hacker Guide</p>
 			  </Button>
