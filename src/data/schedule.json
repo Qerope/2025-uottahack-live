@@ -118,7 +118,7 @@
             "start": "2025-01-18T09:30:00-05:00",
             "duration": 90,
             "category": "food",
-            "location": "C410",
+            "location": "C408",
             "description": "🍩 Get a caffeine boost or unwind with some video games, board games etc! Serving drinks while supplies last."
           },
           {
@@ -147,16 +147,16 @@
             "category": "workshop2",
             "location": "Cyber Range",
             "description": "Explore the world of ethical hacking in this engaging workshop. Learn about pentesting processes, how to break into the field, and real-world examples of vulnerabilities encountered by ethical hackers. Perfect for aspiring cybersecurity professionals!"
-          },  
+          }, 
           {
-            "name": "Intro to Machine Learning",
-            "subtitle": "🤖 Basics to Basics!",
+            "name": "MLH Workshop",
+            "subtitle": "GitHub Copilot",
             "start": "2025-01-18T11:00:00-05:00",
-            "duration": 60,
+            "duration": 30,
             "category": "workshop2",
             "location": "C230",
-            "description": "🔍 Break into Machine Learning! Basics to Basics!"
-          }, 
+            "description": "Making Better Hacks, Faster, using GitHub Copilot! (Exclusive GitHub swags up for grabs.)"
+          },
           {
             "name": "Career Fair",
             "subtitle": "💼 Meet Industry Pros",
@@ -190,18 +190,18 @@
             "start": "2025-01-18T13:00:00-05:00",
             "duration": 240,
             "category": "food",
-            "location": "C410",
+            "location": "C408",
             "description": "🍩 Get a caffeine boost or unwind with some video games, board games etc! Serving drinks while supplies last."
           },
           {
-            "name": "MLH Workshop",
-            "subtitle": "GitHub Copilot",
+            "name": "Intro to Machine Learning",
+            "subtitle": "🤖 Basics to Basics!",
             "start": "2025-01-18T13:00:00-05:00",
-            "duration": 30,
+            "duration": 60,
             "category": "workshop2",
             "location": "C230",
-            "description": "Making Better Hacks, Faster, using GitHub Copilot! (Exclusive GitHub swags up for grabs.)"
-          },
+            "description": "🔍 Break into Machine Learning! Basics to Basics!"
+          }, 
           {
             "name": "Starknet Workshop",
             "subtitle": "🚀 Create Your First Cairo Smart Contract",
@@ -307,7 +307,7 @@
             "start": "2025-01-18T20:00:00-05:00",
             "duration": 120,
             "category": "food",
-            "location": "C410",
+            "location": "C408",
             "description": "🍩 Get a caffeine boost or unwind with some video games, board games etc! Serving drinks while supplies last."
           },
           {
