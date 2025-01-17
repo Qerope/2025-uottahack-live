@@ -2,7 +2,7 @@
 
 @font-face {
 	font-family: 'Harabara';
-	src: url('./assets/fonts/Harabara Mais.otf');
+	src: url('./assets/fonts/HarabaraMais.otf');
 }
 
 @supports (font-variation-settings: normal) {
