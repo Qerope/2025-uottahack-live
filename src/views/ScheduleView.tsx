@@ -5,11 +5,10 @@ import { ONE_MINUTE_MILLISECOND, SHOW_AS_LIVE_DATES, MOBILE_BREAKPOINT_WIDTH } f
 import { EventListener, RelativeTime } from '../enums';
 
 import Container from 'react-bootstrap/Container';
-import ButtonGroup from 'react-bootstrap/ButtonGroup';
-import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import { Spinner } from 'react-bootstrap';
 
+import DaySelector from '../components/DaySelector'; 
 import TimelineComponent from '../components/TimelineComponent';
 import EventListComponent from '../components/EventListComponent';
 import { getRelativeDayTime } from '../utils';
@@ -111,27 +110,7 @@ const ScheduleView: React.FC = () => {
   return (
     <Container id="schedule" fluid>
       <div className="d-flex flex-column">
-        <ButtonGroup className="button-group rounded" style={{ width: '100%', margin: '0 0' }}>
-          {Object.values(days).map((dayInfo, index) => (
-            <Button
-              key={`btn-group-${index}`}
-              onClick={() => setDay(dayInfo)}
-              className="ml-2 mr-2 mb-5 mt-5"
-              style={{
-                backgroundColor: index === day.index ? '#476ab8' : '#f8f9fa',
-                border: '0',
-                fontWeight: index === day.index ? 700 : 400,
-                borderRadius: '1rem',
-                padding: '0.8rem 0 0.8rem 0',
-                outline: 'none',
-                boxShadow: 'none',
-              }}
-              variant={index === day.index ? 'dark' : 'light'}
-            >
-              {!mobile && dayInfo.longTitle || dayInfo.title}
-            </Button>
-          ))}
-        </ButtonGroup>
+        <DaySelector days={days} selectedDay={day} setDay={setDay} mobile={mobile} />
       </div>
       <Row>
         <div className="col-md-9 col-sm-12 mt-3">

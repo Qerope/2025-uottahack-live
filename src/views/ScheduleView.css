@@ -1,20 +1,96 @@
 #schedule {
-	user-select: none;
+    user-select: none;
 }
 
-.text-gradient {
-    animation: fadeInAnimation ease-in-out 0.5s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+/* button group container */
+.schedule-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
 }
 
+/* day selector container */
+.day-selector {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    gap: 50px;
+}
+
+/* day button styles */
+.day-button {
+    flex-grow: 1;
+    background-color: #f7f7f7;
+    color: #898989;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 12px;
+    white-space: normal;
+    padding: 10px 20px;
+    min-width: 200px;
+    max-width: 300px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.06);
+    outline: none;
+    margin-bottom: 0.5rem;
+}
+
+.day-button:focus,
+.day-button:active,
+.day-button:hover {
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+
+/* active button gradient text effect */
+.day-button.active {
+    background-image: linear-gradient(
+        135deg, 
+        #bb4fcc, 
+        #8d52da, 
+        #4b5de6, 
+        #169ae5
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -ms-background-clip: text;
+    -o-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+}
+
+/* responsive adjustments */
+@media (max-width: 768px) {
+    .day-selector {
+        gap: 1rem;
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .day-button {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+        max-width: 120px;
+    }
+}
+
+/* fade-in animation */
 @keyframes fadeInAnimation {
     0% {
-		transform: translateY(-40%);
+        transform: translateY(-40%);
         opacity: 0;
     }
     100% {
-		transform: translateY(0%);
+        transform: translateY(0%);
         opacity: 1;
     }
 }
