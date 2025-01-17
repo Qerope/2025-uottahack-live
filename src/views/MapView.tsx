@@ -6,6 +6,7 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import { Row } from 'react-bootstrap';
+import FloorButtonMenu from '../components/FloorButtonMenu';
 import Skeleton from 'react-loading-skeleton'; // Import Skeleton
 
 const floorImages = [
@@ -80,13 +81,13 @@ const MapView: React.FC = () => {
 
     return (
         <Container id="map-view" fluid>
-            <Row className="justify-content-between">
+            <Row className="justify-content-between align-items-center">
                 <h1 className="hacker-countdown-title font-weight-bold mb-3 p-0">
                     Event Map
                 </h1>
                 <div
                     id="view-switch"
-                    className={is3D ? 'active' : ''}
+                    className={`${is3D ? 'active' : ''} mt-4`}
                     onClick={handleToggle3D}
                 >
                     <div className="toggle-slider"></div>
@@ -96,12 +97,9 @@ const MapView: React.FC = () => {
                     </div>
                 </div>
                 <p style={{ fontSize: '1.1rem' }}>
-                    Hey hackers, sponsors, volunteers, and mentors! uOttaHack 7 will be taking place at the Learning Crossroads (CRX) building at the University of Ottawa. Check out our 3D and 2D maps below to help navigate the event. You can search for specific rooms, sponsor locations, events, and much more! Feel free to explore the venue and make the most of the weekend! The maps will guide you to everything you need to ensure you have an amazing time. See you around the event :)
+                    Hey hackers, sponsors, volunteers, and mentors! uOttaHack 7 will be taking place at the Learning Crossroads (CRX) building at the University of Ottawa. Check out our 3D and 2D maps below to help navigate the event. You can search for specific rooms, sponsor locations, events, and much more! Feel free to explore the venue and make the most of the weekend! The maps will guide you to everything you need to ensure you have an amazing time. See you around the event!
                 </p>
             </Row>
-
-
-
 
 
             <Row className="justify-content-center align-items-center mt-4">
@@ -121,49 +119,24 @@ const MapView: React.FC = () => {
                     ></iframe>
                 ) : (
                     <Row className="map-layout d-flex align-items-center">
-                        <Col md={8} className="image-column">
-                            <div className="floor-layouts text-center">
-                                <EnlargableImage
-                                    src={image}
-                                    alt={`Floor ${button + 1} layout`}
-                                />
-                                <p className="text-muted">Tap to zoom</p>
-                            </div>
-                        </Col>
-                        <Col md={2} className="button-column">
-                            <ButtonGroup
-                                vertical={!isMobile}
-                                className="button-group"
-                                style={{
-                                    borderRadius: '1.2rem',
-                                    backgroundColor: 'rgba(42, 61, 101, 1)',
-                                    padding: '0.5rem',
-                                }}
-                            >
-                                {floorImages.map((_, index) => (
-                                    <Button
-                                        key={`button-${index}`}
-                                        onClick={() => handleClick(index)}
-                                        style={{
-                                            backgroundColor:
-                                                index === button
-                                                    ? 'rgba(120, 144, 197, 1)'
-                                                    : 'rgba(120, 144, 197, 1)',
-                                            border: '0',
-                                            fontWeight: index === button ? 700 : 400,
-                                            width: '45px',
-                                            height: '45px',
-                                            fontSize: '1.2rem',
-                                            borderRadius: '50%',
-                                            marginBottom: '0.5rem',
-                                        }}
-                                    >
-                                        {index}
-                                    </Button>
-                                ))}
-                            </ButtonGroup>
-                        </Col>
-                    </Row>
+                    <Col md={8} className="image-column">
+                      <div className="floor-layouts text-center">
+                        <EnlargableImage
+                          src={image}
+                          alt={`Floor ${button + 1} layout`}
+                        />
+                        <p className="text-muted">Tap to zoom</p>
+                      </div>
+                    </Col>
+                    <Col md={2} className="button-column">
+                      <FloorButtonMenu
+                        floorImages={floorImages}
+                        selectedFloor={button}
+                        onFloorChange={handleClick}
+                        isMobile={isMobile}
+                      />
+                    </Col>
+                  </Row>
                 )}
                 {!isIframeLoaded && <div className="loading-spinner">Loading 3D Map...</div>}
             </Row>

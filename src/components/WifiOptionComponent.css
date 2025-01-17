@@ -2,9 +2,10 @@
 
 /* Quicksand with Jost as fallback */
 .wifi-text {
-  font-family: 'Quicksand', 'Jost', sans-serif;
-  color: #4F75FF;
   flex-grow: 1;
+  max-width: 1000px; 
+  font-family: 'Quicksand', sans-serif;
+  color: #476AB8;
 }
 
 .network-name, .network-description {
@@ -20,33 +21,27 @@
     margin: 0 auto;
 }
 
-/*ensure WiFi section expands on large screens */
+/* ensure WiFi section expands on large screens */
 @media (min-width: 1400px) {
     .wifi-container {
         max-width: 1600px;
     }
 }
+
   
 .wifi-info {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-    width: 100%;
-    max-width: 1200px;
-    padding: 0 2rem; 
-}
-
-.wifi-text {
-    flex-grow: 1;
-    max-width: 1000px; 
-    font-family: 'Quicksand', sans-serif;
-    color: #4F75FF;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 2rem; 
 }
 
 /* icon sizing */
 .wifi-icon-wrapper {
     flex-shrink: 0;
-    color: #4F75FF;
+    color: #476AB8;
     display: flex;
     align-items: center;
     justify-content: center;

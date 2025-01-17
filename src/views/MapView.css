@@ -1,5 +1,8 @@
-#map-view {
-    padding: 20px;
+@import url('https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300;400;700&display=swap');
+
+p {
+    font-family: 'Sulphur Point', sans-serif;
+    color: #476AB8;
 }
 
 .toggle-container {
@@ -17,63 +20,20 @@
     margin-left: 20px;
 }
 
-.button-column {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding-left: 0;
-    margin-bottom: 20px;
-}
-
-.floor-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(120, 144, 197, 1);
-    color: white;
-    border: none;
-    font-weight: 600;
-    font-size: 0.5rem;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-    text-align: center;
-}
-
-.floor-button:focus,
-.floor-button:hover {
-    background-color: rgba(100, 124, 180, 1);
-}
-
-.floor-button.active {
-    font-weight: 700;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-}
-
-
-.button-group button {
-    width: 100%;
-    margin-bottom: 10px;
-}
-
 #view-switch {
     position: relative;
-    width: 90px;
+    width: 80px;
     height: 40px;
-    background-color: white;
-    border: 2px solid rgb(216, 228, 255);
+    background-color: #9F9FF5;
     border-radius: 20px;
     display: flex;
     align-items: center;
     cursor: pointer;
-    transition: border-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
 }
 
 #view-switch.active {
-    border-color: linear;
+    background-color: #01A2D9;
 }
 
 #view-switch .toggle-slider {
@@ -82,7 +42,7 @@
     left: 5px;
     width: 30px;
     height: 30px;
-    background: linear-gradient(to bottom, rgba(20, 90, 171, 1), rgba(145, 152, 205, 1));
+    background: #FFFFFF;
     border-radius: 50%;
     transition: transform 0.3s ease-in-out;
     z-index: 2;
@@ -90,7 +50,7 @@
 }
 
 #view-switch.active .toggle-slider {
-    transform: translateX(47px);
+    transform: translateX(38px);
 }
 
 #view-switch .toggle-label {
@@ -102,18 +62,28 @@
     justify-content: space-between;
     padding: 0 7px;
     font-size: 1.2rem;
-    font-weight: 600;
-    color: rgba(71, 106, 184, 1);
+    font-weight: 300;
+    color: #FFFFFF;
     z-index: 1;
     user-select: none;
     pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#view-switch:not(.active) .toggle-label span:nth-child(1) {
+    opacity: 0;
+}
+
+/* Hide "2D" text in active state */
+#view-switch.active .toggle-label span:nth-child(2) {
+    opacity: 0;
 }
 
 /* Responsive Styles */
 @media (max-width: 1024px) {
     .map-layout {
         flex-direction: column;
-        /* Stack vertically on smaller screens */
+        /* Stack vertically on smaller screens (tablets, etc.) */
     }
 
     .image-column {
@@ -125,24 +95,8 @@
         /* Scale image */
     }
 
-    /* Horizontal buttons for mobile */
-    .button-group {
-        flex-direction: row;
-        /* Make buttons horizontal on mobile */
-        justify-content: center;
-        margin-bottom: 20px;
-    }
-
-    .floor-button {
-        font-size: 1rem;
-        /* Adjust font size for better readability */
-        width: 50px;
-        height: 50px;
-        margin: 5px;
-    }
-
     #view-switch {
-        width: 100px;
+        width: 80px;
         height: 40px;
     }
 
@@ -151,17 +105,49 @@
         height: 30px;
     }
 
+    #view-switch.active .toggle-slider {
+        transform: translateX(38px); /* Adjust if needed */
+    }
+
     #view-switch .toggle-label {
         font-size: 0.9rem;
+    }
+
+    /* Add horizontal margins for the heading row and paragraph on screens up to 1024px */
+    .justify-content-between.align-items-center {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    /* The + p selector targets the paragraph immediately after the heading row */
+    .justify-content-between.align-items-center + p {
+        margin-left: 20px;
+        margin-right: 20px;
     }
 }
 
 /* Further adjustments for very small screens (below 768px) */
 @media (max-width: 768px) {
-    .floor-button {
-        font-size: 0.8rem;
-        width: 40px;
-        height: 40px;
+    .map-layout {
+        /* Remove left/right margins so it's centered on mobile */
+        margin-left: 0;
+        margin-right: 0;
+
+        /* Ensure the content is centered */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Optionally adjust the heading & paragraph margins on very small screens */
+    .justify-content-between.align-items-center {
+        margin-left: 15px;  /* or 20px, if you prefer */
+        margin-right: 15px;
+    }
+
+    .justify-content-between.align-items-center + p {
+        margin-left: 15px;
+        margin-right: 15px;
     }
 }
 
@@ -178,7 +164,6 @@
     0% {
         background-position: -200% 0;
     }
-
     100% {
         background-position: 200% 0;
     }
@@ -197,7 +182,6 @@
     0% {
         background-position: -200% 0;
     }
-
     100% {
         background-position: 200% 0;
     }

@@ -94,7 +94,7 @@
 /* Text Styling */
 .essential-link-button-text {
   font-family: 'Sulphur Point', sans-serif;
-  font-size: clamp(1.1rem, 1.2vw, 1.3rem); /* 🔹 Responsive text size */
+  font-size: clamp(1.1rem, 1.2vw, 1.3rem); /* Responsive text size */
   font-weight: 500;
   color: #1F256C;
 }
@@ -109,7 +109,7 @@
 @media (max-width: 768px) {
   .essential-link-button {
     width: 100%;
-    max-width: 180px;
+    max-width: 180px; /* More compact for mobile */
     margin: 0 auto;
   }
 }

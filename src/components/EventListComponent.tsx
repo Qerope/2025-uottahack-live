@@ -6,7 +6,7 @@ import { PropTypesDay, IEvent } from '../interfaces';
 import { dateToMinutesInDay, getRelativeEventTime, formattedEventTime } from '../utils';
 
 import EventListItem from './EventListItem';
-import ModalDialog from '../components/ModalDialog';
+import ModalDialog from './ModalDialog';
 import { EventCategory, RelativeTime } from '../enums';
 
 function sortEvents(event1: IEvent, event2: IEvent) {

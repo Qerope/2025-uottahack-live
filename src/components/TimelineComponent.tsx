@@ -6,7 +6,7 @@ import { EventCategoryColor } from '../enums';
 import { identity, getRelativeEventTime, dateToMinutesInDay, formattedEventTime } from '../utils';
 import Color from '../colors';
 
-import ModalDialog from '../components/ModalDialog';
+import ModalDialog from './ModalDialog';
 import { DUMMY_EVENT } from '../constants';
 
 const minutes = 60;
