@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=Jost:wght@400;600&display=swap');
+
+/* Quicksand with Jost as fallback */
+.wifi-text {
+  flex-grow: 1;
+  max-width: 1000px; 
+  font-family: 'Quicksand', sans-serif;
+  color: #476AB8;
+}
+
+.network-name, .network-description {
+  font-family: 'Quicksand', 'Jost', sans-serif;
+}
+
+.wifi-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+    max-width: 1400px; 
+    margin: 0 auto;
+}
+
+/* ensure WiFi section expands on large screens */
+@media (min-width: 1400px) {
+    .wifi-container {
+        max-width: 1600px;
+    }
+}
+
+  
+.wifi-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 2rem; 
+}
+
+/* icon sizing */
+.wifi-icon-wrapper {
+    flex-shrink: 0;
+    color: #476AB8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.wifi-icon {
+    width: 2rem;
+    height: 2rem;
+}
+
+@media (min-width: 768px) {
+    .wifi-icon {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+}
+  
+@media (min-width: 1024px) {
+    .wifi-icon {
+      width: 3rem;
+      height: 3rem;
+    }
+}
+
+/* text spacing */ 
+.network-info {
+    margin-bottom: 0.5rem;
+}
+
+.network-name {
+    font-weight: 700;
+}
+
+.network-description {
+    font-weight: 500;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .wifi-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 90%;
+    padding: 0 1rem;
+  }
+
+  .wifi-icon-wrapper {
+    margin-bottom: 1rem;
+  }
+
+  .network-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}

@@ -7,7 +7,7 @@ import { Menu } from 'lucide-react';
 
 import './NavBarComponent.css';
 import { ROUTES_WITH_TITLES } from '../constants';
-import smallLogo from '../assets/small_logo.png';
+import { ReactComponent as SmallLogo } from '../assets/logo.svg'; 
 
 const NavBarComponent = () => {
     const [expanded, setExpanded] = useState(false);
@@ -22,7 +22,7 @@ const NavBarComponent = () => {
         >
             <Container fluid className="px-3">
                 <NavLink to="/" className="logo-link">
-                    <img src={smallLogo} alt="Logo" className="logo" />
+                    <SmallLogo className="logo" /> {/* SVG logo without text */}
                 </NavLink>
 
                 {/* Hamburger Toggle */}

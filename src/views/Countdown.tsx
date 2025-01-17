@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import './Countdown.css';
 
 interface CountdownProps {
-    targetDate: string; // Target date in string format (e.g., "2024-03-01T21:30:00")
+    targetDate: string;
 }
 
 interface TimeLeft {
@@ -44,27 +45,31 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
     });
 
     const addLeadingZeros = (value: number): string => {
-        if (value < 10) {
-            return `0${value}`;
-        }
-        return value.toString();
+        return value < 10 ? `0${value}` : value.toString();
     };
 
     return (
-        <div>
-            <div 
-                style={{
-                    textAlign: 'center', 
-                    fontSize: '6vw', 
-                    marginBottom: '20px',
-                    backgroundImage: 'linear-gradient(to right, rgba(71, 106, 184, 1), rgba(71, 106, 184, 1))', 
-                    WebkitBackgroundClip: 'text', 
-                    color: 'transparent'
-                }}>
-                <span>{addLeadingZeros(timeLeft.days)}<span style={{ fontSize: '3vw' }}>D</span>:</span>
-                <span>{addLeadingZeros(timeLeft.hours)}<span style={{ fontSize: '3vw' }}>H</span>:</span>
-                <span>{addLeadingZeros(timeLeft.minutes)}<span style={{ fontSize: '3vw' }}>M</span>:</span>
-                <span>{addLeadingZeros(timeLeft.seconds)}<span style={{ fontSize: '3vw' }}>S</span></span>
+        <div className="countdown-container">
+            <div className="countdown-timer">
+                <span className="time-segment">
+                    <span className="number">{addLeadingZeros(timeLeft.days)}</span>
+                    <span className="unit">D</span>
+                </span>
+                <span className="separator">:</span>
+                <span className="time-segment">
+                    <span className="number">{addLeadingZeros(timeLeft.hours)}</span>
+                    <span className="unit">H</span>
+                </span>
+                <span className="separator">:</span>
+                <span className="time-segment">
+                    <span className="number">{addLeadingZeros(timeLeft.minutes)}</span>
+                    <span className="unit">M</span>
+                </span>
+                <span className="separator">:</span>
+                <span className="time-segment">
+                    <span className="number">{addLeadingZeros(timeLeft.seconds)}</span>
+                    <span className="unit">S</span>
+                </span>
             </div>
         </div>
     );
