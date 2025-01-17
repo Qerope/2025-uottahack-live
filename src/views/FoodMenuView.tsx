@@ -3,7 +3,7 @@ import './FoodMenuView.css';
 import DaySelector from '../components/DaySelector';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
-import { foodDays, IFoodMenuDay } from '../data/foodMenuData';
+import { foodDays } from '../data/foodMenuData';
 
 const FoodMenuView: React.FC = () => {
     const [selectedDay, setSelectedDay] = React.useState(foodDays[0]);
@@ -19,14 +19,15 @@ const FoodMenuView: React.FC = () => {
         <Container id="food-menu-view" fluid>
             <Col>
                 <div className="d-flex flex-column">
-				<DaySelector
-					days={foodDays}
-					selectedDay={selectedDay}
-					setDay={setSelectedDay}
-					mobile={mobile}
-				/>
+                    <DaySelector
+                        days={foodDays}
+                        selectedDay={selectedDay}
+                        setDay={setSelectedDay}
+                        mobile={mobile}
+                    />
                 </div>
-                <div className="workshops">
+
+                <div className="foodmenu-content">
                     {selectedDay.content}
                 </div>
             </Col>
