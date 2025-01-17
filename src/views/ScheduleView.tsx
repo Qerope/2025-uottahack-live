@@ -111,7 +111,11 @@ const ScheduleView: React.FC = () => {
   return (
     <Container id="schedule" fluid>
       <div className="d-flex flex-column">
+<<<<<<< HEAD
         <ButtonGroup className="button-group rounded" style={{ width: '90%', margin: '0 0' }}>
+=======
+        <ButtonGroup className="button-group rounded" style={{ width: '100%', margin: '0 0' }}>
+>>>>>>> master
           {Object.values(days).map((dayInfo, index) => (
             <Button
               key={`btn-group-${index}`}

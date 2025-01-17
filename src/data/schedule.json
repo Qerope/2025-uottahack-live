@@ -12,16 +12,27 @@
             "start": "2025-01-17T17:00:00-05:00",
             "duration": 180,
             "category": "main",
+<<<<<<< HEAD
             "location": "CRXLobby",
+=======
+            "location": "CRX Lobby",
+>>>>>>> master
             "description": "🏷️ Pick up your event badge, grab some swag, and get ready to hack!"
           },
           {
             "name": "Dinner",
             "subtitle": "🍔 Welcome Feast",
+<<<<<<< HEAD
             "start": "2025-01-17T18:00:00-05:00",
             "duration": 90,
             "category": "food",
             "location": "FoodC309",
+=======
+            "start": "2025-01-17T17:30:00-05:00",
+            "duration": 90,
+            "category": "food",
+            "location": "C309",
+>>>>>>> master
             "description": "🍽️ Enjoy delicious food while mingling with fellow participants."
           },
           {
@@ -30,7 +41,11 @@
             "start": "2025-01-17T20:00:00-05:00",
             "duration": 90,
             "category": "main",
+<<<<<<< HEAD
             "location": "UCUAuditorium",
+=======
+            "location": "UCU Auditorium",
+>>>>>>> master
             "description": "🎤 The event begins! Hear from inspiring speakers and get pumped!"
           },
           {
@@ -39,7 +54,11 @@
             "start": "2025-01-17T21:30:00-05:00",
             "duration": 120,
             "category": "career",
+<<<<<<< HEAD
             "location": "CRXLobby",
+=======
+            "location": "CRX Lobby",
+>>>>>>> master
             "description": "🤝 Connect with recruiters and explore awesome career opportunities."
           },
           {
@@ -48,6 +67,7 @@
             "start": "2025-01-17T21:30:00-05:00",
             "duration": 60,
             "category": "activity1",
+<<<<<<< HEAD
             "location": "RestRoomFloor5",
             "description": "📝 Join a team or form your own to work on your hackathon project!"
           },
@@ -56,6 +76,34 @@
             "subtitle": "👩‍💻 Let the Coding Begin!",
             "start": "2025-01-17T23:00:00-05:00",
             "duration": 0,
+=======
+            "location": "Rest Room Floor 5",
+            "description": "📝 Join a team or form your own to work on your hackathon project!"
+          },
+          {
+            "name": "Fire Noodle Challenge",
+            "subtitle": "🔥Spice Up the Night!",
+            "start": "2025-01-17T21:30:00-05:00",
+            "duration": 60,
+            "category": "food",
+            "location": "C440",
+            "description": "🍜 Watch or compete: Brave the heat and you might win a sweet treat…"
+          },
+          {
+            "name": "Bracelet Making + Jackbox",
+            "subtitle": "✨ Craft, Trade, and Play!",
+            "start": "2025-01-17T22:30:00-05:00",
+            "duration": 90,
+            "category": "activity1",
+            "location": "C440",
+            "description": "🎲 Come make/trade charm bracelets and play party games together!"
+          },
+          {
+            "name": "Hacking Begins",
+            "subtitle": "👩‍💻 Let the Coding Begin!",
+            "start": "2025-01-17T23:00:00-05:00",
+            "duration": 60,
+>>>>>>> master
             "category": "main",
             "description": "💻 It's time to start building your masterpiece!"
           }
@@ -71,15 +119,22 @@
             "name": "Midnight Snack",
             "subtitle": "🍕 Fuel for the Night",
             "start": "2025-01-18T00:00:00-05:00",
+<<<<<<< HEAD
             "duration": 90,
             "category": "food",
             "location": "FoodC309",
+=======
+            "duration": 60,
+            "category": "food",
+            "location": "C440",
+>>>>>>> master
             "description": "🌙 Grab a tasty snack and keep the energy high as you hack into the night."
           },
           {
             "name": "Breakfast",
             "subtitle": "🥞 Morning Fuel",
             "start": "2025-01-18T07:00:00-05:00",
+<<<<<<< HEAD
             "duration": 90,
             "category": "food",
             "location": "FoodC309",
@@ -104,12 +159,78 @@
             "description": "🎓 Level up your skills with expert-led workshops."
           },
           {
+=======
+            "duration": 120,
+            "category": "food",
+            "location": "C309",
+            "description": "🍳 Wake up and start your day with a hearty breakfast!"
+          },
+          {
+            "name": "Groq Workshop",
+            "subtitle": "⚡ Turbocharge Your Multimodal and Agentic Apps with Groq",
+            "start": "2025-01-18T09:00:00-05:00",
+            "duration": 60,
+            "category": "workshop2",
+            "location": "C140",
+            "description": "Join Graham Steele, Sr. Product Marketing Manager, for an interactive workshop where you'll learn how to tap into Groq speed to build innovative, multimodal, and agentic applications. Explore open-source demos and integrate Groq's cutting-edge technology into your projects. Perfect for developers of all levels, this session will help you create faster, more efficient, and engaging apps."
+          },  
+          {
+            "name": "Caffeine Café",
+            "subtitle": "☕ Coffee Boost",
+            "start": "2025-01-18T09:30:00-05:00",
+            "duration": 90,
+            "category": "food",
+            "location": "C410",
+            "description": "🍩 Get a caffeine boost or unwind with some video games, board games etc! Serving drinks while supplies last."
+          },
+          {
+            "name": "Totebag Painting",
+            "subtitle": "🌟 Design & Shine",
+            "start": "2025-01-18T10:00:00-05:00",
+            "duration": 60, 
+            "category": "activity2",
+            "location": "C410",
+            "description": "👜 Design your own tote bag, all skill levels welcome! (Limited spots, sign up via discord)"
+          }, 
+          {
+            "name": "Microsoft: How to Build and Deploy an API Workshop",
+            "subtitle": "💻 Create and Launch APIs",
+            "start": "2025-01-18T10:00:00-05:00",
+            "duration": 60,
+            "category": "workshop1",
+            "location": "C140",
+            "description": "🎓 Create and launch your first API with Microsoft experts! (Sign up via Discord)"
+          },
+          {
+            "name": "IBM Cyber Range Workshop",
+            "subtitle": "🔓 Inside Ethical Hacking!",
+            "start": "2025-01-18T10:30:00-05:00",
+            "duration": 60,
+            "category": "workshop2",
+            "location": "Cyber Range",
+            "description": "Explore the world of ethical hacking in this engaging workshop. Learn about pentesting processes, how to break into the field, and real-world examples of vulnerabilities encountered by ethical hackers. Perfect for aspiring cybersecurity professionals!"
+          },  
+          {
+            "name": "Intro to Machine Learning",
+            "subtitle": "🤖 Basics to Basics!",
+            "start": "2025-01-18T11:00:00-05:00",
+            "duration": 60,
+            "category": "workshop2",
+            "location": "C230",
+            "description": "🔍 Break into Machine Learning! Basics to Basics!"
+          }, 
+          {
+>>>>>>> master
             "name": "Career Fair",
             "subtitle": "💼 Meet Industry Pros",
             "start": "2025-01-18T11:30:00-05:00",
             "duration": 300,
             "category": "career",
+<<<<<<< HEAD
             "location": "CRXLobby",
+=======
+            "location": "CRX Lobby",
+>>>>>>> master
             "description": "🤝 Connect with recruiters and explore awesome career opportunities."
           },
           {
@@ -118,6 +239,7 @@
             "start": "2025-01-18T12:00:00-05:00",
             "duration": 90,
             "category": "food",
+<<<<<<< HEAD
             "location": "FoodC309",
             "description": "🍲 Take a break, grab a bite, and recharge for the next challenge."
           },
@@ -129,6 +251,109 @@
             "category": "activity2",
             "location": "CRXLobby",
             "description": "🐾 Take a break with therapy animals and de-stress."
+=======
+            "location": "C309",
+            "description": "🍲 Take a break, grab a bite, and recharge for the next challenge."
+          },
+          {
+            "name": "Solace Workshop",
+            "subtitle": "🔗 Connecting the Dots: Event-Driven Architecture!",
+            "start": "2025-01-18T12:30:00-05:00",
+            "duration": 60,
+            "category": "workshop2",
+            "location": "C140",
+            "description": "This workshop covers the fundamentals of Event-Driven Architecture (EDA) with a focus on how Solace implements it. Learn why and how Software Developers and Architects use this pattern. We'll also guide students through connecting their applications to a Solace Event Broker for 'Pub/Sub' (publish/subscribe) functionality. This session serves as a quick bootstrap for participants to get set up and ready to qualify for our challenge."
+          },
+          {
+            "name": "Caffeine Café",
+            "subtitle": "☕ Coffee Boost",
+            "start": "2025-01-18T13:00:00-05:00",
+            "duration": 240,
+            "category": "food",
+            "location": "C410",
+            "description": "🍩 Get a caffeine boost or unwind with some video games, board games etc! Serving drinks while supplies last."
+          },
+          {
+            "name": "MLH Workshop",
+            "subtitle": "GitHub Copilot",
+            "start": "2025-01-18T13:00:00-05:00",
+            "duration": 30,
+            "category": "workshop2",
+            "location": "C230",
+            "description": "Making Better Hacks, Faster, using GitHub Copilot! (Exclusive GitHub swags up for grabs.)"
+          },
+          {
+            "name": "Starknet Workshop",
+            "subtitle": "🚀 Create Your First Cairo Smart Contract",
+            "start": "2025-01-18T13:30:00-05:00",
+            "duration": 60,
+            "category": "workshop2",
+            "location": "C240",
+            "description": "Join David Barreto, Developer Advocate at Starknet Foundation, as he guides you through creating a simple smart contract using the Cairo language. This workshop includes deploying your contract to the Starknet testnet. Don't miss this hands-on session!"
+          }, 
+          {
+            "name": "Skating on the Canal",
+            "subtitle": "⛸️ Fun on Ice",
+            "start": "2025-01-18T14:00:00-05:00",
+            "duration": 120,
+            "category": "activity2",
+            "location": "CRX Lobby",
+            "description": "⛸️ Come skating at the canal with us! (We are not liable if you get lost.)"
+          },
+          {
+            "name": "Starting your own Software Development Agency Workshop",
+            "subtitle": "💻 Build Your Dream Agency",
+            "start": "2025-01-18T14:00:00-05:00",
+            "duration": 90,
+            "category": "workshop2",
+            "location": "C140",
+            "description": "🚀 Launch your tech business and learn from"
+          },
+          {
+            "name": "Onigiri Cooking Class",
+            "subtitle": "🍙 Rice Ball Delights",
+            "start": "2025-01-18T15:00:00-05:00",
+            "duration": 60,
+            "category": "activity2",
+            "location": "C440",
+            "description": "🧑‍🍳 Join a Japanese rice ball cooking class!"
+          },
+          {
+            "name": "2D Unity Platformer Workshop",
+            "subtitle": "🎮 Jump into Game Dev with Unity!",
+            "start": "2025-01-18T15:00:00-05:00",
+            "duration": 180,
+            "category": "workshop2",
+            "location": "C040",
+            "description": "👾 Build your first video game: Design a 2D platformer. (sign up via discord)"
+          },
+          {
+            "name": "AWS Workshop",
+            "subtitle": "🌐 Intro to Solution Architects and AWS Generative AI",
+            "start": "2025-01-18T15:30:00-05:00",
+            "duration": 120,
+            "category": "workshop2",
+            "location": "C240",
+            "description": "Dive into an introductory workshop covering Solution Architects, AWS Cloud, AI Stack, Code Whisperer, Generative AI, and an overview of the 48-hour workshop material. Students must sign up for AWS prior to the workshop to ensure a smoother experience. Details for registration will be shared in an announcement on our Discord server."
+          }, 
+          {
+            "name": "uOGDC Workshop",
+            "subtitle": "TBD",
+            "start": "2025-01-18T15:30:00-05:00",
+            "duration": 180,
+            "category": "workshop2",
+            "location": "C040",
+            "description": "TBD"
+          },
+          {
+            "name": "Speed Networking With Solace",
+            "subtitle": "🚀 Join Solace for an exciting Speed Networking Event!",
+            "start": "2025-01-18T16:30:00-05:00",
+            "duration": 60,
+            "category": "workshop2",
+            "location": "C240",
+            "description": "💬 Meet every member of the Solace team and discover what makes them unique. 🤝 Build connections, ask questions, and gain insights into their innovative work. 🌟 Don’t miss this chance to grow your network and explore opportunities with Solace!"
+>>>>>>> master
           },
           {
             "name": "Dinner",
@@ -136,6 +361,7 @@
             "start": "2025-01-18T18:00:00-05:00",
             "duration": 90,
             "category": "food",
+<<<<<<< HEAD
             "location": "FoodC309",
             "description": "🍽️ Enjoy delicious food while mingling with fellow participants."
           },
@@ -147,15 +373,62 @@
             "category": "workshop1",
             "location": "WorkshopC140",
             "description": "🎓 Level up your skills with expert-led workshops."
+=======
+            "location": "C309",
+            "description": "🍽️ Enjoy delicious food while mingling with fellow participants."
+          },
+          {
+            "name": "MLH Workshop",
+            "subtitle": "Figma to Code: Learning Design with Dev Mode",
+            "start": "2025-01-18T19:30:00-05:00",
+            "duration": 30,
+            "category": "workshop2",
+            "location": "C230",
+            "description": "Figma Dev Mode is a new Figma feature designed to create smoother collaboration between designers and developers, as well as empower hackers to level up their own design-skills. The tool provides hackers with a detailed view of design files, including access to specs, assets, and code snippets, ensuring accuracy in the design implementation while saving time in the process. Whether you’re completely new to designing websites or want to expand your existing skill set, this workshop is a great way to learn one of the most developer friendly and professionally utilized design tools on the market."
+          },
+          {
+            "name": "Coinbase Workshop",
+            "subtitle": "Lucas Matheson Presents...!",
+            "start": "2025-01-18T20:30:00-05:00",
+            "duration": 60,
+            "category": "workshop2",
+            "location": "C140",
+            "description": "Lucas Matheson, CEO of Coinbase Canada, delivers an insightful talk 💬 about the company’s mission and its role in shaping the future of digital finance 🌐💰. He shares an overview of the innovative tools and approaches driving Coinbase’s success 🔍💻. Lucas highlights the impactful work being done to advance the industry and empower users. The session concludes with an open Q&A, giving attendees the opportunity to connect with him directly ❓🤝."
+          },
+          {
+            "name": "Caffeine Café",
+            "subtitle": "☕ Coffee Boost",
+            "start": "2025-01-18T20:00:00-05:00",
+            "duration": 120,
+            "category": "food",
+            "location": "C410",
+            "description": "🍩 Get a caffeine boost or unwind with some video games, board games etc! Serving drinks while supplies last."
+          },
+          {
+            "name": "Mario Kart Drop-In",
+            "subtitle": "🐶 Relax with Cute Animals",
+            "start": "2025-01-18T21:30:00-05:00",
+            "duration": 60,
+            "category": "activity2",
+            "location": "C410",
+            "description": "🏎️ Drop by to get destroyed in Mario Kart <3"
+>>>>>>> master
           },
           {
             "name": "Karaoke",
             "subtitle": "🎤 Sing Your Heart Out",
             "start": "2025-01-18T21:30:00-05:00",
+<<<<<<< HEAD
             "duration": 105,
             "category": "activity1",
             "location": "RestRoomFloor5",
             "description": "🎶 Grab the mic, sing your favorite song, and have some fun!"
+=======
+            "duration": 150,
+            "category": "activity1",
+            "location": "C040",
+            "description": "🎶 Sing your heart out with live DJ! "
+>>>>>>> master
           },
           {
             "name": "Midnight Snack",
@@ -163,7 +436,11 @@
             "start": "2025-01-18T23:30:00-05:00",
             "duration": 120,
             "category": "food",
+<<<<<<< HEAD
             "location": "FoodC309",
+=======
+            "location": "C309",
+>>>>>>> master
             "description": "🌙 Grab a tasty snack and keep the energy high as you hack into the night."
           }
         ]
@@ -180,16 +457,26 @@
             "start": "2025-01-19T00:00:00-05:00",
             "duration": 90,
             "category": "food",
+<<<<<<< HEAD
             "location": "FoodC309",
+=======
+            "location": "C309",
+>>>>>>> master
             "description": "🌙 Grab a tasty snack and keep the energy high as you hack into the night."
           },
           {
             "name": "Breakfast",
             "subtitle": "🥞 Morning Fuel",
             "start": "2025-01-19T07:00:00-05:00",
+<<<<<<< HEAD
             "duration": 90,
             "category": "food",
             "location": "FoodC309",
+=======
+            "duration": 120,
+            "category": "food",
+            "location": "C309",
+>>>>>>> master
             "description": "🍳 Wake up and start your day with a hearty breakfast!"
           },
           {
@@ -215,7 +502,11 @@
             "start": "2025-01-19T13:00:00-05:00",
             "duration": 90,
             "category": "food",
+<<<<<<< HEAD
             "location": "FoodC309",
+=======
+            "location": "C309",
+>>>>>>> master
             "description": "🍕 Enjoy a relaxing lunch before the final ceremony."
           },
           {
@@ -224,7 +515,11 @@
             "start": "2025-01-19T14:30:00-05:00",
             "duration": 60,
             "category": "main",
+<<<<<<< HEAD
             "location": "UCUAuditorium",
+=======
+            "location": "UCU Auditorium",
+>>>>>>> master
             "description": "🏆 Celebrate the end of an amazing hackathon with awards and final speeches!"
           }
         ]
