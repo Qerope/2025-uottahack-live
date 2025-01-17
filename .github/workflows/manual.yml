@@ -18,6 +18,6 @@ jobs:
     - name: Add mirror remote (Vercel)
       run: git remote add mirror https://github.com/Qerope/2025-uottahack-live.git
     - name: Push to Repository B
-      run: git push mirror main --force  # Use --force only if necessary
+      run: git push mirror master:main --force 
       env:
         GITHUB_TOKEN: ${{ secrets.HAMED_GITHUB_TOKEN }}
