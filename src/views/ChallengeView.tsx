@@ -207,6 +207,16 @@ const ChallengesSection = () => (
           Runner Ups: 3x $500</span>)}
       />
       <TimedChallengeCard
+        name="Gadget"
+        title="Gadget Full-Stack Web App Challenge"
+        challenge={(<span>Gadget, the application development and hosting platform, is challenging students to leverage its new AI-assisted capabilities to build and launch a full-stack web app in three days. These apps can be for personal use, or aimed at being distributed to others. The challenge is to launch a fully hosted, full-stack app that solves a real-world problem. <br /> <br /> The application must: <br />
+          • Be built entirely on Gadget <br />
+          • Have a frontend, backend, and database <br />
+          • Solve a real problem <br />
+          • Look and work great</span>)}
+        prize={(<span>TBD</span>)}
+      />
+      <TimedChallengeCard
         name="Groq"
         title="Multimodal App Challenge"
         challenge={(<span>Build a creative and  interactive multimodal app powered by Groq. Projects are judged based on the number of modalities powered by Groq (text, vision, audio), how innovative it is to solve a real world problem, UX, and design.</span>)}
