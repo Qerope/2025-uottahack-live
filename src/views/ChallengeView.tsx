@@ -10,6 +10,8 @@ import deepcodeLogo from '../assets/images/Deepcode.png';
 import huionLogo from '../assets/images/Group 1223.png';
 import seedstudioLogo from '../assets/images/image 188.png';
 import xppenLogo from "../assets/images/xp-pen 1.png";
+import starknetLogo from "../assets/images/starknet.png";
+import gadgetLogo from "../assets/images/gadget.png";
 
 interface ChallengeCardProps {
   name?: string;
@@ -205,6 +207,7 @@ const ChallengesSection = () => (
           2nd Prize: 🥈 $1,500 <br />
           3rd Prize: 🥉 $1,000 <br />
           Runner Ups: 3x $500</span>)}
+        logo={starknetLogo}
       />
       <TimedChallengeCard
         name="Gadget"
@@ -215,6 +218,7 @@ const ChallengesSection = () => (
           • Solve a real problem <br />
           • Look and work great</span>)}
         prize={(<span>TBD</span>)}
+        logo={gadgetLogo}
       />
       <TimedChallengeCard
         name="Groq"
