@@ -7,7 +7,7 @@ import { Menu } from 'lucide-react';
 
 import './NavBarComponent.css';
 import { ROUTES_WITH_TITLES } from '../constants';
-import { ReactComponent as SmallLogo } from '../assets/logo.svg'; // Import SVG as ReactComponent
+import { ReactComponent as SmallLogo } from '../assets/logo.svg'; 
 
 const NavBarComponent = () => {
     const [expanded, setExpanded] = useState(false);
