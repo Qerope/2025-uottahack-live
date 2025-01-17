@@ -151,6 +151,10 @@
         height: 30px;
     }
 
+    #view-switch.active .toggle-slider {
+        transform: translateX(57px); /* Adjust the transform value accordingly */
+    }
+
     #view-switch .toggle-label {
         font-size: 0.9rem;
     }
