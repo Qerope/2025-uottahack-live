@@ -3,11 +3,10 @@ import './MapView.css';
 
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
-import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import { Row } from 'react-bootstrap';
 import FloorButtonMenu from '../components/FloorButtonMenu';
 import Skeleton from 'react-loading-skeleton'; // Import Skeleton
+import 'react-loading-skeleton/dist/skeleton.css';
 
 const floorImages = [
     require('../assets/images/floor0.svg'),
@@ -29,8 +28,13 @@ const useCheckMobileScreen = () => {
 
     return width <= 1024;
 };
+interface EnlargableImageProps {
+    src: string;
+    alt: string;
+    onLoad?: () => void; 
+}
 
-const EnlargableImage = ({ src, alt }: { src: string; alt: string }) => {
+const EnlargableImage: React.FC<EnlargableImageProps> = ({ src, alt, onLoad }) => {
     const handleClick = () => {
         const modal = document.createElement('div');
         modal.style.cssText = `
@@ -65,11 +69,13 @@ const MapView: React.FC = () => {
     const [is3D, setIs3D] = useState(true);
     const [button, setButton] = useState(1);
     const [image, setImage] = useState(floorImages[1]);
+    const [isImageLoading, setIsImageLoading] = useState(true);
     const [isIframeLoaded, setIsIframeLoaded] = useState(false);
     const isMobile = useCheckMobileScreen();
 
     const handleClick = (index: number) => {
         setButton(index);
+        setIsImageLoading(true);
         setImage(floorImages[index]);
     };
 
@@ -121,10 +127,15 @@ const MapView: React.FC = () => {
                     <Row className="map-layout d-flex align-items-center">
                     <Col md={8} className="image-column">
                       <div className="floor-layouts text-center">
-                        <EnlargableImage
-                          src={image}
-                          alt={`Floor ${button + 1} layout`}
-                        />
+                      {isImageLoading ? (
+                                    <Skeleton height={500} width="100%" /> // Show skeleton while loading
+                                ) : (
+                                    <EnlargableImage
+                                        src={image}
+                                        alt={`Floor ${button + 1} layout`}
+                                        onLoad={() => setIsImageLoading(false)}
+                                    />
+                                )}
                         <p className="text-muted">Tap to zoom</p>
                       </div>
                     </Col>

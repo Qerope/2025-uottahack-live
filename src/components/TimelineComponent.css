@@ -3,17 +3,10 @@
     overflow: auto;
     width: 100%;
     outline: none;
-<<<<<<< HEAD
-    height: 64vh;
-    border-radius: 12px; 
-    background: rgb(255, 255, 255);
-	outline: 1px solid rgb(216, 228, 255);
-=======
     height: 80vh;
     border-radius: 12px; 
     background: rgb(255, 255, 255);
     border: 1px solid rgb(216, 228, 255);
->>>>>>> master
     padding: 10px;
 }
 
@@ -51,10 +44,6 @@
 
 #timeline-slider .triangle-pointer {
     position: absolute;
-<<<<<<< HEAD
-    /* width: 10px; */
-=======
->>>>>>> master
     left: -5px;
 }
 
@@ -93,11 +82,8 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-<<<<<<< HEAD
-=======
     max-width: calc(100% - 20px);
     width: auto;
->>>>>>> master
 }
 
 .timeline-track-bar {
@@ -122,8 +108,4 @@
 
 .timeline-track-item.present > .timeline-track-bar {
     box-shadow: 0 0 16px rgba(46, 42, 42, 0.7);
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> master
