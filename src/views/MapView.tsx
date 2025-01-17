@@ -128,7 +128,7 @@ const MapView: React.FC = () => {
                     <Col md={8} className="image-column">
                       <div className="floor-layouts text-center">
                       {isImageLoading ? (
-                                    <Skeleton height={500} width="100%" /> // Show skeleton while loading
+                                    <Skeleton height={500} width="100%" /> // skeleton loader
                                 ) : (
                                     <EnlargableImage
                                         src={image}

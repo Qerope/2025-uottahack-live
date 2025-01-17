@@ -4,15 +4,12 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import './FloorButtonMenu.css';
 
 interface FloorButtonMenuProps {
-  floorImages: string[];
+  floorImages: string[]; /* string of floor pictures */
   selectedFloor: number;
   onFloorChange: (floorIndex: number) => void;
   isMobile: boolean;
 }
 
-/**
- * Renders a group of buttons for selecting different floors.
- */
 const FloorButtonMenu: React.FC<FloorButtonMenuProps> = ({
   floorImages,
   selectedFloor,
