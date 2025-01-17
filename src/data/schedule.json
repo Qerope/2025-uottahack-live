@@ -12,16 +12,16 @@
             "start": "2025-01-17T17:00:00-05:00",
             "duration": 180,
             "category": "main",
-            "location": "CRXLobby",
+            "location": "CRX Lobby",
             "description": "🏷️ Pick up your event badge, grab some swag, and get ready to hack!"
           },
           {
             "name": "Dinner",
             "subtitle": "🍔 Welcome Feast",
-            "start": "2025-01-17T18:00:00-05:00",
+            "start": "2025-01-17T17:30:00-05:00",
             "duration": 90,
             "category": "food",
-            "location": "FoodC309",
+            "location": "C309",
             "description": "🍽️ Enjoy delicious food while mingling with fellow participants."
           },
           {
@@ -30,7 +30,7 @@
             "start": "2025-01-17T20:00:00-05:00",
             "duration": 90,
             "category": "main",
-            "location": "UCUAuditorium",
+            "location": "UCU Auditorium",
             "description": "🎤 The event begins! Hear from inspiring speakers and get pumped!"
           },
           {
@@ -39,7 +39,7 @@
             "start": "2025-01-17T21:30:00-05:00",
             "duration": 120,
             "category": "career",
-            "location": "CRXLobby",
+            "location": "CRX Lobby",
             "description": "🤝 Connect with recruiters and explore awesome career opportunities."
           },
           {
@@ -48,7 +48,7 @@
             "start": "2025-01-17T21:30:00-05:00",
             "duration": 60,
             "category": "activity1",
-            "location": "RestRoomFloor5",
+            "location": "Rest Room Floor 5",
             "description": "📝 Join a team or form your own to work on your hackathon project!"
           },
           {
@@ -57,7 +57,7 @@
             "start": "2025-01-17T21:30:00-05:00",
             "duration": 60,
             "category": "food",
-            "location": "WorkshopC440",
+            "location": "C440",
             "description": "🍜 Watch or compete: Brave the heat and you might win a sweet treat…"
           },
           {
@@ -66,7 +66,7 @@
             "start": "2025-01-17T22:30:00-05:00",
             "duration": 90,
             "category": "activity1",
-            "location": "WorkshopC440",
+            "location": "C440",
             "description": "🎲 Come make/trade charm bracelets and play party games together!"
           },
           {
@@ -91,7 +91,7 @@
             "start": "2025-01-18T00:00:00-05:00",
             "duration": 60,
             "category": "food",
-            "location": "FoodC440",
+            "location": "C440",
             "description": "🌙 Grab a tasty snack and keep the energy high as you hack into the night."
           },
           {
@@ -100,7 +100,7 @@
             "start": "2025-01-18T07:00:00-05:00",
             "duration": 120,
             "category": "food",
-            "location": "FoodC309",
+            "location": "C309",
             "description": "🍳 Wake up and start your day with a hearty breakfast!"
           },
           {
@@ -109,7 +109,7 @@
             "start": "2025-01-18T09:30:00-05:00",
             "duration": 90,
             "category": "food",
-            "location": "FoodC410",
+            "location": "C410",
             "description": "🍩 Get a caffeine boost or unwind with some video games, board games etc! Serving drinks while supplies last."
           },
           {
@@ -117,7 +117,7 @@
             "subtitle": "🌟 Design & Shine",
             "start": "2025-01-18T10:00:00-05:00",
             "duration": 60, 
-            "category": "Workshop1",
+            "category": "activity2",
             "location": "C410",
             "description": "👜 Design your own tote bag, all skill levels welcome! (Limited spots, sign up via discord)"
           },
@@ -127,7 +127,7 @@
             "start": "2025-01-18T10:00:00-05:00",
             "duration": 60,
             "category": "workshop1",
-            "location": "WorkshopC140",
+            "location": "C140",
             "description": "🎓 Create and launch your first API with Microsoft experts! (Sign up via Discord)"
           },
           {
@@ -136,7 +136,7 @@
             "start": "2025-01-18T11:00:00-05:00",
             "duration": 60,
             "category": "workshop2",
-            "location": "WorkshopC230",
+            "location": "C230",
             "description": "🔍 Break into Machine Learning! Basics to Basics!"
           },
           {
@@ -145,7 +145,7 @@
             "start": "2025-01-18T11:30:00-05:00",
             "duration": 300,
             "category": "career",
-            "location": "CRXLobby",
+            "location": "CRX Lobby",
             "description": "🤝 Connect with recruiters and explore awesome career opportunities."
           },
           {
@@ -154,13 +154,13 @@
             "start": "2025-01-18T12:00:00-05:00",
             "duration": 90,
             "category": "food",
-            "location": "FoodC309",
+            "location": "C309",
             "description": "🍲 Take a break, grab a bite, and recharge for the next challenge."
           },
           {
             "name": "Mario Kart Drop-In",
             "subtitle": "🐶 Relax with Cute Animals",
-            "start": "2025-01-18T12:30:00-05:00",
+            "start": "2025-01-18T21:30:00-05:00",
             "duration": 60,
             "category": "activity2",
             "location": "C410",
@@ -181,7 +181,7 @@
             "start": "2025-01-18T14:00:00-05:00",
             "duration": 120,
             "category": "activity2",
-            "location": "CRXLobby",
+            "location": "CRX Lobby",
             "description": "⛸️ Come skating at the canal with us! (We are not liable if you get lost.)"
           },
           {
@@ -198,7 +198,7 @@
             "subtitle": "🍙 Rice Ball Delights",
             "start": "2025-01-18T15:00:00-05:00",
             "duration": 60,
-            "category": "workshop2",
+            "category": "activity2",
             "location": "C440",
             "description": "🧑‍🍳 Join a Japanese rice ball cooking class!"
           },
@@ -217,17 +217,8 @@
             "start": "2025-01-18T18:00:00-05:00",
             "duration": 90,
             "category": "food",
-            "location": "FoodC309",
+            "location": "C309",
             "description": "🍽️ Enjoy delicious food while mingling with fellow participants."
-          },
-          {
-            "name": "Workshop",
-            "subtitle": "🧑‍🏫 Learn & Grow",
-            "start": "2025-01-18T18:00:00-05:00",
-            "duration": 60,
-            "category": "workshop1",
-            "location": "WorkshopC140",
-            "description": "🎓 Level up your skills with expert-led workshops."
           },
           {
             "name": "Caffeine Cafe",
@@ -253,7 +244,7 @@
             "start": "2025-01-18T23:30:00-05:00",
             "duration": 120,
             "category": "food",
-            "location": "FoodC309",
+            "location": "C309",
             "description": "🌙 Grab a tasty snack and keep the energy high as you hack into the night."
           }
         ]
@@ -270,7 +261,7 @@
             "start": "2025-01-19T00:00:00-05:00",
             "duration": 90,
             "category": "food",
-            "location": "FoodC309",
+            "location": "C309",
             "description": "🌙 Grab a tasty snack and keep the energy high as you hack into the night."
           },
           {
@@ -279,7 +270,7 @@
             "start": "2025-01-19T07:00:00-05:00",
             "duration": 120,
             "category": "food",
-            "location": "FoodC309",
+            "location": "C309",
             "description": "🍳 Wake up and start your day with a hearty breakfast!"
           },
           {
@@ -305,7 +296,7 @@
             "start": "2025-01-19T13:00:00-05:00",
             "duration": 90,
             "category": "food",
-            "location": "FoodC309",
+            "location": "C309",
             "description": "🍕 Enjoy a relaxing lunch before the final ceremony."
           },
           {
@@ -314,7 +305,7 @@
             "start": "2025-01-19T14:30:00-05:00",
             "duration": 60,
             "category": "main",
-            "location": "UCUAuditorium",
+            "location": "UCU Auditorium",
             "description": "🏆 Celebrate the end of an amazing hackathon with awards and final speeches!"
           }
         ]
