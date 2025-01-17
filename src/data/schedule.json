@@ -73,7 +73,7 @@
             "name": "Hacking Begins",
             "subtitle": "👩‍💻 Let the Coding Begin!",
             "start": "2025-01-17T23:00:00-05:00",
-            "duration": 0,
+            "duration": 60,
             "category": "main",
             "description": "💻 It's time to start building your masterpiece!"
           }
@@ -104,7 +104,7 @@
             "description": "🍳 Wake up and start your day with a hearty breakfast!"
           },
           {
-            "name": "Caffeine Cafe",
+            "name": "Caffeine Café",
             "subtitle": "☕ Coffee Boost",
             "start": "2025-01-18T09:30:00-05:00",
             "duration": 90,
@@ -167,7 +167,7 @@
             "description": "🏎️ Drop by to get destroyed in Mario Kart <3"
           },
           {
-            "name": "Caffeine Cafe",
+            "name": "Caffeine Café",
             "subtitle": "☕ Coffee Boost",
             "start": "2025-01-18T13:00:00-05:00",
             "duration": 240,
@@ -221,7 +221,7 @@
             "description": "🍽️ Enjoy delicious food while mingling with fellow participants."
           },
           {
-            "name": "Caffeine Cafe",
+            "name": "Caffeine Café",
             "subtitle": "☕ Coffee Boost",
             "start": "2025-01-18T20:00:00-05:00",
             "duration": 120,
