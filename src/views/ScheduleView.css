@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@500&display=swap');
+
 #schedule {
 	user-select: none;
 }
@@ -6,6 +8,68 @@
     animation: fadeInAnimation ease-in-out 0.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+}
+
+.button-group {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 15px; 
+}
+
+.schedule-button {
+    background-color: #F7F7F7 !important;
+    color: #898989 !important;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 500; 
+    text-transform: uppercase;
+    border: none !important;
+    border-radius: 12px !important;
+    padding: 10px 20px !important; 
+    min-width: 100px !important; 
+    transition: all 0.3s ease-in-out;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.06); 
+    outline: none !important;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.schedule-button:focus,
+.schedule-button:active,
+.schedule-button:hover {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.schedule-button.active {
+    background-image: linear-gradient(
+        135deg, 
+        #BB4FCC, 
+        #8D52DA, 
+        #4B5DE6, 
+        #169AE5
+    );
+    background-clip: text; 
+    -webkit-background-clip: text; /* webkit for safari & chrome */
+    -moz-background-clip: text; /* mozilla support */
+    -ms-background-clip: text; /* microsoft Edge */
+    -o-background-clip: text; /* opera */
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .button-group {
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .schedule-button {
+        padding: 1rem 1.5rem !important;
+        font-size: 1rem;
+    }
 }
 
 @keyframes fadeInAnimation {

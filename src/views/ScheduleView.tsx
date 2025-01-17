@@ -111,27 +111,17 @@ const ScheduleView: React.FC = () => {
   return (
     <Container id="schedule" fluid>
       <div className="d-flex flex-column">
-        <ButtonGroup className="button-group rounded" style={{ width: '100%', margin: '0 0' }}>
-          {Object.values(days).map((dayInfo, index) => (
-            <Button
-              key={`btn-group-${index}`}
-              onClick={() => setDay(dayInfo)}
-              className="ml-2 mr-2 mb-5 mt-5"
-              style={{
-                backgroundColor: index === day.index ? '#476ab8' : '#f8f9fa',
-                border: '0',
-                fontWeight: index === day.index ? 700 : 400,
-                borderRadius: '1rem',
-                padding: '0.8rem 0 0.8rem 0',
-                outline: 'none',
-                boxShadow: 'none',
-              }}
-              variant={index === day.index ? 'dark' : 'light'}
-            >
-              {!mobile && dayInfo.longTitle || dayInfo.title}
-            </Button>
-          ))}
-        </ButtonGroup>
+      <ButtonGroup className="button-group">
+        {Object.values(days).map((dayInfo, index) => (
+          <Button
+            key={`btn-group-${index}`}
+            onClick={() => setDay(dayInfo)}
+            className={`schedule-button ${index === day.index ? "active" : ""}`}
+          >
+            {!mobile && dayInfo.longTitle || dayInfo.title}
+          </Button>
+        ))}
+      </ButtonGroup>
       </div>
       <Row>
         <div className="col-md-9 col-sm-12 mt-3">
