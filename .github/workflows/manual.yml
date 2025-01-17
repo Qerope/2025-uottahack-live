@@ -1,0 +1,23 @@
+name: Sync to Vercel Repository
+
+on:
+  push:
+    branches:
+      - master
+      
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository A
+      uses: actions/checkout@v2
+    - name: Set up Git
+      run: |
+        git config --global user.name 'Hamed'
+        git config --global user.email 'preloopadm@gmail.com'
+    - name: Add mirror remote (Vercel)
+      run: git remote add mirror https://github.com/Qerope/2025-uottahack-live.git
+    - name: Push to Repository B
+      run: git push mirror main --force  # Use --force only if necessary
+      env:
+        GITHUB_TOKEN: ${{ secrets.HAMED_GITHUB_TOKEN }}
