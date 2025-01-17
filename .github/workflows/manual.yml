@@ -16,7 +16,7 @@ jobs:
         git config --global user.name 'Hamed'
         git config --global user.email 'preloopadm@gmail.com'
     - name: Add mirror remote (Vercel)
-      run: git remote add mirror https://Qerope:${{ secrets.HAMED_GITHUB_TOKEN }}@github.com/Qerope/2025-uottahack-live.git
+      run: git remote add mirror https://github.com/Qerope/2025-uottahack-live.git
     - name: Push to Repository B
       run: git push mirror master:main --force 
       env:
