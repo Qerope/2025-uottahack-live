@@ -22,6 +22,9 @@ const InfoView: React.FC = () => {
 
   return (
     <Container id="info-view" fluid>
+      <h1 className="hacker-countdown-title font-weight-bold">
+        Essential Links
+      </h1>
       <div className="grid-container">
         <EssentialLinkGrid />
       </div>
