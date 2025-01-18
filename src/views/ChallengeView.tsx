@@ -12,6 +12,7 @@ import seedstudioLogo from '../assets/images/image 188.png';
 import xppenLogo from "../assets/images/xp-pen 1.png";
 import starknetLogo from "../assets/images/starknet.png";
 import gadgetLogo from "../assets/images/gadget.png";
+import ehub from "../assets/images/eh.png";
 
 interface ChallengeCardProps {
   name?: string;
@@ -114,7 +115,7 @@ const TimedChallengeCard = ({
           {isReleaseTime ? (
             <div className="mt-1">
               <div className="mt-3">
-                <span className="text1">Challenge: 
+                <span className="text1">Challenge:
                   <span className="text2">
                     <TruncatedText>{challenge}</TruncatedText>
                   </span>
@@ -122,7 +123,7 @@ const TimedChallengeCard = ({
               </div>
               {prize !== (<></>) && (
                 <div className="mt-3">
-                  <span className="text1">Prizes 🏆: 
+                  <span className="text1">Prizes 🏆:
                     <span style={{ fontWeight: 'normal' }}>{prize}</span>
                   </span>
                 </div>
@@ -149,7 +150,7 @@ const ChallengesSection = () => (
         name="Solace"
         title="Event-Driven Solutions"
         challenge={(<span>Build a project that communicates through a Solace Event Broker. Judged on how innovative it is towards solving a real world problem, as well as how appropriately you've leveraged Event-Driven Architecture (EDA) to solve it.</span>)}
-        prize={(<span>$250 x 4 Amazon Gift Cards</span>)}
+        prize={(<span> $250 x 4 Amazon Gift Cards</span>)}
         logo={solaceLogo}
       />
       <TimedChallengeCard
@@ -164,10 +165,10 @@ const ChallengesSection = () => (
       <TimedChallengeCard
         name="QNX Blackberry"
         title="Build on the QNX 8.0 Operating System Challenge"
-        challenge={(<span>We challenge you to develop your hackathon project to run on a Raspberry Pi 4B using the QNX 8.0 Quick Start Target Image for Pi. Raspberry Pi 4 hardware and free QNX licenses are available to participating teams. 
+        challenge={(<span>We challenge you to develop your hackathon project to run on a Raspberry Pi 4B using the QNX 8.0 Quick Start Target Image for Pi. Raspberry Pi 4 hardware and free QNX licenses are available to participating teams.
           <br /> <br />
           Requirements: Hackers will require a free license for QNX 8.0 (available at https://www.qnx.com/getqnx). Raspberry Pi 4B hardware is available to participating teams on a first-come first-served basis. Get your license and gear early so you're ready to hack during the event! </span>)}
-        prize={(<span>4 x $50 Amazon Canada Gift Cards</span>)}
+        prize={(<span> 4 x $50 Amazon Canada Gift Cards</span>)}
         logo={qnxLogo}
       />
       <TimedChallengeCard
@@ -177,7 +178,7 @@ const ChallengesSection = () => (
           <br /> <br />
           Requirements: Open source libraries can be used as a basis for the Tetris game. Automation should be implemented to assist the user while keeping the human meaningfully involved and accountable for the result.
         </span>)}
-        prize={(<span>$100 Amazon Gift Cards x 4 and a Tour of the NAV CANADA tower simulator in Ottawa</span>)}
+        prize={(<span> $100 Amazon Gift Cards x 4 and a Tour of the NAV CANADA tower simulator in Ottawa</span>)}
         logo={navLogo}
       />
       <TimedChallengeCard
@@ -202,7 +203,7 @@ const ChallengesSection = () => (
           Argent (wallet): https://www.argent.xyz/ <br />
           Dojo (game engine): https://www.dojoengine.org/ <br />
         </span>)}
-        prize={(<span>All prizes to be paid in STRK tokens via OnlyDust on a Starknet wallet using the exchange rate of the final day of the hackathon. <br />
+        prize={(<span> All prizes to be paid in STRK tokens via OnlyDust on a Starknet wallet using the exchange rate of the final day of the hackathon. <br />
           1st Prize:🥇 $2,000 <br />
           2nd Prize: 🥈 $1,500 <br />
           3rd Prize: 🥉 $1,000 <br />
@@ -224,7 +225,7 @@ const ChallengesSection = () => (
         name="Groq"
         title="Multimodal App Challenge"
         challenge={(<span>Build a creative and  interactive multimodal app powered by Groq. Projects are judged based on the number of modalities powered by Groq (text, vision, audio), how innovative it is to solve a real world problem, UX, and design.</span>)}
-        prize={(<span>TBD</span>)}
+        prize={(<span> $500 CAD</span>)}
         logo={groqLogo}
       />
       <TimedChallengeCard
@@ -233,12 +234,12 @@ const ChallengesSection = () => (
         challenge={(<span>The Challenge As part of our early warning application, we are required to quickly analyze large amounts of data leaked on various underground channels. To speed up this process, we are looking for an application that can parse, store, and enrich the intercepted data, making it searchable and eventually integrating it with other applications. The breached data we are capturing includes usernames, passwords, and URLs. To efficiently identify specific breached data, we need to parse large amounts of raw text data, ingest it into a database, and enrich it with as much additional information as possible. The challenge for this hackathon is to process very large text files containing breach data, parse the contents, store the parsed data in a MySQL database, enrich it with additional details, and make it searchable. This will help us quickly share breach information with affected organizations to initiate incident response.
           <br /> <br />
           The Details Breached data is frequently shared on underground channels and sold to various parties, including threat actors such as carders or ransomware actors. As part of our services, we intercept these breaches, identify high-risk accounts (such as those related to hospitals' VPNs, charitable organizations, and customer accounts), and prevent further attacks on their networks. The amount of data we intercept has now outpaced our simple scripts, and we need a more efficient solution to make our early warning application faster and more effective.
-           <br /> <br /> 
-           Your goal Create an application that can: <br />
-          * Parse breach data from large text files. <br /> 
-          * Store it in a relational database (MySQL). <br /> 
-          * Enrich the data with additional information. <br /> 
-          * Allow users to search the database and filter breach data. <br /> <br /> 
+          <br /> <br />
+          Your goal Create an application that can: <br />
+          * Parse breach data from large text files. <br />
+          * Store it in a relational database (MySQL). <br />
+          * Enrich the data with additional information. <br />
+          * Allow users to search the database and filter breach data. <br /> <br />
           Inputs: <br />
           You will be provided with large text files containing anywhere between 7,000 and 25,000,000 lines. Each line contains a URL, a username, and a password in the following format: URI USERNAME PASSWORD <br /> The URIs in these files may be valid, invalid, or improperly formatted.</span>)}
         prize={(<span>$300 Amazon Gift Cards x 4</span>)}
@@ -267,27 +268,27 @@ const ChallengesSection = () => (
           3rd Place: Artist 10 (2nd)</span>)}
         logo={xppenLogo}
       />
-    <TimedChallengeCard
-      name="Huion"
-      title="Best UI/UX Design"
-      challenge={(<span>Calling all creators and innovators! Compete in the Huion Challenge and show off your team’s exceptional UI/UX skills and overall project design. 
-        <br /> <br />
-        How to Participate:
-        <br />
-        • Ensure your project demonstrates exceptional UI/UX design and showcases overall thoughtful and intuitive project design. <br />
-        • Highlight the visual appeal, user experience, and design details during your project submission and judging. <br />
-        • Submit your final project to DoraHacks and indicate you’re competing in the Huion Challenge. <br /> <br /> Rules: <br />
-        • The project must be created during the hackathon. <br />
-        • Teams can have up to 4 members. <br />
-        • UI/UX and design must be original work created during the event. <br /> <br />
-        Show us your creative brilliance and design skills, and take home this amazing prize! Good luck! </span>)}
-      prize={(<span>4x Huion Q11K Tablets (one per team member)</span>)}
-      logo={huionLogo}
-    />
-    <TimedChallengeCard
+      <TimedChallengeCard
+        name="Huion"
+        title="Best UI/UX Design"
+        challenge={(<span>Calling all creators and innovators! Compete in the Huion Challenge and show off your team’s exceptional UI/UX skills and overall project design.
+          <br /> <br />
+          How to Participate:
+          <br />
+          • Ensure your project demonstrates exceptional UI/UX design and showcases overall thoughtful and intuitive project design. <br />
+          • Highlight the visual appeal, user experience, and design details during your project submission and judging. <br />
+          • Submit your final project to DoraHacks and indicate you’re competing in the Huion Challenge. <br /> <br /> Rules: <br />
+          • The project must be created during the hackathon. <br />
+          • Teams can have up to 4 members. <br />
+          • UI/UX and design must be original work created during the event. <br /> <br />
+          Show us your creative brilliance and design skills, and take home this amazing prize! Good luck! </span>)}
+        prize={(<span>4x Huion Q11K Tablets (one per team member)</span>)}
+        logo={huionLogo}
+      />
+      <TimedChallengeCard
         name="Seed Studio"
         title="Best Use of Seeed Studio Hardware"
-        challenge={(<span>Show off your hardware hacking skills in the Seeed Studio Challenge! The team with the best hardware-based project that creatively incorporates Seeed Studio products will take home amazing prizes. 
+        challenge={(<span>Show off your hardware hacking skills in the Seeed Studio Challenge! The team with the best hardware-based project that creatively incorporates Seeed Studio products will take home amazing prizes.
           <br /> <br /> How to Participate: <br />
           • Visit the Hardware Zone table to rent Seeed Studio hardware for your project. <br />
           • Build a hardware-based project that incorporates Seeed Studio products in a meaningful and innovative way. <br />
@@ -299,6 +300,26 @@ const ChallengesSection = () => (
           • Clearly explain how Seeed Studio hardware was integrated into your project. </span>)}
         prize={(<span>4x ReSpeaker Lite Voice Assistant Kits and 4x $25 Seeed Studio Gift Cards</span>)}
         logo={seedstudioLogo}
+      />
+      <TimedChallengeCard
+        name="eHub"
+        title="Entrepreneurship Hub Scoreboard Challenge"
+        challenge={
+          (
+            <span>
+              uOttawa's eHub is raffling $525 to 10 students.
+              <br />
+              <br />
+              <strong>Earn Bonus Raffle Tickets:</strong>
+              <ul>
+                <li>2 Raffle Ticket - Attending a workshop</li>
+                <li>4 Raffle Tickets - Submitting a project</li>
+              </ul>
+            </span>
+          )
+        }
+        prize={(<span> 10 x $525</span>)}
+        logo={ehub}
       />
     </Row>
   </div>
