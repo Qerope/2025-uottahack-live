@@ -80,7 +80,7 @@ const TimedChallengeCard = ({
 
   useEffect(() => {
     const checkReleaseTime = () => {
-      const releaseDate = new Date('2025-01-18T04:00:00Z');
+      const releaseDate = new Date('2025-01-18T02:00:00Z');
       const now = new Date();
       setIsReleaseTime(now >= releaseDate);
     };
