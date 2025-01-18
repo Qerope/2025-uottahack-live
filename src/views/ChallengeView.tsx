@@ -3,7 +3,7 @@ import './ChallengeView.css';
 import { Row } from 'react-bootstrap';
 import solaceLogo from '../assets/images/Group 1169.png';
 import surveyLogo from '../assets/images/Group 1168.png';
-import qnxLogo from '../assets/images/QNX_201x_logo 1.png';
+import qnxLogo from '../assets/images/qnx.png';
 import navLogo from '../assets/images/image 7.png';
 import groqLogo from '../assets/images/groq 1.png';
 import deepcodeLogo from '../assets/images/Deepcode.png';
