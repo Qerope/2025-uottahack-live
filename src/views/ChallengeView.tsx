@@ -218,7 +218,15 @@ const ChallengesSection = () => (
           • Have a frontend, backend, and database <br />
           • Solve a real problem <br />
           • Look and work great</span>)}
-        prize={(<span>TBD</span>)}
+        prize={(<span><ul>
+          <li><strong>🏆 1st Prize:</strong> $1,000</li>
+          <li><strong>🥈 2nd Prize:</strong> $300</li>
+          <li><strong>💡 Best New Bug Reported:</strong> $200</li>
+          <li><strong>✨ Best New Feature Suggested:</strong> $200</li>
+          <li>5x $100 Draws on Day 2 of the Event</li>
+          <li>3x 30-Minute Technical Career Chat with Harry</li>
+          <li>3x Detailed CV Review from the Groq Team</li>
+        </ul></span>)}
         logo={gadgetLogo}
       />
       <TimedChallengeCard
