@@ -22,10 +22,6 @@ const InfoView: React.FC = () => {
 
   return (
     <Container id="info-view" fluid>
-      <h1 className="hacker-countdown-title font-weight-bold">
-        Hacker Countdown
-      </h1>
-      <Countdown targetDate="2025-01-17T18:00:00" />
       <div className="grid-container">
         <EssentialLinkGrid />
       </div>
