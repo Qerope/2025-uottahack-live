@@ -3,21 +3,24 @@ import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 import './FoodCard.css';
 
+type ImageSource = string | { default: string };
+
 interface FoodCardProps {
     mealType: 'breakfast' | 'lunch' | 'dinner';
     restaurant: string;
     time: string;
     items: [string, string][];
-    imageSrc?: string;
+    imageSrc: ImageSource;
 }
 
 const FoodCard: React.FC<FoodCardProps> = ({ mealType, restaurant, time, items, imageSrc }) => {
     const [isImageLoading, setIsImageLoading] = useState(true);
+    const src = typeof imageSrc === 'string' ? imageSrc : imageSrc.default;
 
     useEffect(() => {
         if (imageSrc) {
             const img = new Image();
-            img.src = imageSrc;
+            img.src = src;
             img.onload = () => setIsImageLoading(false);
         } else {
             setIsImageLoading(false);
@@ -51,7 +54,7 @@ const FoodCard: React.FC<FoodCardProps> = ({ mealType, restaurant, time, items, 
                     {isImageLoading ? (
                         <Skeleton height={180} width={280} />
                     ) : (
-                        imageSrc && <img src={imageSrc} alt={restaurant} />
+                        imageSrc && <img src={src} alt={restaurant} />
                     )}
                 </div>
             </div>

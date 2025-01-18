@@ -29,9 +29,9 @@ const useCheckMobileScreen = () => {
     return width <= 1024;
 };
 interface EnlargableImageProps {
-    src: string;
+    src: string | { default: string };
     alt: string;
-    onLoad?: () => void; 
+    onLoad?: () => void;
 }
 
 const EnlargableImage: React.FC<EnlargableImageProps> = ({ src, alt, onLoad }) => {
@@ -53,11 +53,14 @@ const EnlargableImage: React.FC<EnlargableImageProps> = ({ src, alt, onLoad }) =
         document.body.appendChild(modal);
     };
 
+    const src1 = typeof src === 'string' ? src : src.default;
+    console.log(src1)
+
     return (
         <img
             data-enlargable
             className="img-enlargable"
-            src={src}
+            src={src1}
             alt={alt}
             onClick={handleClick}
             style={{ width: '100%', height: 'auto' }}
@@ -125,9 +128,9 @@ const MapView: React.FC = () => {
                     ></iframe>
                 ) : (
                     <Row className="map-layout d-flex align-items-center">
-                    <Col md={8} className="image-column">
-                      <div className="floor-layouts text-center">
-                      {isImageLoading ? (
+                        <Col md={8} className="image-column">
+                            <div className="floor-layouts text-center">
+                                {/* {isImageLoading ? (
                                     <Skeleton height={500} width="100%" /> // skeleton loader
                                 ) : (
                                     <EnlargableImage
@@ -135,19 +138,25 @@ const MapView: React.FC = () => {
                                         alt={`Floor ${button + 1} layout`}
                                         onLoad={() => setIsImageLoading(false)}
                                     />
-                                )}
-                        <p className="text-muted">Tap to zoom</p>
-                      </div>
-                    </Col>
-                    <Col md={2} className="button-column">
-                      <FloorButtonMenu
-                        floorImages={floorImages}
-                        selectedFloor={button}
-                        onFloorChange={handleClick}
-                        isMobile={isMobile}
-                      />
-                    </Col>
-                  </Row>
+                                )} */}
+
+                                <EnlargableImage
+                                    src={image}
+                                    alt={`Floor ${button + 1} layout`}
+                                    onLoad={() => setIsImageLoading(false)}
+                                />
+                                <p className="text-muted">Tap to zoom</p>
+                            </div>
+                        </Col>
+                        <Col md={2} className="button-column">
+                            <FloorButtonMenu
+                                floorImages={floorImages}
+                                selectedFloor={button}
+                                onFloorChange={handleClick}
+                                isMobile={isMobile}
+                            />
+                        </Col>
+                    </Row>
                 )}
                 {!isIframeLoaded && <div className="loading-spinner">Loading 3D Map...</div>}
             </Row>
